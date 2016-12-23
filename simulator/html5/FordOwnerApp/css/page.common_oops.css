@@ -1,0 +1,72 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+.common_oops .am-body-inner {
+	display: block;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}
+
+.common_oops .oopsblock{
+	display:block;
+	position: absolute;
+	top: 50%;
+	margin-top: -77px;
+	width:100%;
+}
+
+.common_oops .oopsblock .oopsfonts{
+	margin-top:12px;
+	margin-bottom:18px;
+	font-size:18px;
+	color:#102839;
+	line-height:18px;
+	display:block;
+	text-align:center;
+}
+
+.common_oops .oopsblock .comments{
+	display:block;
+	line-height:26px;
+	font-size:12px;
+	color:#616161;
+	text-align:center;
+    padding:0px 5%;
+}
+
+.common_oops .oopsblock .detail{
+	display:block;
+	line-height:26px;
+	font-size:12px;
+	color:#616161;
+	text-align:center;
+    word-break: break-all;
+}
+
+.common_oops .buttons{
+	position:absolute;
+	bottom:0px;
+	height: 50px;
+	width: 100%;
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+}
+
+.common_oops .buttons li{
+	height: 50px;
+	-webkit-box-flex: 1;
+	text-align: center;
+	font-size: 15px;
+	line-height: 50px;
+	color: #FFFFFF;
+	background: #2596cf;
+	width:50%;
+}
+.common_oops .buttons li.am-clickable-active{
+	opacity: 0.8;
+}
+
+.common_oops .buttons .marginright1{
+	margin-right:1px;
+}

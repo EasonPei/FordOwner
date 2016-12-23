@@ -1,0 +1,129 @@
+@charset "utf-8";
+/* CSS Document */
+
+.setting_about{
+	background:#102839;
+}
+
+.setting_about .logo{
+	background:url(../img/login/logo.png) no-repeat;
+	background-size:231px 130px;
+	background-position: center center;
+	display:block;
+	width:100%;
+	height:129.5px;
+	margin-top:12px;
+	margin-bottom:14px;
+}
+
+.setting_about .logo_cn{
+	background:url(../img/login/CN_SettingPage_FordLogo.png) no-repeat, url(../img/login/CN_SettingPage_OwnersTitle.png) no-repeat;
+	background-size:119px 71px,190px 46px;
+	background-position: center top,center bottom;
+	display:block;
+	width:100%;
+	height:129.5px;
+	margin-top:12px;
+	margin-bottom:14px;
+}
+
+.setting_about .logo_id{
+	background:url(../img/login/logo_only.png) no-repeat, url(../img/login/p1_ID.png) no-repeat;
+	background-size:231px 66.5px,260px 27px;
+	background-position: center top,center bottom;
+	display:block;
+	width:100%;
+	height:129.5px;
+	margin-top:12px;
+	margin-bottom:14px;
+}
+
+.setting_about .logo_th{
+	background:url(../img/login/logo_only.png) no-repeat, url(../img/login/p1_TH-ID-en.png) no-repeat;
+	background-size:231px 66.5px,288.6px 29.3px;
+	background-position: center top,center 75px;
+	display:block;
+	width:100%;
+	height:129.5px;
+	margin-top:12px;
+	margin-bottom:14px;
+}
+
+.setting_about .logo_idth_en{
+	background:url(../img/login/logo_only.png) no-repeat, url(../img/login/p1_TH-ID-en.png) no-repeat;
+	background-size:231px 66.5px,255px 25px;
+	background-position: center top,center bottom;
+	display:block;
+	width:100%;
+	height:129.5px;
+	margin-top:12px;
+	margin-bottom:14px;
+}
+
+.setting_about .logo_vn{
+	background:url(../img/login/logo_only.png) no-repeat, url(../img/login/p1_VN.png) no-repeat;
+	background-size:231px 66.5px,218.6px 73px;
+	background-position: center top,center bottom;
+	display:block;
+	width:100%;
+	height:129.5px;
+	margin-top:12px;
+	margin-bottom:14px;
+}
+
+
+/*.setting_about .title{
+	background:url(../img/fordowner.png) no-repeat;
+	background-size:150px 17px;
+	background-position: center center;
+	display:block;
+	height:17px;
+	margin-bottom:10px;
+}*/
+
+.setting_about .subtitle{
+  font-size:20px;
+}
+
+.setting_about .version{
+	font-size:12px;
+	color:#ffffff;
+	text-align:center;
+	display:block;
+	line-height:12px;
+	margin-bottom:23px;
+}
+
+.setting_about .aboutdetail{
+	margin-bottom:85px;
+	padding-left:36px;
+	padding-right:36px;
+	font-size:9px;
+	color:#ffffff;
+	line-height:18px;
+	text-align:center;
+	display:block;
+}
+
+.setting_about .ownership{
+	font-size:9px;
+	color:#ffffff;
+	line-height:10px;
+	text-align:center;
+	display:block;
+	margin-bottom:21px;
+}
+
+.setting_about .bottombutton.am-clickable-active{opacity: 0.8}
+.setting_about .bottombutton{
+	display:block;
+	height:49px;
+	width: 100%;
+	line-height:49px;
+	color:#ffffff;
+	font-size:15px;
+	text-align:center;
+	background:#2d96cd;
+	position: absolute; 
+	bottom:0px;
+}

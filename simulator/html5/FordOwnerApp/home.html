@@ -1,0 +1,2552 @@
+<!DOCTYPE html>
+<!-- Copyright, 2014 Ford Motor Company 
+ 
+All rights, including copyright and database right, in the application and its contents, are owned by or licensed to Ford, or otherwise used by Ford as permitted by applicable law or the copyright holder. You may not copy, reproduce, republish, download, post, broadcast or transmit any text, images, graphic, logo, button, icon, image and their selection and arrangement thereof for any commercial or public purpose without prior written permission from Ford or the copyright holder. You may not reverse engineer, decompile, translate,  disassemble or attempt to discover any source code and software or underlying ideas or algorithms of the application nor permit others to reverse engineer, decompile or disassemble the source code and software,  except and only to the extent that such activity is expressly permitted by applicable law notwithstanding this limitation or to the extent as may be permitted by the licensing terms governing use of any open source components included with the source code and software. You may not distribute, copy, make modifications to or create derivative works based on the source code and software, except and only to the extent that such activity is expressly permitted by applicable law notwithstanding this limitation or to the extent as may be permitted by the licensing terms governing use of any open source components included with the source code and software. You may not adapt, alter or create any of the material or information in this application or use it for any other purpose other than for your personal non-commercial use. 
+ 
+You agree to use this application only for lawful purposes. You agree to be responsible for and assume the risk to the following: (i) any use of the application while driving an automobile or other vehicle in violation of applicable law or otherwise driving in an unsafe manner presents a significant risk of distracted driving and should not be attempted under any circumstances; and (ii) use of the application may cause you to incur additional charges from your wireless service provider.
+ 
+Ford reserves the right to use for its own purposes any material submitted to the application, including text and images, either on the application or in any other form, including for publicity purposes. Ford reserves the right to monitor submissions to the application and to edit or reject any submissions. Without prejudice to any other rights, Ford may terminate this license if you fail to comply with the terms and conditions of this license. -->
+<html>
+<head>
+    <title>Ford Owners App</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="format-detection" content="address=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!--  libs -- start -->
+    <script src="../emaplib/cordova.js" type="text/javascript"></script>
+    <script src="lib/emap-lib-0.01.js" type="text/javascript"></script>
+    <script src="lib/jquery-2.0.3.min.js" type="text/javascript"></script>
+    <script src="lib/jquery.easing.1.3.js" type="text/javascript"></script>
+    <script src="lib/jquery.md5.js" type="text/javascript"></script>
+    <script src="lib/am.js" type="text/javascript"></script>
+    <script src="lib/am.i18n.js" type="text/javascript"></script>
+    <script src="lib/am.events.js" type="text/javascript"></script>
+    <script src="lib/am.Page.js" type="text/javascript"></script>
+    <script src="lib/am.Scrollview.js" type="text/javascript"></script>
+    <script src="lib/am.Carrousel.js" type="text/javascript"></script>
+    <script src="lib/am.SlideBar.js" type="text/javascript"></script>
+    <script src="lib/am.Popup.js" type="text/javascript"></script>
+    <script src="lib/am.debug.js" type="text/javascript"></script>
+    <script src="lib/dateFormat.js" type="text/javascript"></script>
+    <script src="lib/jquery.ui.datepicker.js" type="text/javascript"></script>
+    <script src="lib/jquery.mobile.custom.js" type="text/javascript"></script>
+    <script src="lib/ADB_Helper.js" type="text/javascript" charset="UTF-8"></script>
+
+    <link href="lib/am.css" rel="stylesheet" type="text/css" />
+    <!--  libs -- end -->
+    <!--  business css -- start -->
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.indexPage.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.firstUse_selectRegion.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.firstUse_tc.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.firstUse_linkPage.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.login_login.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.signUp_account.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.signUp_vehicle.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.signUp_contact.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.signUp_finish.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.dashboard_main.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.profile_myVehicle.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.profile_myAccount.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.profile_updateInfo.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.contact_callCenter.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.contact_roadsideAssistance.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.notification_list.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.notification_detail.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.knowledge_indicatorIcons.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.knowledge_indicatorDetail.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.knowledge_ownerManual.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/page.knowledge_phasebook.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.knowledge_more.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.dealer_listview.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.dealer_mapview.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.dealer_search.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.dealer_detail.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.service_checklist.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.service_checklist_au.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.service_reminderList.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.service_createReminder.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.service_reminderDetail.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.setting_main.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.setting_about.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.setting_qrcode.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.recall_main.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.common_reload.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.common_oops.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.common_noResult.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/page.fuyu_login.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.fuyu_signup.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.fuyu_vin.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.fuyu_dashboard.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.fuyu_coupon.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.fuyu_repair.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.fuyu_repairList.css" rel="stylesheet" type="text/css" />
+    <link href="css/page.fuyu_repairDetail.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/popup.findVin.css" rel="stylesheet" type="text/css" />
+    <link href="css/popup.saveOk.css" rel="stylesheet" type="text/css" />
+    <link href="css/popup.versionUpdate.css" rel="stylesheet" type="text/css" />
+    <link href="css/jquery.ui.datepicker.css" rel="stylesheet" type="text/css" />
+    <link href="css/jquery.mobile.slider.css" rel="stylesheet" type="text/css" />
+
+    <!--  business css -- end -->
+    <!--  business script -- start -->
+    <script src="js/init.js" type="text/javascript"></script>
+    <script src="js/marketsConfig.js" type="text/javascript"></script>
+    <script src="js/registrationConfig.js" type="text/javascript"></script>
+    <script src="js/page.indexPage.js" type="text/javascript"></script>
+    <script src="js/page.firstUse_selectRegion.js" type="text/javascript"></script>
+    <script src="js/page.firstUse_tc.js" type="text/javascript"></script>
+    <script src="js/page.firstUse_linkPage.js" type="text/javascript"></script>
+    <script src="js/page.login_login.js" type="text/javascript"></script>
+    <script src="js/page.login_vehicle.js" type="text/javascript"></script>
+    <script src="js/page.signUp_account.js" type="text/javascript"></script>
+    <script src="js/page.signUp_vehicle.js" type="text/javascript"></script>
+    <script src="js/page.signUp_contact.js" type="text/javascript"></script>
+    <script src="js/page.signUp_finish.js" type="text/javascript"></script>
+    <script src="js/page.dashboard_main.js" type="text/javascript"></script>
+    <script src="js/page.dashboard_main_skjp.js" type="text/javascript"></script>
+    <script src="js/page.profile_myVehicle.js" type="text/javascript"></script>
+    <script src="js/page.profile_myAccount.js" type="text/javascript"></script>
+    <script src="js/page.profile_updateInfo.js" type="text/javascript"></script>
+    <script src="js/page.contact_callCenter.js" type="text/javascript"></script>
+    <script src="js/page.contact_roadsideAssistance.js" type="text/javascript"></script>
+    <script src="js/page.notification_list.js" type="text/javascript"></script>
+    <script src="js/page.notification_detail.js" type="text/javascript"></script>
+    <script src="js/page.knowledge_indicatorIcons.js" type="text/javascript"></script>
+    <script src="js/page.knowledge_indicatorIcons_KR.js" type="text/javascript"></script>
+    <script src="js/page.knowledge_indicatorIcons_JP.js" type="text/javascript"></script>
+    <script src="js/page.knowledge_indicatorDetail.js" type="text/javascript"></script>
+    <script src="js/page.knowledge_ownerManual.js" type="text/javascript"></script>
+
+    <script src="js/page.knowledge_phasebook.js" type="text/javascript"></script>
+    <script src="js/page.knowledge_more.js" type="text/javascript"></script>
+    <script src="js/page.knowledge_phasebook_JP.js" type="text/javascript"></script>
+    <script src="js/page.knowledge_more_JP.js" type="text/javascript"></script>
+    <script src="js/page.dealer_listview.js" type="text/javascript"></script>
+    <script src="js/page.dealer_mapview.js" type="text/javascript"></script>
+    <script src="js/page.dealer_search.js" type="text/javascript"></script>
+    <script src="js/page.dealer_search_JP.js" type="text/javascript"></script>
+    <script src="js/page.dealer_detail.js" type="text/javascript"></script>
+    <script src="js/page.service_checklist.js" type="text/javascript"></script>
+    <script src="js/page.service_checklist_KR.js" type="text/javascript"></script>
+    <script src="js/page.service_checklist_au.js" type="text/javascript"></script>
+    <script src="js/page.service_reminderList.js" type="text/javascript"></script>
+    <script src="js/page.service_createReminder.js" type="text/javascript"></script>
+    <script src="js/page.service_reminderDetail.js" type="text/javascript"></script>
+    <script src="js/page.setting_main.js" type="text/javascript"></script>
+    <script src="js/page.setting_about.js" type="text/javascript"></script>
+    <script src="js/page.setting_qrcode.js" type="text/javascript"></script>
+    <script src="js/page.recall_main.js" type="text/javascript"></script>
+    <script src="js/page.common_reload.js" type="text/javascript"></script>
+    <script src="js/page.common_oops.js" type="text/javascript"></script>
+    <script src="js/page.common_noResult.js" type="text/javascript"></script>
+
+    <script src="js/page.fuyu_login.js" type="text/javascript"></script>
+    <script src="js/page.fuyu_signup.js" type="text/javascript"></script>
+    <script src="js/page.fuyu_vin.js" type="text/javascript"></script>
+    <script src="js/page.fuyu_dashboard.js" type="text/javascript"></script>
+    <script src="js/page.fuyu_coupon.js" type="text/javascript"></script>
+    <script src="js/page.fuyu_repair.js" type="text/javascript"></script>
+    <script src="js/page.fuyu_repairList.js" type="text/javascript"></script>
+    <script src="js/page.fuyu_repairDetail.js" type="text/javascript"></script>
+
+    <script src="js/popup.findVin.js" type="text/javascript"></script>
+    <script src="js/popup.privacyPolicy.js" type="text/javascript"></script>
+    <script src="js/popup.disclaimer.js" type="text/javascript"></script>
+    <script src="js/popup.userLegalAgreement.js" type="text/javascript"></script>
+    <script src="js/popup.saveOk.js" type="text/javascript"></script>
+    <script src="js/popup.versionUpdate.js" type="text/javascript"></script>
+    <script src="js/slideBar.main.js" type="text/javascript"></script>
+
+    <!--<script type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0" async="async"></script>-->
+    <!--<script type="text/javascript">
+        (function () {
+            function async_load() {
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = 'http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0';
+                var x = document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+            }
+            if (window.attachEvent)
+                window.attachEvent('onload', async_load);
+            else
+                window.addEventListener('load', async_load, false);
+        })();
+    </script>
+    <!--  business script -- end -->
+    <!-- <script src="js/mockdata.js" type="text/javascript"></script> -->
+</head>
+
+
+<body>
+    <div class="am-app">
+
+
+        <!--  page.notification_mainlist -- start -->
+        <div class="am-page indexPage" id="indexPage">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <span href="#" class="am-clickable right button nextbutton">NEXT</span>
+                <p>Page List</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <ul id="mainList_list">
+                        <!-- <li class="am-clickable">ListItem 1<span class="arrow"></span></li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--  page.notification_mainlist -- end -->
+        <!--  page.firstUse_selectRegion -- start -->
+        <div class="am-page firstUse_selectRegion" id="firstUse_selectRegion">
+            <div class="am-header">
+                <p i18n="FIRSTUSE_SELECTREGION_TITLE">Select Region</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="whiteBG">
+                        <div class="textview regionTitle" i18n="FIRSTUSE_SELECTREGION_TEXT1">Your region</div>
+                        <div class="inputLine inputLineDropDown am-clickable" id="firstUse_selectRegion_select">
+                            <div class="inputLineLeftView" id="locationView"></div>
+                            <div class="inputLineMiddle" i18n="FIRSTUSE_SELECTREGION_TEXT2">Please select...</div>
+                            <div class="inputLineRightView"></div>
+                        </div>
+                        <div class="textview" i18n="FIRSTUSE_SELECTREGION_TEXT3">Language</div>
+                        <ul class="selectList" style="display: none">
+                            <!-- <li class="tableNavLi am-clickable home">首页</li> -->
+                            <li class="inputLine am-clickable">
+                                <div class="inputLineLeftView">1</div>
+                                <div class="inputLineMiddle">Chinese</div>
+                                <div class="am-clickable inputLineRightView"></div>
+                            </li>
+                            <!-- <li class="inputLine am-clickable inputLineCheck">
+                                <div class="inputLineLeftView">2</div>
+                                <div class="inputLineMiddle">ไทย</div>
+                                <div class="am-clickable inputLineRightView"></div>
+                            </li>
+                            <li class="inputLine am-clickable">
+                                <div class="inputLineLeftView">3</div>
+                                <div class="inputLineMiddle">English</div>
+                                <div class="am-clickable inputLineRightView"></div>
+                            </li> -->
+                        </ul>
+                        <div class="am-clickable rectButton" i18n="FIRSTUSE_SELECTREGION_TEXT4">OK</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  page.firstUse_selectRegion -- end -->
+        
+        <!--  page.firstUse_tc -- start -->
+        <div class="am-page firstUse_tc" id="firstUse_tc">
+            <div class="am-header">
+                <p i18n="FIRSTUSE_TC_TITLE">TERMS &amp; CONDITIONS</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="whiteBG">
+                        <div class="useragreement">
+                            <span class="am-clickable icon-uncheck"></span><p i18n="FIRSTUSE_TC_TEXT1">I have read, understand and agree the <span class="highlight am-clickable link1">Terms &amp;  Conditions </span>and<span class="highlight am-clickable link1"> Privacy Statement</span>.</p>
+                        </div>
+                        <div class="am-clickable rectButton am-disabled" i18n="FIRSTUSE_TC_TEXT2">Agree &amp; Download Content</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  page.firstUse_tc -- end -->
+        
+        <!--  page.firstUse_linkPage -- start -->
+        <div class="am-page firstUse_linkPage firstUse_selectRegion" id="firstUse_linkPage">
+            <div class="loginBG">
+                <div class="fordLogo"></div>
+                <div class="am-carrousel am-touchable mainCarr" id="firstUse_wisard">
+                    <ul class="am-carrousel-inner">
+                        <li><img src="img/wizard/p1.png"></li>
+                        <li><img src="img/wizard/p2.png"></li>
+                        <li><img src="img/wizard/p3.png"></li>
+                        <li><img src="img/wizard/p4.png"></li>
+                        <li><img src="img/wizard/p5.png"></li>
+                    </ul>
+                    <ul class="dot">
+                        <li class="selected"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div id="operationView">
+                    <div class="textview-accountTips" i18n="FIRSTUSE_LINK_TEXT1">Ford owner site account can apply for this app</div>
+                    <div class="am-clickable loginButton" i18n="FIRSTUSE_LINK_TEXT2">Login</div>
+                    <div class="am-clickable signupButton" i18n="FIRSTUSE_LINK_TEXT3">Sign Up</div>
+                    <div id="loginBottomViewWhite">
+                        <div class="am-clickable textLink" id="signUpLater" i18n="FIRSTUSE_LINK_TEXT4">Sign Up later</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  page.firstUse_linkPage -- end -->
+        <!--  page.login_login -- start -->
+        <div class="am-page login_login" id="login_login">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <p i18n="LOGIN_LOGIN_TITLE">LOGIN</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="whiteBG">
+                        <div class="textview" i18n="LOGIN_LOGIN_DESC">Log in with your Owner app or website account  for quicker access to vehicle information and support tools</div>
+                        <div class="inputLine">
+                            <div class="inputLineLeftView" id="usernameField"></div>
+                            <input class="am-activable inputLineMiddle" type="text" maxlength="20" placeholder="Username" autocapitalize="off" autocorrect="off"/>
+                            <div class="am-clickable inputLineRightView textLink" id="forgetusername" i18n="LOGIN_LOGIN_FOGUSR">Forgot username</div>
+                        </div>
+                        <div class="error-message" id="login_errorMsg1">Error message</div>
+                        <div class="inputLine">
+                            <div class="inputLineLeftView" id="passwordField"></div><input class="am-activable inputLineMiddle" type="password" maxlength="20" placeholder="Password" /><div class="am-clickable inputLineRightView textLink" id="forgetpassword" i18n="LOGIN_LOGIN_FOGPWD">Forgot password</div>
+                        </div>
+                        <div class="error-message" id="login_errorMsg">Error message</div>
+                        <!-- <div class="inputLine">
+                            <div class="inputLineLeftView" id="numberField"></div><input class="am-activable inputLineMiddle" type="text" maxlength="20" placeholder="Input number" /><div class="am-clickable inputLineRightView checkNumber"></div>
+                        </div>
+                        <div class="error-message">Error message</div> -->
+                        <div class="am-clickable rectButton" id="loginButton" i18n="LOGIN_LOGIN_LOGINBTN">Login</div>
+                    </div>
+
+                    <div id="loginBottomView">
+                        <div class="am-clickable textLink" id="createAccountBtn" i18n="LOGIN_LOGIN_CREATE">Create Account</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  page.login_login -- end -->
+        
+        
+        <!--  page.login_vehicle -- start -->
+        <div class="am-page signUp_vehicle" id="login_vehicle">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <span href="#" class="am-clickable right button nextbutton" i18n="SIGNUP_VEHICLE_NE">NEXT</span>
+                <p i18n="LOGIN_VEHICLE_TITLE">VEHICLE INFO</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner am-backgroun-white">
+                    <div class="signup-vehicletitle" i18n="LOGIN_VEHICLE_INFO">Vehicle Info</div>
+                    <div class="signup-vehicleinfo">
+                        <p class="vititle" i18n="SIGNUP_VEHICLE_NAME">Vehicle name</p>
+                        <ul class="formline" id="login_vehicle_model">
+                            <li class="am-clickable button-arrow-down"></li>
+                            <li class="iconli icon-vehicle"></li>
+                            <li class="inputli"><input id="vehiclename" type="text" readonly class="selectinput" list="vehiclelist" placeholder="Select Vehicle" /></li>
+                        </ul>
+                        <p class="vititle" i18n="SIGNUP_VEHICLE_VIN">VIN code</p>
+                        <ul class="formline formline-lasticon">
+                            <li class="iconli">VIN</li>
+                            <li class="inputli" id="login_vehicle_vincode">1234566</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div name="" class="am-placeholder am-clickable bottombutton" i18n="SIGNUP_VEHICLE_NEXT">Next</div>
+        </div>
+        <!--  page.login_vehicle -- end -->
+        
+        <!--  page.signUp_account -- start -->
+        <div class="am-page signUp_account" id="signUp_account">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <span href="#" class="am-clickable right button nextbutton" i18n="SIGNUP_ACCOUNT_NE">NEXT</span>
+                <p i18n="SIGNUP_ACCOUNT_SIGN">SIGN UP</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="keboardCover"></div>
+                    <form>
+                        <header>
+                            <div class="signup-accounttitle" i18n="SIGNUP_ACCOUNT_TITLE">Account Information</div>
+                            <p i18n="SIGNUP_ACCOUNT_P">By signing up with Ford Owner,  you'll have access to enhanced features tailored to your needs.</p>
+                        </header>
+                        <div class="formcontent">
+                            <ul>
+                                <li class="required">*</li>
+                                <li class="iconli icon-person"></li>
+                                <li class="inputli"><input name="" id="username" type="text" placeholder="Username" autocapitalize="off" autocorrect="off"></li>
+                            </ul>
+                            <span class="error-message name"></span>
+                            <ul>
+                                <li class="required">*</li>
+                                <li class="iconli icon-lock"></li>
+                                <li class="inputli"><input name="" id="password" type="password" maxlength="20" placeholder="Password"></li>
+                            </ul>
+                            <span class="error-message Password"></span>
+                            <ul>
+                                <li class="required">*</li>
+                                <li class="iconli"></li>
+                                <li class="inputli"><input name="" id="passwordconfirm" type="password" maxlength="20" placeholder="Confirm password"></li>
+                            </ul>
+                            <span class="error-message confrim"></span>
+                            <ul>
+                                <li class="required">*</li>
+                                <li class="iconli icon-email"></li>
+                                <li class="inputli"><input name="" id="email" type="email" placeholder="Email"></li>
+                            </ul>
+                            <span class="error-message Email"></span>
+                            <p class="height40"></p>
+                            <ul>
+                                <li class="required">*</li>
+                                <li class="iconli icon-F"></li>
+                                <li class="inputli"><input name="" id="firstname" type="text" placeholder="First name"></li>
+                            </ul>
+                            <span class="error-message First"></span>
+                            <ul>
+                                <li class="required">*</li>
+                                <li class="iconli icon-L"></li>
+                                <li class="inputli"><input name="" id="lastname" type="text" placeholder="Last name"></li>
+                            </ul>
+                            <span class="error-message Last"></span>
+                            <!-- <ul>
+                                <li class="iconli" id="numberField"></li>
+                                <li class="inputli"><input id="captcha" type="number" maxlength="20" placeholder="Input number" onkeyup="value=value.replace(/[^\d]/g,'')" /></li>
+                                <li class="am-clickable picrefresh"><img class="captcha" id="captchaImg" src="" /></li>
+                            </ul>
+                            <span class="error-message captcha"></span> -->
+                            <div class="useragreement">
+                                <span class="am-clickable icon-uncheck"></span><p i18n="SIGNUP_ACCOUNT_AGREEMENT">I have read and understand the <a href="#" class="am-clickable">Privacy Statement</a> and agree to the <a href="#" class="am-clickable">User Legal Agreement</a></p>
+                            </div>
+                            <span class="error-message aggreement"></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div name="" class="am-placeholder am-clickable bottombutton" i18n="SIGNUP_ACCOUNT_NEXT">Next</div>
+        </div>
+        <!--  page.signUp_account -- end -->
+        <!--  page.signUp_vehicle -- start -->
+        <div class="am-page signUp_vehicle" id="signUp_vehicle">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <span href="#" class="am-clickable right button nextbutton" i18n="SIGNUP_VEHICLE_NE">NEXT</span>
+                <p i18n="SIGNUP_VEHICLE_VEHICLE">SIGN UP</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner am-backgroun-white">
+                    <div class="signup-vehicletitle" i18n="SIGNUP_VEHICLE_INFO">Vehicle Info</div>
+                    <div class="signup-savedvehicle">
+                        <p class="svtitle">Saved vehicle</p>
+                        <div class="svinfo">
+                            <span class="svinfo-number">1</span>
+                            <p>My 2014 Mustang</p>
+                            <p>VIN No. IFDXE45FX1HA86243</p>
+                        </div>
+                        <div class="svdelete"><span class="icon-delete am-clickable"></span></div>
+                    </div>
+                    <div class="signup-vehicleinfo">
+                        <p class="vititle" i18n="SIGNUP_VEHICLE_NAME">Vehicle name</p>
+                        <ul class="formline">
+                            <li class="am-clickable button-arrow-down"></li>
+                            <li class="iconli icon-vehicle"></li>
+                            <li class="inputli"><input id="vehiclename" type="text" readonly class="selectinput" list="vehiclelist" placeholder="Select Vehicle" /></li>
+                        </ul>
+                        <p class="vititle" i18n="SIGNUP_VEHICLE_VIN">Input VIN code</p>
+                        <ul class="signup-vcswitch">
+                            <li id="signup-vcswitch10" class="am-clickable focused" i18n="SIGNUP_VEHICLE_SCAN">Scan<span class="arrow-bluegray-down"></span></li>
+                            <li id="signup-vcswitch11" class="am-clickable" i18n="SIGNUP_VEHICLE_MANUALINPUT">Manual input<span class="arrow-bluegray-down"></span></li>
+                        </ul>
+                        <ul class="formline formline-lasticon">
+                            <li class="lasticonli"><span class="am-clickable icon-scan"></span></li>
+                            <li class="iconli">VIN</li>
+                            <li class="inputli"><input id="vin" name="vin" type="text" placeholder="VIN code" /></li>
+                        </ul>
+                        <p class="am-clickable how-findvin" i18n="SIGNUP_VEHICLE_FINDVIN">How do I find my VIN?  > </p>
+                        <span class="error-message"></span>
+                        <div class="addvehicle">
+                            <div><span class="am-clickable icon-addvehicle"></span></div>
+                            <p class="am-clickable" i18n="SIGNUP_VEHICLE_ADD">Add Vehicle</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div name="" class="am-placeholder am-clickable bottombutton" i18n="SIGNUP_VEHICLE_NEXT">Next</div>
+        </div>
+        <!--  page.signUp_vehicle -- end -->
+        
+        <!--  page.signUp_contact -- start -->
+        <div class="am-page signUp_contact" id="signUp_contact">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <span href="#" class="am-clickable right button nextbutton" i18n="SIGNUP_CONTACT_SK">SKIP</span>
+                <p i18n="SIGNUP_CONTACT_SIGN">SIGN UP</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <form>
+                        <header>
+                            <div class="signup-contactitle" i18n="SIGNUP_CONTACT_TITLE">Contact Details<span>(Optional)</span></div>
+                            <p i18n="SIGNUP_CONTACT_P">If you want to use Ford Owner Site service, please fill in below information. Or skip it and do it later.</p>
+                        </header>
+                        <div class="formcontent-contact">
+                            <ul>
+                                <li>
+                                    <span class="am-clickable button-arrow-down"></span>
+                                    <input type="text" id="title" readonly class="selectinput" list="titlelist" placeholder="Title" />
+                                    <datalist id="titlelist">
+                                        <option label="" value="Mr.">
+                                        <option label="" value="Mrs.">
+                                    </datalist>
+                                </li>
+                                <span class="error-message title"></span>
+<!--                                <li><input name="" id="nickname" type="text" placeholder="Nick Name"></li>-->
+<!--                                <span class="error-message nickname"></span>-->
+                                <li>
+                                    <span class="am-clickable button-arrow-down"></span>
+                                    <input type="text" id="state" readonly class="selectinput" list="statelist" placeholder="State" />
+                                    <datalist id="statelist">
+                                        <option label="" value="ACT">
+                                        <option label="" value="NSW">
+                                        <option label="" value="NT">
+                                        <option label="" value="QLD">
+                                        <option label="" value="SA">
+                                        <option label="" value="TAS">
+                                        <option label="" value="VIC">
+                                        <option label="" value="WA">
+                                    </datalist>
+                                </li>
+                                <span class="error-message state"></span>
+                                <li class="hidden_in_vn"><input name="" id="postcode" type="text" placeholder="Post Code"></li>
+                                <span class="error-message postcode"></span>
+                            </ul>
+                            <div class="inputnote">
+                                <p i18n="SIGNUP_CONTACT_NUMBER">Only one telephone number is mandatory. </p>
+                            </div>
+                            <ul>
+                                <li><input name="" id="mobile" type="number" placeholder="Mobile Phone Number"></li>
+                                <li><input name="" id="home" type="number" placeholder="Home Phone Number"></li>
+                                <li><input name="" id="work" type="number" placeholder="Work Phone Number"></li>
+                            </ul>
+                            <span class="error-message number"></span>
+                            <div class="selectblock">
+                                <div class="selectblock1">
+                                    <span class="am-clickable icon-checked"></span><p i18n="SIGNUP_CONTACT_ALL">By ticking this box I acknowledge I will receive news, offers and product details from Ford.</p>
+
+                                </div>
+
+                                <div class="choosecontent" i18n="SIGNUP_CONTACT_CUSTOMIZE">Customize the way we communicate with you. Pick and choose from the below to only receive information that's relevant to your world:</div>
+
+                                <div class="moreselects">
+                                     
+                                    <span class="arrow-gray-up"></span>
+                                    <div><span class="am-clickable icon-checked"></span><p i18n="SIGNUP_CONTACT_NEWS">News and Announcements</p></div>
+                                    <div><span class="am-clickable icon-checked"></span><p i18n="SIGNUP_CONTACT_SPECIAL">Special Offers and Discounts</p></div>
+                                    <div><span class="am-clickable icon-checked"></span><p i18n="SIGNUP_CONTACT_INFO">Information for Owners</p></div>
+                                    <div><span class="am-clickable icon-checked"></span><p i18n="SIGNUP_CONTACT_EVENT">Events & Activities Invitations</p></div>
+                                </div>
+                                <div class="selectblock2">
+                                    <p i18n="SIGNUP_CONTACT_OR">Or</p>
+                                    <span class="am-clickable icon-uncheck"></span><p i18n="SIGNUP_CONTACT_NO">I don't want to receive any communication.</p>
+                                </div>
+                            </div>
+                            <span class="error-message selects"></span>
+                        </div>
+                    </form>
+                    <div name="" class="am-clickable bottombuttonblue" i18n="SIGNUP_ACCOUNT_NEXT">Next</div>
+                    <div name="" class="am-clickable bottombuttongray" i18n="SIGNUP_CONTACT_SKIP">Skip</div>
+                </div>
+            </div>
+        </div>
+        <!--  page.signUp_contact -- end -->
+
+        <!--  page.signUp_finish -- start -->
+        <div class="am-page signUp_finish" id="signUp_finish">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                
+                <p i18n="SIGNUP_FINISH_SIGN">SIGN UP</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner am-backgroun-white">
+                    <form>
+                        <div class="formcontent">
+                            <ul>
+                                <li class="iconli" id="numberField"></li>
+                                <li class="inputli"><input id="captcha" type="number" maxlength="20" placeholder="Input number" onkeyup="value=value.replace(/[^\d]/g,'')" /></li>
+                                <li class="am-clickable picrefresh"><img class="captcha" id="captchaImg" src="" /></li>
+                            </ul> 
+                            <span class="error-message"></span>
+                        </div>
+                    </form>
+                    
+                    <div name="" class="am-clickable bottombutton" i18n="SIGNUP_FINISH_FINISH">Finish</div>
+
+                </div>
+            </div>
+            
+        </div>
+        <!--  page.signUp_finish -- end -->
+
+        <!--  page.dashboard_main -- start -->
+        <div class="am-page dashboard_main" id="dashboard_main">
+            <div class="am-header">
+                <span href="#" class="am-clickable menubutton left button"></span>
+                <p i18n="DASHBOARD_MAIN_TITLE">FORD <span class="highlight">OWNERS</span></p>
+            </div>
+                <div class="am-carrousel am-touchable mainCarr" id="dashboard_topCarrousel">
+                    <ul class="am-carrousel-inner">
+                        <li>
+                            <div class="background"><img src="src/dashboard-1.jpg" width="100%"></div>
+                            <div class="text">
+                                <div class="name"><!-- My Focus --></div>
+                                <div class="vinNo"><!-- VIN No. IFDXE45FX1HA86243 --></div>
+                            </div>
+                            <div class="panel">
+                                <table border="0" cellpadding="0" cellspacing="0">
+                                    <tbody>
+                                        <tr>
+                                            <td class="am-clickable notification">
+                                                <div class="line1" i18n="DASHBOARD_MAIN_MID1">Latest<br />Notification</div>
+                                                <div class="line3">
+                                                    <div class="left">2</div>
+                                                </div>
+                                            </td>
+                                            <td class="am-clickable reminder">
+                                                <div class="line1 icon2" i18n="DASHBOARD_MAIN_MID2">Service Reminder</div>
+                                                <div class="line2" i18n="DASHBOARD_MAIN_MID3">Create <span class="arrow"></span></div>
+                                                <div class="line3">
+                                                    <div class="left">2</div>
+                                                    <div class="right">JUN<br />2015</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="dot">
+                        <li class="selected"></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="loginBlock" id="dashboard_loginBlock">
+                    <img src="img/dashboard/loginbg.jpg" width="100%">
+                    <p class="line1" i18n="DASHBOARD_MAIN_UNLOGIN1">Sign up now. </p>
+                    <p class="line2" i18n="DASHBOARD_MAIN_UNLOGIN2">All your vehicle info in one place.</p>
+                    <div class="loginBtn" i18n="DASHBOARD_MAIN_UNLOGIN3">Login</div>
+                    <div class="signUpBtn" i18n="DASHBOARD_MAIN_UNLOGIN4">Sign Up</div>
+                </div>
+            <div class="am-body-wrap">
+                
+                <div class="am-body-inner">
+                    
+
+                    <div class="mainMenu">
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td class="am-clickable" id="td0">
+                                        <div class="img"><img src="img/dashboard/menuIcon1.png" /></div>
+                                        <div class="title" i18n="DASHBOARD_MAIN_DEALERLOCATOR">McInerney Ford</div>
+                                    </td>
+                                    <td class="am-clickable" id="td1">
+                                        <div class="img"><img src="img/dashboard/menuIcon2.png" /></div>
+                                        <div class="title" i18n="DASHBOARD_MAIN_CALLCENTER">Call<br />Center</div>
+                                    </td>
+                                    <td class="am-clickable vn_hidden" id="td2">
+                                        <div class="img"><img src="img/dashboard/menuIcon3.png" /></div>
+                                        <div class="title" i18n="DASHBOARD_MAIN_ROADASSIS">Roadside<br />Assist.</div>
+                                    </td>
+                                    <td class="am-clickable vn_shown" id="td2_1">
+                                        <div class="img"><img src="img/dashboard/menuIcon3-2.png" /></div>
+                                        <div class="title" i18n="DASHBOARD_MAIN_HOWTOVIDEOS">How-to<br />Videos</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="am-clickable" id="td3">
+                                        <div class="img"><img src="img/dashboard/menuIcon4.png" /></div>
+                                        <div class="title" i18n="DASHBOARD_MAIN_SERVICECHECKLIST">Service<br />Checklist</div>
+                                    </td>
+                                    <td class="am-clickable" id="td4">
+                                        <div class="img"><img src="img/dashboard/menuIcon5.png" /></div>
+                                        <div class="title" i18n="DASHBOARD_MAIN_KNOWLEDGECENTER">Knowledge<br />Center</div>
+                                    </td>
+                                    <td class="am-clickable" id="td5">
+                                        <div class="img"><img src="img/dashboard/menuIcon6-2.png" /></div>
+                                        <div class="title" i18n="DASHBOARD_MAIN_MORE">More</div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  page.dashboard_main -- end -->
+
+        <!--  page.dashboard_main_skjp -- start -->
+        <div class="am-page dashboard_main" id="dashboard_main_skjp">
+            <div class="am-header">
+                <span href="#" class="am-clickable menubutton left button"></span>
+                <p i18n="DASHBOARD_MAIN_TITLE">FORD <span class="highlight">OWNERS</span></p>
+            </div>
+                <div class="loginBlock" id="dashboard_loginBlock">
+                    <img src="img/dashboard/loginbg.jpg" width="100%">
+                </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="mainMenu">
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td class="am-clickable" id="td0">
+                                        <div class="img"><img src="img/dashboard/menuIcon1.png" /></div>
+                                        <div class="title" i18n="DASHBOARD_MAIN_DEALERLOCATOR">McInerney Ford</div>
+                                    </td>
+                                    <td class="am-clickable" id="td1">
+                                        <div class="img"><img src="img/dashboard/menuIcon2.png" /></div>
+                                        <div class="title" i18n="DASHBOARD_MAIN_CALLCENTER">Call<br />Center</div>
+                                    </td>
+                                    <td class="am-clickable kr_shown jp_hidden" id="td2">
+                                        <div class="img"><img src="img/dashboard/menuIcon3.png" /></div>
+                                        <div class="title" i18n="DASHBOARD_MAIN_ROADASSIS">Roadside<br />Assist.</div>
+                                    </td>
+                                    <td class="am-clickable kr_hidden jp_shown" id="td2_1">
+                                        <div class="img"><img src="img/dashboard/menuIcon5-1.png" /></div>
+                                        <div class="title" i18n="DASHBOARD_MAIN_DASHBOARD_INDICATORS">Dashboard<br />Indicators</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="am-clickable kr_shown jp_hidden" id="td3">
+                                        <div class="img"><img src="img/dashboard/menuIcon4.png" /></div>
+                                        <div class="title" i18n="DASHBOARD_MAIN_SERVICECHECKLIST">Service<br />Checklist</div>
+                                    </td>
+                                    <td class="am-clickable kr_hidden jp_shown" id="td3_1">
+                                        <div class="img"><img src="img/dashboard/menuIcon3-2.png" /></div>
+                                        <div class="title" i18n="DASHBOARD_MAIN_SYNC_PHRASEBOOK">SYNC<br />Phrasebook</div>
+                                    </td>
+                                    <td class="am-clickable kr_shown jp_hidden" id="td4">
+                                        <div class="img"><img src="img/dashboard/menuIcon5-1.png" /></div>
+                                        <div class="title" i18n="DASHBOARD_MAIN_DASHBOARD_INDICATORS">Dashboard<br />Indicators</div>
+                                    </td>
+                                    <td class="am-clickable kr_hidden jp_shown" id="td4_1">
+                                        <div class="img"><img src="img/dashboard/menuIcon5-2.png" /></div>
+                                        <div class="title" i18n="DASHBOARD_MAIN_HOWTOVIDEOS">Ford How-to<br />Videos</div>
+                                    </td>
+                                    <td class="am-clickable kr_hidden jp_shown" id="td5">
+                                        <div class="img"><img src="img/dashboard/menuIcon6-1.png" /></div>
+                                        <div class="title" i18n="DASHBOARD_MAIN_SYNC_SUPPORT">SYNC<br />Support</div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  page.dashboard_main -- end -->
+        <!--  page.profile_myVehicle -- start -->
+        <div class="am-page profile_myVehicle" id="profile_myVehicle">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <p i18n="PROFILE_MYVEHICLE_TITLE">PROFILE</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner vehicel_info_wrapper">
+                    <div class="tabs">
+                        <div class="h-seperator"></div>
+                        <div class="am-clickable active" i18n="PROFILE_MYVEHICLE_VEHICLE">My Vehicle</div>
+                        <div class="am-clickable" i18n="PROFILE_MYVEHICLE_ACCOUNT">My Account</div>
+                    </div>
+                    <div class="vehicel_info template">
+                        <div class="profile_image">
+                            <img src="src/dashboard-1.jpg" />
+                        </div>
+                        <div class="detail-list">
+                            <div class="inputLine am-clickable">
+                                <div class="inputLineLeftView" id="vehicleField"></div>
+                                <input class="am-activable inputLineMiddle vehiclename" type="text" readonly maxlength="20" value="My MUSTANG">
+                                <div class="nextbutton"></div>
+                            </div>
+                            <div class="inputLine">
+                                <div class="inputLineLeftView" id="vinField"></div>
+                                <input class="am-activable inputLineMiddle vin" type="text" readonly maxlength="20" value="IFDXE45FX1HA86243">
+                            </div>
+                            <ul>
+<!--                                 <li>
+                                    <div class="inputLine">
+                                        <div class="inputLineLeftView" id="warrantyNameField"></div>
+                                        <input class="am-activable inputLineMiddle" type="text" readonly maxlength="20" value="Warranty Service - 3 years or 10 miles">
+                                    </div>
+                                    <div class="inputLine">
+                                        <div class="inputLineLeftView" id="warrantyServiceField"></div>
+                                        <input class="am-activable inputLineMiddle" type="text" readonly maxlength="20" value="Warranty Service - 3 years or 10 miles">
+                                    </div>
+                                    <div class="inputLine">
+                                        <div class="inputLineLeftView" id="warrantyExpireField"></div>
+                                        <input class="am-activable inputLineMiddle" type="text" readonly maxlength="20" value="Warranty Exp. Date - 2015.09.10">
+                                        <span class="warning" i18n="PROFILE_MYVEHICLE_EXPIRE">Expire soon</span>
+                                    </div>
+                                </li> -->
+                            </ul>
+                            <div class="buttonLine">
+                                <div class="am-clickable roundbutton icon-delete"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicel_info template">
+                        <div class="profile_image">
+                            <img src="src/dashboard-1.jpg" />
+                        </div>
+                        <div class="detail-list">
+                            <div class="inputLine">
+                                <div class="inputLineLeftView" id="vehicleField"></div>
+                                <input class="am-activable inputLineMiddle" type="text" maxlength="20" value="My FOCUS">
+                                <div class="nextbutton"></div>
+                            </div>
+                            <div class="inputLine">
+                                <div class="inputLineLeftView" id="vinField"></div>
+                                <input class="am-activable inputLineMiddle" type="text" maxlength="20" value="IFDXE45FX1HA86243">
+                            </div>
+                            <div class="inputLine hide">
+                                <div class="inputLineLeftView" id="warrantyServiceField"></div>
+                                <input class="am-activable inputLineMiddle" type="text" maxlength="20" value="Warranty Service - 3 years or 10 miles">
+                            </div>
+                            <div class="inputLine hide">
+                                <div class="inputLineLeftView" id="warrantyExpireField"></div>
+                                <input class="am-activable inputLineMiddle" type="text" maxlength="20" value="Warranty Exp. Date - 2017.09.10">
+                                <!--<span class="warning">Expire soon</span>-->
+                            </div>
+                            <div class="buttonLine">
+                                <div class="am-clickable roundbutton icon-delete"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="am-clickable rectButtonWhite " i18n="PROFILE_MYVEHICLE_ADD">
+                        <div class="roundbutton icon-add"></div>
+                        Add Vehicle
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  page.profile_myVehicle -- end -->
+        <!--  page.profile_myAccount -- start -->
+        <div class="am-page profile_myAccount" id="profile_myAccount">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton-account left button"></span>
+                <span href="#" class="am-clickable right button nextbutton" i18n="PROFILE_MYACCOUNT_SAVE">SAVE</span>
+                <p i18n="PROFILE_MYACCOUNT_TITLE">PROFILE</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="tabs">
+                        <div class="h-seperator"></div>
+                        <div class="am-clickable" i18n="PROFILE_MYACCOUNT_VEHICLE">My Vehicle</div>
+                        <div class="am-clickable active" i18n="PROFILE_MYACCOUNT_INFOMATION">My Account</div>
+                    </div>
+
+                    <h1 i18n="PROFILE_MYACCOUNT_INFO">Account Information</h1>
+
+
+                    <div class="block">
+                        <div class="inputLine">
+                            <div class="inputLineLeftView" id="usernameField"></div>
+                            <input class="am-activable inputLineMiddle" id="username" type="text" readonly maxlength="20" value="jackwwong">
+                        </div>
+                        <div class="inputLine updatable">
+                            <div class="inputLineLeftView" id="passwordField"></div>
+                            <input class="am-activable inputLineMiddle" id="password" type="password" readonly maxlength="20" value="jackwwong" placeholder="Password">
+                            <div class="inputLineRightView am-clickable"></div>
+                        </div>
+                        <div class="inputLine">
+                            <div class="inputLineLeftView" id="emailAddressField"></div>
+                            <input class="am-activable inputLineMiddle" id="email" type="text" readonly maxlength="20" value="jackiewong@email.com">
+                        </div>
+                        <div class="inputLine">
+                            <div class="inputLineLeftView" id="firstNameField"></div>
+                            <input class="am-activable inputLineMiddle" id="firstname" type="text" readonly maxlength="20" value="Jackie">
+                        </div>
+                        <div class="inputLine">
+                            <div class="inputLineLeftView" id="lastNameField"></div>
+                            <input class="am-activable inputLineMiddle" id="lastname" type="text" readonly maxlength="20" value="Wong">
+                        </div>
+                    </div>
+                    <div class="block">
+                        <h1 i18n="PROFILE_MYACCOUNT_CONTACT">Contact Details</h1>
+                        <span class="textview" i18n="PROFILE_MYACCOUNT_COMPLETE">If you want to use Ford Owner Site service,<br />please complete below information.</span>
+
+                        <div class="inputLine inputLineDropDown">
+                            <div class="inputLineLeftView2" i18n="PROFILE_MYACCOUNT_TITLE">Title</div>
+                            <input class="inputLineMiddle2 am-clickable" id="title" type="text" readonly maxlength="20" placeholder="Title">
+                            <datalist id="titlelist">
+                                <option label="" value="Mr.">
+                                <option label="" value="Mrs.">
+                            </datalist>
+                            <div class="inputLineRightView am-clickable"></div>
+                        </div>
+                        <div class="inputLine updatable am-clickable" style="display: none">
+                            <div class="inputLineLeftView2" i18n="PROFILE_MYACCOUNT_NICKNAME">Nick Name</div>
+                            <input class="am-activable inputLineMiddle2" id="forum_nickname" type="text" readonly maxlength="20" placeholder="Nick Name">
+                            <div class="inputLineRightView am-clickable"></div>
+                        </div>
+                        <div class="inputLine inputLineDropDown am-clickable">
+                            <div class="inputLineLeftView2" i18n="PROFILE_MYACCOUNT_STATE">State</div>
+                            <input class="inputLineMiddle2 am-clickable" id="state" type="text" readonly maxlength="20" placeholder="State">
+                            <datalist id="statelist">
+                                <option label="" value="ACT">
+                                <option label="" value="NSW">
+                                <option label="" value="NT">
+                                <option label="" value="QLD">
+                                <option label="" value="SA">
+                                <option label="" value="TAS">
+                                <option label="" value="VIC">
+                                <option label="" value="WA">
+                            </datalist>
+                            <div class="inputLineRightView"></div>
+                        </div>
+                        <div class="inputLine updatable am-clickable">
+                            <div class="inputLineLeftView2" i18n="PROFILE_MYACCOUNT_CITY">City</div>
+                            <input class="am-activable inputLineMiddle2" id="city" type="text" readonly maxlength="20" placeholder="City">
+                            <div class="inputLineRightView am-clickable"></div>
+                        </div>
+                        <div class="inputLine updatable am-clickable">
+                            <div class="inputLineLeftView2" i18n="PROFILE_MYACCOUNT_STREET">Street</div>
+                            <input class="am-activable inputLineMiddle2" id="street" type="text" readonly maxlength="20" placeholder="Street">
+                            <div class="inputLineRightView am-clickable"></div>
+                        </div>
+                        <div class="inputLine updatable am-clickable hidden_in_vn">
+                            <div class="inputLineLeftView2" i18n="PROFILE_MYACCOUNT_POSTCODE">Post code</div>
+                            <input class="am-activable inputLineMiddle2" id="postal_code" type="text" readonly maxlength="20" value="00512" placeholder="Post Code">
+                            <div class="inputLineRightView am-clickable"></div>
+                        </div>
+                        <div class="commentsLine" i18n="PROFILE_MYACCOUNT_ONLY">
+                            Only one telephone number is mandatory.<br />Please include area code.
+                        </div>
+                        <div class="inputLine updatable am-clickable">
+                            <div class="inputLineLeftView2" i18n="PROFILE_MYACCOUNT_MOBILENO">Mobile No.</div>
+                            <input class="am-activable inputLineMiddle2" id="min" type="text" readonly maxlength="20" placeholder="Mobile Phone Number">
+                            <div class="inputLineRightView am-clickable"></div>
+                        </div>
+                        <div class="inputLine updatable am-clickable">
+                            <div class="inputLineLeftView2" i18n="PROFILE_MYACCOUNT_HOMENO">Home No.</div>
+                            <input class="am-activable inputLineMiddle2" id="home_phone" type="text" readonly maxlength="20" placeholder="Home Phone Number">
+                            <div class="inputLineRightView am-clickable"></div>
+                        </div>
+                        <div class="inputLine updatable am-clickable">
+                            <div class="inputLineLeftView2" i18n="PROFILE_MYACCOUNT_WORKNO">Work No.</div>
+                            <input class="am-activable inputLineMiddle2" id="work_phone" type="text" readonly maxlength="20" placeholder="Work Phone Number">
+                            <div class="inputLineRightView am-clickable"></div>
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <div class="selectblock">
+                            <div class="contactcontent" i18n="PROFILE_MYACCOUNT_HOWDOI">How do I want to be contacted?</div>
+                            <div class="selectblock1">
+                                <span class="am-clickable icon-uncheck"></span><p i18n="PROFILE_MYACCOUNT_IWISH">I wish to receive exclusive offers, news and product details from Ford.</p>
+                            </div>
+                            <div class="choosecontent" i18n="PROFILE_MYACCOUNT_CUSTOMIZE">Customize the way we communicate with you. Pick and choose from the below to only receive information that's relevant to your world:</div>
+                            <div class="moreselects">
+                                <span class="arrow-gray-up"></span>
+                                <div><span class="am-clickable icon-uncheck"></span><p i18n="PROFILE_MYACCOUNT_NEWS">News and Announcements</p></div>
+                                <div><span class="am-clickable icon-uncheck"></span><p i18n="PROFILE_MYACCOUNT_SPECIAL">Special Offers and Discounts</p></div>
+                                <div><span class="am-clickable icon-uncheck"></span><p i18n="PROFILE_MYACCOUNT_INFO">Information for Owners</p></div>
+                                <div><span class="am-clickable icon-uncheck"></span><p i18n="PROFILE_MYACCOUNT_EVENTS">Events & Activities Invitations</p></div>
+                            </div>
+                            <div class="selectblock2">
+                                <P i18n="PROFILE_MYACCOUNT_OR">Or</P>
+                                <span class="am-clickable icon-uncheck"></span><p i18n="PROFILE_MYACCOUNT_NO">No thank you. I don't want to receive any communication.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="am-clickable rectButton" i18n="PROFILE_MYACCOUNT_SAVE">Save</div>
+                </div>
+            </div>
+        </div>
+        <!--  page.profile_myAccount -- end -->
+        <!--  page.profile_updateInfo -- start -->
+        <div class="am-page profile_updateInfo" id="profile_updateInfo">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <span href="#" class="am-clickable right button nextbutton" i18n="PROFILE_UPDATEINFO_DO">DONE</span>
+                <p i18n="PROFILE_UPDATEINFO_UPDATE">UPDATE INFO</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="keboardCover"></div>
+                    <input id="key" type="hidden" />
+                    <div id="normalForm" class="form">
+                        <div>
+                            <label i18n="PROFILE_UPDATEINFO_CURRENTPOSTCODE">Current post code</label>
+                            <input class="am-activable" type="read" value="00512">
+                        </div>
+                        <div>
+                            <label i18n="PROFILE_UPDATEINFO_NEWPOSTCODE">New post code</label>
+                            <input class="am-activable" type="text" value="">
+                        </div>
+                    </div>
+                    <div id="passwordForm" class="form">
+                        <div>
+                            <label i18n="PROFILE_UPDATEINFO_CURRENTPOSTCODE">Current post code</label>
+                            <input class="am-activable" type="password" value="00512">
+                        </div>
+                        <div>
+                            <label i18n="PROFILE_UPDATEINFO_NEWPOSTCODE">New post code</label>
+                            <input class="am-activable" type="password" value="">
+                        </div>
+                        <div>
+                            <label i18n="PROFILE_UPDATEINFO_NEWPOSTCODE">New post code</label>
+                            <input class="am-activable" type="password" value="">
+                        </div>
+                    </div>
+                    <span class="error" i18n="PROFILE_UPDATEINFO_ERROR">Error message</span>
+
+                </div>
+            </div>
+            <div class="am-placeholder am-clickable rectButton" i18n="PROFILE_UPDATEINFO_DONE">Done</div>
+        </div>
+        <!--  page.profile_updateInfo -- end -->
+        <!--  page.contact_callCenter -- start -->
+        <div class="am-page contact_callCenter" id="contact_callCenter">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <p i18n="CONTACT_CALLCENTER_TITLE">CALL CENTER</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <ul class="mainList">
+                        <li>
+                            <div class="callCenterTitle">About Your Vehicle</div>
+                            <div class="callCenterPhoneNumber am-clickable">800-392-3673</div>
+                            <div class="callCenterDetail">Mon to Fri. 8:00AM - 8:00PM.<br />Sat. 8:00AM - 5:00PM</div>
+                        </li>
+                        <!-- <li>
+                            <div class="callCenterTitle">Warranty Question</div>
+                            <div class="callCenterPhoneNumber am-clickable">800-392-3672</div>
+                            <div class="callCenterDetail">Mon to Fri. 8:00AM - 8:00PM.<br />Sat. 8:00AM - 5:00PM</div>
+                        </li>
+                        <li>
+                            <div class="callCenterTitle">Maintenance Service</div>
+                            <div class="callCenterPhoneNumber am-clickable">800-392-3676</div>
+                            <div class="callCenterDetail">Mon to Fri. 8:00AM - 8:00PM.<br />Sat. 8:00AM - 5:00PM</div>
+                        </li>
+                        <li>
+                            <div class="callCenterTitle">Change Vehicle</div>
+                            <div class="callCenterPhoneNumber am-clickable">800-392-3674</div>
+                            <div class="callCenterDetail">Mon to Fri. 8:00AM - 8:00PM.<br />Sat. 8:00AM - 5:00PM</div>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--  page.contact_callCenter -- end -->
+        <!--  page.contact_roadsideAssistance -- start -->
+        <div class="am-page contact_roadsideAssistance" id="contact_roadsideAssistance">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <p i18n="CONTACT_ROADSIDEASSISTANCE_TITLE">ROADSIDE ASSIST.</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="warnblock">
+                        <div class="serviceList">
+                            <ul class="hourservice">
+                                <li class="thridli"><span class="am-clickable  icon-call"></span></li>
+                                <li class="firstli"></li>
+                                <li class="secondli">
+                                    <p class="hstitle">24 Hours Service</p>
+                                    <p class="hsphonenumber am-clickable">800-392-3671</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="rememtitle" i18n="CONTACT_ROADSIDEASSISTANCE_TEXT2"><span class="icon-warning"></span>Remember</div>
+                        <p class="rememinfo" i18n="CONTACT_ROADSIDEASSISTANCE_TEXT3">
+                            When calling Ford Roadside Assistance. They will need the driver license number or VIN number of your Ford. A cost for recovery services may supply if you do not have a valid contract for Roadside Assistance. Here is the information you may need: 
+                        </p>
+                        <div class="myinfo">
+                            <div id="assisMyVehicle">
+                                <span class="arrow-gray-up"></span>
+                                <p class="mititle" i18n="CONTACT_ROADSIDEASSISTANCE_TEXT4">My Vehicle</p>
+                                <div class="vehicelList">
+                                    <div class="midetail">
+                                        <span class="midetail-number">1</span>
+                                        <div>
+                                            <p class="name">My 2014 Mustang</p>
+                                            <p class="vin">VIN No. IFDXE45FX1HA86243</p>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="midetail graybottomline">
+                                        <span class="midetail-number">2</span>
+                                        <div>
+                                            <p>My 2013 Focus</p>
+                                            <p>VIN No. IFDXE45FX1HA86243</p>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div id="assisMyPosition">
+                                <p class="mititle" i18n="CONTACT_ROADSIDEASSISTANCE_TEXT5">My Current Location</p>
+                                <div class="midetail marginbottom0">
+                                    <span class="midetail-icon icon-locationgray"></span>
+                                    <div>
+                                        <p class="addressText">1601 El Camino Real, Red Wood City 94063</p>
+                                    </div>
+                                    <div id='mapDivHidden' style="position:relative; width:0%; height:0px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <p class="FRAintroduce">When calling Ford Roadside Assistance. They will need the VIN number of your Ford. A cost for revovery services may supply if you do not have avalid contract for Roadside Assistance.</p>
+                    <p class="FRAtitle">My Vehicel</p>
+                    <div class="FRAinfoblock">
+                        <div class="graybottomline2">
+                            <span class="FRAinfo-number">1</span>
+                            <p>My 2014 Mustang</p>
+                            <p>VIN No. IFDXE45FX1HA86243</p>
+                        </div>
+                        <div>
+                            <span class="FRAinfo-number">2</span>
+                            <p>My 2013 Focus</p>
+                            <p>VIN No. IFDXE45FX1HA86243</p>
+                        </div>
+                    </div>
+                    <p class="FRAtitle">My Location</p>
+                    <div class="FRAinfoblock">
+                        <div>
+                            <span class="FRAinfo-icon icon-locationblue"></span>
+                            <p>1601 El Camino Real, Red Wood City 94063</p>
+                        </div>
+                    </div>
+                    <div class="graybottomline3"></div>
+                    <div class="hourservice">
+                        <span class="am-clickable icon-call hsicon"></span>
+                        <p class="hstitle">24 hours service</p>
+                        <p class="hsnumber">800-999-1111</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!--  page.contact_roadsideAssistance -- end -->
+        <!--  page.notification_list -- start -->
+        <div class="am-page notification_list" id="notification_list">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <span href="#" class="am-clickable right button searchbutton"></span>
+                <span href="#" class="am-clickable right button filterbutton"></span>
+                <p i18n="NOTIFICATIONS">NOTIFICATION</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+
+                </div>
+               
+            </div>
+            <!--  page.notification_list search -- start -->
+            <div class="popbox">
+                <div class="searchpopbox" style="display: none">
+                    <span class="arrow-white-up"></span>
+                    <div class="inputbox">
+                        <span class="icon-clear"></span>
+                        <input class="am-activable" type="text">
+                    </div>
+                    <ul class="searchresults"></ul>
+                </div>
+            </div>
+            <!--  page.notification_list search-- end -->
+            <!--  page.notification_list filter -- start -->
+            <div class="popbox">
+                <div class="filterpopbox" style="display: none">
+                    <span class="arrow-white-up"></span>
+                    <ul>
+                        <li class="am-clickable" data-filter="All">
+                            <p i18n="NOTIFICATIONS_SEARCH_ALL">All</p>
+                        </li>
+                        <li class="am-clickable" data-filter="Special">
+                            <span class="icon-specialoffer"></span>
+                            <p i18n="NOTIFICATIONS_SEARCH_SPECIALS">Special Offer</p>
+                        </li>
+                        <li class="am-clickable" data-filter="Fav">
+                            <span class="icon-stargray"></span>
+                            <p i18n="NOTIFICATIONS_SEARCH_FAV">My Fav.</p>
+                        </li>
+                        <li class="am-clickable borderbottom0" data-filter="Unread">
+                            <span><canvas class="icon-graydot"></canvas></span>
+                            <p i18n="NOTIFICATIONS_SEARCH_UNREAD">Unread</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+             
+            <!--  page.notification_list filter-- end -->
+        </div>
+        <!--  page.notification_list -- end -->
+        <!--  page.notification_detail -- start -->
+        <div class="am-page notification_detail" id="notification_detail">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <p i18n="NOTIFICATIONS_DETAIL">Notification Detail</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                </div>
+            </div>
+        </div>
+        <!--  page.notification_detail -- end -->
+        <!--  page.knowledge_indicatorIcons -- start -->
+        <div class="am-page knowledge_indicatorIcons" id="knowledge_indicatorIcons">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <p i18n="KNOWLEDGE_CENTRE">KNOWLEDGE CENTER</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="tabs item4 line2">
+                        <div class="h-seperator"></div>
+                        <div class="h-seperator"></div>
+                        <div class="h-seperator"></div>
+                        <div class="am-clickable active" i18n="KNOWLEDGE_CENTRE_INDICATORS">Indicator<br />icons</div>
+                        <div class="am-clickable" i18n="KNOWLEDGE_CENTRE_OWNERMANUAL">Owner<br />Manual</div>
+                        <div class="am-clickable" i18n="KNOWLEDGE_CENTRE_SYNCPHRASEBOOK">SYNC<br />Phrasebook</div>
+                        <div class="am-clickable" i18n="KNOWLEDGE_CENTRE_MORE">more</div>
+                    </div>
+                    <div class="am-clickable loginAlert-forlist">
+                        <span class="button-next-white"></span>
+                        <p i18n="KNOWLEDGE_CENTRE_LOGIN_HINT">Please Login / Sign in to see complete content</p>
+                    </div>
+                    <div class="commoniconslabel">
+                        <span class="icon-vehicle-gray"></span>
+                        <p i18n="KNOWLEDGE_CENTRE_COMMON_ICONS">Common icons for all Ford vehicles</p>
+                    </div>
+                    <div class="content_wrapper">
+                        <div class="inputLine  inputLineDropDown">
+                            <div class="inputLineLeftView" id="vehicleField"></div>
+                            <input class="am-activable inputLineMiddle" type="text" maxlength="20" value="All icons" readonly="readonly">
+                            <div class="inputLineRightView am-clickable"></div>
+                        </div>
+                        <div class="icons">
+                        	
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  page.knowledge_indicatorIcons -- end -->
+        <!--  page.knowledge_indicatorIcons -- start -->
+        <div class="am-page knowledge_indicatorIcons" id="knowledge_indicatorIcons_KR">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <p i18n="KNOWLEDGE_CENTRE">Indicator Icons</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="content_wrapper">
+                        <div class="icons">
+                            
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  page.knowledge_indicatorIcons -- end -->
+        <!--  page.knowledge_indicatorIcons -- start -->
+        <div class="am-page knowledge_indicatorIcons" id="knowledge_indicatorIcons_JP">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <p i18n="KNOWLEDGE_CENTRE">KNOWLEDGE CENTER</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="tabs item3 line2">
+                        <div class="h-seperator"></div>
+                        <div class="h-seperator"></div>
+                        <div class="am-clickable active" i18n="KNOWLEDGE_CENTRE_INDICATORS">Indicator<br />icons</div>
+                        <div class="am-clickable" i18n="KNOWLEDGE_CENTRE_SYNCPHRASEBOOK">SYNC<br />Phrasebook</div>
+                        <div class="am-clickable" i18n="KNOWLEDGE_CENTRE_MORE">more</div>
+                    </div>
+                    <div class="content_wrapper">
+                        <div class="icons">
+                            
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  page.knowledge_indicatorIcons -- end -->
+        <!--  page.knowledge_indicatorDetail -- start -->
+        <div class="am-page knowledge_indicatorDetail" id="knowledge_indicatorDetail">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <p i18n="KNOWLEDGE_CENTRE_INDICATOR_DETAIL">INDICATOR DETAIL</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="indicatorDetailTitle" id="iconDetalTitle"></div>
+                    <div class="indicatorDetailIcon" id="iconDetalImg"></div>
+                    <!--<div class="indicatorDetailSubtitle indicatorDetailRedIcon">Follow the correction procedure</div>
+                    <div class="indicatorDetailText" id="procedureText"></div>-->
+                    <!--<div class="indicatorDetailSubtitle indicatorDetailOrangeIcon">Indicator meaning</div>
+                    <div class="indicatorDetailText"></div>
+                    <div class="indicatorDetailSubtitle indicatorDetailGreenIcon">You should do</div>
+                    <div class="indicatorDetailText"></div>-->
+                </div>
+            </div>
+        </div>
+        <!--  page.knowledge_indicatorDetail -- end -->
+        <!--  page.knowledge_ownerManual -- start -->
+        <div class="am-page knowledge_ownerManual" id="knowledge_ownerManual">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <p i18n="KNOWLEDGE_CENTRE">KNOWLEDGE CENTER</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="tabs item4 line2">
+                        <div class="h-seperator"></div>
+                        <div class="h-seperator"></div>
+                        <div class="h-seperator"></div>
+                        <div class="am-clickable" i18n="KNOWLEDGE_CENTRE_INDICATORS">Indicator<br />icons</div>
+                        <div class="am-clickable active" i18n="KNOWLEDGE_CENTRE_OWNERMANUAL">Owner<br />Manual</div>
+                        <div class="am-clickable" i18n="KNOWLEDGE_CENTRE_SYNCPHRASEBOOK">SYNC<br />Phrasebook</div>
+                        <div class="am-clickable" i18n="KNOWLEDGE_CENTRE_MORE">more</div>
+                    </div>
+                    <div class="am-clickable loginAlert-forlist">
+                        <span class="button-next-white"></span>
+                        <p i18n="KNOWLEDGE_CENTRE_LOGIN_HINT">Please Login / Sign in to see complete content</p>
+                    </div>
+                    <div class="content_wrapper">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  page.knowledge_ownerManual -- end -->
+        <!--  page.knowledge_phasebook -- start -->
+        <div class="am-page knowledge_phasebook" id="knowledge_phasebook">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <p i18n="KNOWLEDGE_CENTRE">KNOWLEDGE CENTER</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="tabs item4 line2">
+                        <div class="h-seperator"></div>
+                        <div class="h-seperator"></div>
+                        <div class="h-seperator"></div>
+                        <div class="am-clickable" i18n="KNOWLEDGE_CENTRE_INDICATORS">Indicator<br />icons</div>
+                        <div class="am-clickable" i18n="KNOWLEDGE_CENTRE_OWNERMANUAL">Owner<br />Manual</div>
+                        <div class="am-clickable active" i18n="KNOWLEDGE_CENTRE_SYNCPHRASEBOOK">SYNC<br />Phrasebook</div>
+                        <div class="am-clickable" i18n="KNOWLEDGE_CENTRE_MORE">more</div>
+                    </div>
+                    <div class="content_wrapper">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  page.knowledge_phasebook -- end -->
+        <!--  page.knowledge_phasebook -- start -->
+        <div class="am-page knowledge_phasebook" id="knowledge_phasebook_JP">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <p i18n="KNOWLEDGE_CENTRE">KNOWLEDGE CENTER</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="tabs item3 line2">
+                        <div class="h-seperator"></div>
+                        <div class="h-seperator"></div>
+                        <div class="am-clickable" i18n="KNOWLEDGE_CENTRE_INDICATORS">Indicator<br />icons</div>
+                        <div class="am-clickable active" i18n="KNOWLEDGE_CENTRE_SYNCPHRASEBOOK">SYNC<br />Phrasebook</div>
+                        <div class="am-clickable" i18n="KNOWLEDGE_CENTRE_MORE">more</div>
+                    </div>
+                    <div class="content_wrapper">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  page.knowledge_phasebook -- end -->
+        <!--  page.knowledge_more -- start -->
+        <div class="am-page knowledge_phasebook" id="knowledge_more">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <p i18n="KNOWLEDGE_CENTRE">KNOWLEDGE CENTER</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="tabs item4 line2">
+                        <div class="h-seperator"></div>
+                        <div class="h-seperator"></div>
+                        <div class="h-seperator"></div>
+                        <div class="am-clickable" i18n="KNOWLEDGE_CENTRE_INDICATORS">Indicator<br />icons</div>
+                        <div class="am-clickable" i18n="KNOWLEDGE_CENTRE_OWNERMANUAL">Owner<br />Manual</div>
+                        <div class="am-clickable" i18n="KNOWLEDGE_CENTRE_SYNCPHRASEBOOK">SYNC<br />Phrasebook</div>
+                        <div class="am-clickable active" i18n="KNOWLEDGE_CENTRE_MORE">more</div>
+                    </div>
+                    <div class="content_wrapper">
+                        <div class="list-item am-clickable">
+                            <div class="title-item">
+                                <div class="icon voice"></div>
+                                <div class="title" i18n="KNOWLEDGE_CENTRE_MORE_SYNCSUPPORT">SYNC Support</div>
+                                <div class="button"></div>
+                            </div>
+                        </div>
+                        <div class="list-item am-clickable">
+                            <div class="title-item">
+                                <div class="icon play"></div>
+                                <div class="title" i18n="KNOWLEDGE_CENTRE_MORE_VIDEOS">Ford How-to Videos</div>
+                                <div class="button"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  page.knowledge_more -- end -->
+        <!--  page.knowledge_more -- start -->
+        <div class="am-page knowledge_phasebook" id="knowledge_more_JP">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <p i18n="KNOWLEDGE_CENTRE">KNOWLEDGE CENTER</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="tabs item3 line2">
+                        <div class="h-seperator"></div>
+                        <div class="h-seperator"></div>
+                        <div class="am-clickable" i18n="KNOWLEDGE_CENTRE_INDICATORS">Indicator<br />icons</div>
+                        <div class="am-clickable" i18n="KNOWLEDGE_CENTRE_SYNCPHRASEBOOK">SYNC<br />Phrasebook</div>
+                        <div class="am-clickable active" i18n="KNOWLEDGE_CENTRE_MORE">more</div>
+                    </div>
+                    <div class="content_wrapper">
+                        <div class="list-item am-clickable">
+                            <div class="title-item">
+                                <div class="icon voice"></div>
+                                <div class="title" i18n="KNOWLEDGE_CENTRE_MORE_SYNCSUPPORT">SYNC Support</div>
+                                <div class="button"></div>
+                            </div>
+                        </div>
+                        <div class="list-item am-clickable">
+                            <div class="title-item">
+                                <div class="icon play"></div>
+                                <div class="title" i18n="KNOWLEDGE_CENTRE_MORE_VIDEOS">Ford How-to Videos</div>
+                                <div class="button"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  page.knowledge_more -- end -->
+        <!--  page.dealer_listview -- start -->
+        <div class="am-page dealer_listview" id="dealer_listview">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <span href="#" class="am-clickable right button searchbutton"></span>
+                <span href="#" class="am-clickable right button filterbutton"></span>
+                <p i18n="DEALER_LOCATOR_TITLE">DEALER LOCATOR</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="round_tab">
+                        <div class="tab_button active am-clickable list">
+                            <label i18n="DEALER_LOCATOR_LIST">List</label>
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="tab_button am-clickable map">
+                            <label i18n="DEALER_LOCATOR_MAP">Map</label>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <div class="list clas_dealerList">
+
+                    </div>
+	                <div class="am-loadmore" style="display: none;">
+                        <span i18n="NEXT_5_RECORDS">Next 5 Records...</span>
+	                </div>
+                </div>
+            </div>
+            <!--  page.dealer_listview filter -- start -->
+            <div class="popbox">
+                <div class="filterpopbox" style="display: none">
+                    <span class="arrow-white-up"></span>
+                    <ul>
+                        <li class="am-clickable">
+                            <p i18n="DEALER_LOCATOR_ALL">ALL</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--  page.dealer_listview filter-- end -->
+        </div>
+        <!--  page.dealer_listview -- end -->
+        <!--  page.dealer_mapview -- start -->
+        <div class="am-page dealer_listview dealer_mapview" id="dealer_mapview">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <span href="#" class="am-clickable right button searchbutton"></span>
+                <span href="#" class="am-clickable right button filterbutton"></span>
+                <p i18n="DEALER_LOCATOR_TITLE">DEALER LOCATOR</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="map">
+                        <!-- <img src="img/dealerlocator/map.png" /> -->
+                        <div id='mapDiv' style="position:relative; width:100%; height:400px;"></div>
+
+                        <div class="round_tab">
+                            <div class="tab_button am-clickable list">
+                                <label i18n="DEALER_LOCATOR_LIST">List</label>
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="tab_button active am-clickable map">
+                                <label i18n="DEALER_LOCATOR_MAP">Map</label>
+                                <div class="arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list clas_dealerInfo">
+                        <div class="am-clickable button left"></div>
+                        <div class="list-item">
+                            <div class="favour-tag"></div>
+                            <div class="distance-bullet">
+                                <div class="number">1</div>
+                                <div class="distance">2.5km</div>
+                            </div>
+                            <div class="locator-detail">
+                                <div class="title">Mclnerney Ford</div>
+                                <div class="buttons">
+                                    <div class="button am-clickable clas_callDealer" data-phone="">
+                                        <div class="roundbutton icon-phone"></div>
+                                        <div class="button-text" i18n="DEALER_LOCATOR_ACTION_CALL">Call</div>
+                                    </div>
+                                    <div class="button am-clickable dealerEmail">
+                                        <div class="roundbutton icon-email"></div>
+                                        <div class="button-text" i18n="DEALER_LOCATOR_ACTION_EMAIL">Email</div>
+                                    </div>
+                                    <div class="button am-clickable clas_dealerDetailBtn" data-index="">
+                                        <div class="roundbutton icon-info"></div>
+                                        <div class="button-text" i18n="DEALER_LOCATOR_ACTION_DETAILS">Detail</div>
+                                    </div>
+                                </div>
+                                <div class="details">
+                                    <span class="contact">02-9331 5000  |  reception@cityford.com.au</span>
+                                    <br />
+                                    <span class="address">811 Elizabeth St Zetland NSW 2017</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="am-clickable button right"></div>
+                    </div>
+                </div>
+            </div>
+            <!--  page.dealer_mapview filter -- start -->
+            <div class="popbox">
+                <div class="filterpopbox" style="display: none">
+                    <span class="arrow-white-up"></span>
+                    <ul>
+                        <li class="am-clickable">
+                            <p i18n="DEALER_LOCATOR_ALL">ALL</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--  page.dealer_mapview filter-- end -->
+        </div>
+        <!--  page.dealer_mapview -- end -->
+        <!--  page.dealer_search -- start -->
+        <div class="am-page dealer_search" id="dealer_search">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <p i18n="DEALER_SEARCH_TITLE">SEARCH DEALER</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <form>
+                        <header>
+                            <p i18n="DEALER_SEARCH_CONTENT_TITLE">Find your Ford dealer by location or by dealer name.</p>
+                        </header>
+                        <div class="formcontent">
+                            <!--
+                                <p class="label">Region</p>
+                                <ul class="formline">
+                                    <li class="am-clickable button-arrow-down"></li>
+                                    <li class="iconli icon-locationblue"></li>
+                                    <li class="inputli"><input type="text" readonly class="selectinput" value="Please select" /></li>
+                                </ul>
+                                <p class="label">Province</p>
+                                <ul class="formline">
+                                    <li class="am-clickable button-arrow-down"></li>
+                                    <li class="iconli icon-locationblue"></li>
+                                    <li class="inputli"><input type="text" readonly class="selectinput" value="Please select" /></li>
+                                </ul>
+
+                                <p class="or">or</p>
+                            -->
+                            <p class="label" i18n="DEALER_SEARCH_LABEL_LOCATION">Your Location (Zip or City)</p>
+                            <ul class="formline input">
+                                <li class="iconli icon-locationblue"></li>
+                                <li class="inputli"><input type="text" id="locationCode" class="input_gray" value="" /></li>
+                            </ul>
+                            <p class="or" i18n="DEALER_SEARCH_LABEL_OR">or</p>
+
+                            <p class="label" i18n="DEALER_SEARCH_LABEL_NAME">Dealer Name</p>
+                            <ul class="formline input">
+                                <li class="iconli icon-dealername"></li>
+                                <li class="inputli"><input type="text" id="dealernameCode" class="input_gray" value="" /></li>
+                            </ul>
+
+                            <p class="label" i18n="DEALER_SEARCH_TH_NOTE"></p>
+
+
+                        </div>
+                    </form>
+                    <div class="am-clickable button bottombutton" i18n="DEALER_SEARCH_BUTTON">Search</div>
+                </div>
+            </div>
+        </div>
+        <!--  page.dealer_search -- end -->
+        <!--  page.dealer_search -- start -->
+        <div class="am-page dealer_search" id="dealer_search_JP">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <p i18n="DEALER_SEARCH_TITLE">SEARCH DEALER</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <form>
+                        <header>
+                            <p i18n="DEALER_SEARCH_CONTENT_TITLE">Find your Ford dealer by location or by dealer name.</p>
+                        </header>
+                        <div class="formcontent">
+                            <p class="label" i18n="DEALER_SEARCH_LABEL_LOCATION">Your Location (Zip or City)</p>
+                            <ul class="formline input">
+                                <li class="iconli icon-locationblue"></li>
+                                <li class="inputli"><input type="text" readonly id="locationCode" class="input_gray" value="" placeholder="地域を選択する"/></li>
+                            </ul>
+                            <p class="label" i18n="DEALER_SEARCH_LABEL_LOCATION_CITY">都道府県</p>
+                            <ul class="formline input">
+                                <!-- <li class="iconli icon-locationblue"></li> -->
+                                <li class="inputli"><input type="text" readonly id="locationCodeCity" class="input_gray" value="" placeholder="都道府県を選択する" /></li>
+                            </ul>
+
+                            <p class="or" i18n="DEALER_SEARCH_LABEL_OR">or</p>
+
+                            <p class="label" i18n="DEALER_SEARCH_LABEL_NAME">Dealer Name</p>
+                            <ul class="formline input">
+                                <li class="iconli icon-dealername"></li>
+                                <li class="inputli"><input type="text" id="dealernameCode" class="input_gray" value="" /></li>
+                            </ul> 
+
+
+                        </div>
+                    </form>
+                    <div class="am-clickable button bottombutton" i18n="DEALER_SEARCH_BUTTON">Search</div>
+                </div>
+            </div>
+        </div>
+        <!--  page.dealer_search -- end -->
+        <!--  page.dealer_detail -- start -->
+        <div class="am-page dealer_detail" id="dealer_detail">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <p i18n="DEALER_LOCATOR_DETAIL_TITLE">DEALER DETAIL</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="map">
+                        <!--                         <img src="img/dealerlocator/map.png" /> -->
+                        <div id='id_detail_mapDiv' style="position:relative; width:100%; height:200px;"></div>
+                    </div>
+                    <div class="locator-detail clas_dealerDetail">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--  page.dealer_detail -- end -->
+        <!--  page.service_checklist -- start -->
+        <div class="am-page service_checklist" id="service_checklist">
+        </div>
+
+        <div class="am-page service_checklist" id="service_checklist_KR">
+        </div>
+
+        <div class="am-page service_checklist_au" id="service_checklist_au">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <p i18n="CHECKLIST_AU_TITLE">SERVICING MY FORD</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="content_wrapper">
+                        <div class="list-item am-clickable">
+                            <div class="title-item bookService">
+                                <div class="icon book"></div>
+                                <div class="title" i18n="CHECKLIST_AU_BOOK_SERVICE">Book Service</div>
+                                <div class="button"></div>
+                            </div>
+                            <div class="disclaimer" i18n="CHECKLIST_AU_BOOK_SERVICE_DISCLAIMER">
+                                Book a service appointment with your local Ford dealer.
+                            </div>
+                        </div>
+                        <div class="list-item am-clickable" style="display: none;">
+                            <div class="title-item priceCalculator">
+                                <div class="icon calculator"></div>
+                                <div class="title" i18n="CHECKLIST_AU_PRICE_CALCULATOR">Price Calculator</div>
+                                <div class="button"></div>
+                            </div>
+                            <div class="disclaimer"  i18n="CHECKLIST_AU_PRICE_CALCULATOR_DISCLAIMER">
+                                Find out approximately how much your service will cost.
+                            </div>
+                        </div>
+                        <div class="list-item am-clickable">
+                            <div class="title-item setReminder">
+                                <div class="icon reminder"></div>
+                                <div class="title" i18n="CHECKLIST_AU_SET_REMINDER">Set My Calendar Reminder</div>
+                                <div class="button"></div>
+                            </div>
+                            <div class="disclaimer"  i18n="CHECKLIST_AU_SET_REMINDER_DISCLAIMER">
+                                Set reminders and receive notifications via your cellphone’s calendar. 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  page.service_checklist -- end -->
+        <!--  page.service_reminderList -- start -->
+        <div class="am-page service_reminderList" id="service_reminderList">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <p i18n="SERVICE_REMINDER_TITLE">SERVICE REMINDER</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="createReminderBtn am-clickable" i18n="SERVICE_REMINDER_CREATE">Create Reminder</div>
+                    <ul class="reminderAvailable"></ul>
+                    <div class="Overdue" i18n="SERVICE_REMINDER_OVERDUE">Overdue</div>
+                    <ul class="reminderOverdue"></ul>
+                </div>
+            </div>
+        </div>
+        <!--  page.service_reminderList -- end -->
+        <!--  page.service_createReminder -- start -->
+        <div class="am-page service_createReminder" id="service_createReminder">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <p i18n="CREATE_REMINDER_TITLE">CREATE REMINDER</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="datepicker"></div>
+                    <div class="subtitle" i18n="CREATE_REMINDER_CHECK_VEHICLE">Check Vehicle</div>
+                    <div class="inputLine inputLineDropDown am-clickable">
+                        <div class="inputLineLeftView" id="myVehicle"></div>
+                        <div class="inputLineMiddle"></div>
+                        <div class="inputLineRightView" style="display: none;"></div>
+                    </div>
+                    <div class="subtitle noteTitle" i18n="CREATE_REMINDER_NOTE">Note</div>
+                    <textarea class="noteInput" rows=4></textarea>
+                </div>
+            </div>
+            <div class="am-clickable rectButton" i18n="CREATE_REMINDER_SAVE">Save</div>
+        </div>
+        <!--  page.service_createReminder -- end -->
+        <!--  page.service_reminderDetail -- start -->
+        <div class="am-page service_reminderDetail" id="service_reminderDetail">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <p i18n="SERVICE_REMINDER_TITLE">SERVICE REMINDER</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="reminderDetailTitle">
+                        <div class="am-clickable editButton"></div>
+                        <div class="am-clickable deleteButton"></div>
+                    </div>
+                    <div class="reminderDetailLogo"></div>
+                    <div class="reminderDetailDate">18 Nov 2014</div>
+                    <div class="reminderDetailList" id="myCar">My 2014 Mustang</div>
+                    <div class="reminderDetailList" id="myVin">IFDXE451HA86423</div>
+                    <div class="reminderDetailList" id="myDetail">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam nist quis ex eulsmod tempus. In pharetra ligula eu leo aliquet posuere.</div>
+                    <div class="reminderDetailNote" i18n="SERVICE_REMINDER_TIPS">This reminder you requested that your Ford Mustang is due for a service appointment. You should visit or contract your Ford dealer to have this Ford recommended service completed inthe near future.</div>
+                    
+                </div>
+            </div>
+            <div class="am-clickable rectButton" i18n="SERVICE_REMINDER_FIND_DEALER">Find Dealer</div>
+        </div>
+        <!--  page.service_reminderDetail -- end -->
+        <!--  page.setting_main -- start -->
+        <div class="am-page setting_main" id="setting_main">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <p i18n="SETTING_MAIN_TITLE">SETTING</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <ul>
+                        <li>
+                            <span class="am-clickable lasticon"></span>
+                            <p i18n="SETTING_MAIN_ABOUT">About</p>
+                        </li>
+                        <li>
+                            <span class="am-clickable lasticon"></span>
+                            <p i18n="SETTING_MAIN_LEGAL">Ford Legal Statement</p>
+                        </li>
+                        <li>
+                            <span class="am-clickable lasticon"></span>
+                            <p i18n="SETTING_MAIN_PRIVACY">Privacy Policy</p>
+                        </li>
+                        <li>
+                            <span class="am-clickable lasticon button-arrow-down"></span>
+                            <input type="text" readonly value="English" />
+                            <p i18n="SETTING_MAIN_LANGUAGE">Language Setting</p>
+                        </li>
+                        <li>
+                            <div class="am-clickable switchbutton-on floatright "><span class="switch"></span></div>
+                            <p i18n="SETTING_MAIN_PUSH">Push Notification</p>
+                        </li>
+                        <!--
+                        <li>
+                            <div class="am-clickable switchbutton-off floatright "><span class="switch"></span></div>
+                            <p>Push Notification</p>
+                        </li>
+                        -->
+                        <li style="display: none;">
+                            <span class="am-clickable lasticon"></span>
+                            <p>QR code for sharing</p>
+                        </li>
+
+                        <li>
+                            <span class="am-clickable lasticon"></span>
+                            <p i18n="SETTING_MAIN_LOGOUT">Log Out</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--  page.setting_main -- end -->
+        <!--  page.setting_about -- start -->
+        <div class="am-page setting_about" id="setting_about">
+            <div class="am-header">
+                <span href="#" class="am-clickable right button"><img src="img/icon-clear.png" width="13" height="13" alt="Close"></span>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="logo"></div>
+                    <p class="title"></p>
+                    <p class="version" i18n="SETTING_ABOUT_VERSION">Version 1.011.289</p>
+                    <p class="aboutdetail" i18n="SETTING_ABOUT_ABOUTDETAIL">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices lacus et ultricies rhoncus. Integer in dui diam. Vestibulum ligula lorem, maximus eget laoreet eget, ultrices in mi. Donec ut viverra quam, vel volutpat sapien. Vivamus blandit velit id libero dapibus, id mattis quam tincidunt. </p>
+                    <p class="ownership" i18n="SETTING_ABOUT_OWNERSHIP">© 2014 Ford Motor Company of Thailand Limited</p>
+                    
+                </div>
+            </div>
+            <div class="am-placeholder am-clickable bottombutton" i18n="SETTING_ABOUT_CHECK">Check for Updates</div>
+        </div>
+        <!--  page.setting_about -- end -->
+        <!--  page.setting_qrcode -- start -->
+        <div class="am-page setting_qrcode" id="setting_qrcode">
+            <div class="am-header">
+                <span href="#" class="am-clickable right button"><img src="img/icon-clear.png" width="13" height="13" alt="Close"></span>
+                <p>QR CODE SHARING</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <p class="shareto">Share to your friend</p>
+                    <div class="fordowner"></div>
+                    <div class="qrcode"></div>
+                    <ul class="sharepath">
+                        <li class="facebook">
+                            <span class="am-clickable"></span>
+                            <p>Facebook</p>
+                        </li>
+                        <li class="twitter">
+                            <span class="am-clickable"></span>
+                            <p>Twitter</p>
+                        </li>
+                        <li class="weChat">
+                            <span class="am-clickable"></span>
+                            <p>WeChat</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--  page.setting_qrcode -- end -->
+        <!--  page.recall_main -- start -->
+        <div class="am-page recall_main" id="recall_main">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <p i18n="RECALL_LOOKUP">RECALL LOOKUP</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                </div>
+            </div>
+        </div>
+        <!--  page.recall_main -- end -->
+        <!--  page.common_reload -- start -->
+        <div class="am-page common_reload" id="common_reload">
+            <div class="am-header">
+                <span href="#" class="am-clickable left button"></span>
+                <p>CONNECTION ERROR</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="reloadblock">
+                        <div><span class="am-clickable icon-reload"></span></div>
+                        <p>Tap to Reload</p>
+                    </div>
+                    <div class="loadingline">
+                        <div class="passed" style="width:40%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  page.common_reload -- end -->
+        <!--  page.common_oops -- start -->
+        <div class="am-page common_oops" id="common_oops">
+            <div class="am-header">
+                <span href="#" class="am-clickable right button"><img src="img/icon-clear.png" width="13" height="13" alt="Close"></span>
+                <p i18n="ERROR_DEFAULT_TITLE">ERROR</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="oopsblock">
+                        <span class="icon-warnblack"></span>
+                        <p class="oopsfonts"></p>
+                        <p class="comments"></p>
+                        <p class="detail"></p>
+                    </div>
+                    <ul class="buttons">
+                        <li class="am-clickable" i18n="SETTING_MAIN_CANCEL">Cancel</li>
+                        <!--<li class="am-clickable">Report</li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--  page.common_oops -- end -->
+        <!--  page.common_noResult -- start -->
+        <div class="am-page common_noResult" id="common_noResult">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <p>common_noResult</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="noresultblock">
+                        <span class="icon-warnblack"></span>
+                        <p>No result found</p>
+                    </div>
+                    <ul class="buttons">
+                        <li class="am-clickable marginright1">Cancel</li>
+                        <li class="am-clickable">Search Again</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--  page.common_noResult -- end -->
+        <!--  page.fuyu_login -- start -->
+        <div class="am-page fuyu_login" id="fuyu_login">
+            <div class="am-header">
+                <span href="#" class="am-clickable menubutton left button"></span>
+                <p>长安福特俱乐部</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner loginunsign-fuyu" style="display:none;">
+                    <div class="loginunsign">
+                        <p class="title">长安福特俱乐部</p>
+                        <p class="subtitle">长安福特俱乐部</p>
+                        <div class="am-clickable loginbt">登录</div>
+                        <div class="am-clickable signupbt">注册</div>
+                    </div>
+                </div>
+                <div class="am-body-inner loginsign-fuyu">
+                    <form>
+                        <p class="loginnote">
+                            已是长安福特俱乐部用户，请登录
+                        </p>
+                        <div class="formcontent">
+                            <ul>
+                                <li class="lastli"></li>
+                                <li class="iconli icon-person"></li>
+                                <li class="inputli"><input name="" id="fyusername" type="text" placeholder="用户名" autocapitalize="off" autocorrect="off"></li>
+                            </ul>
+                            <ul>
+                                <li class="lastli"></li>
+                                <li class="iconli icon-lock"></li>
+                                <li class="inputli"><input name="" id="fypassword" type="password" maxlength="20" placeholder="密码"></li>
+                            </ul>
+                            <!-- <ul>
+                                <li class="lastli"><img src="img/login/checkNumber.png" class="am-clickable checknumber" /></li>
+                                <li class="iconli icon-number"></li>
+                                <li class="inputli"><input id="checknumber" type="text" maxlength="20" placeholder="验证码" /></li>
+                            </ul> -->
+                        </div>
+                    </form>
+                    <div class="am-clickable loginbutton" id="fyLoginButton">登录</div>
+                    <div class="registerline">
+                        或，<p class="am-clickable fontlink">注册成为长安福特俱乐部会员 〉</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  page.fuyu_login -- end -->
+        <!--  page.fuyu_signup -- start -->
+        <div class="am-page fuyu_signup" id="fuyu_signup">
+            <div class="am-header">
+                <span href="#" class="am-clickable menubutton left button"></span>
+                <p>长安福特俱乐部</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <form>
+                        <header>注册成为会员</header>
+                        <div class="formcontent">
+                            <ul>
+                                <li class="lastli"><span>3到14位的中文字符、英文字母或数字</span></li>
+                                <li class="iconli icon-person"></li>
+                                <li class="inputli username"><input name="" id="username" type="text" placeholder="用户名" autocapitalize="off" autocorrect="off"></li>
+                            </ul>
+                            <span class="error-message name"></span>
+                            <ul>
+                                <li class="lastli"><span></span></li>
+                                <li class="iconli icon-lock"></li>
+                                <li class="inputli"><input name="" id="password" type="password" maxlength="16" placeholder="密码"></li>
+                            </ul>
+                            <span class="error-message password"></span>
+                            <ul>
+                                <li class="lastli"></li>
+                                <li class="iconli"></li>
+                                <li class="inputli"><input name="" id="passwordconfirm" type="password" maxlength="16" placeholder="确认密码"></li>
+                            </ul>
+                            <span class="error-message confirm"></span>
+                            <ul>
+                                <li class="iconli icon-email"></li>
+                                <li class="inputli"><input name="" id="email" type="email" placeholder="电子邮件"></li>
+                            </ul>
+                            <span class="error-message email"></span>
+                            <!--
+                            <ul>
+                                <li class="lastli"><img src="img/login/checkNumber.png" class="am-clickable checknumber"/></li>
+                                <li class="iconli am-clickable icon-number"><img class="captcha" id="captchaImg" src="" /></li>
+                                <li class="inputli"><input id="checknumber" type="number" maxlength="20" placeholder="验证码" onkeyup="value=value.replace(/[^\d]/g,'')" /></li>
+
+                            </ul>
+                            -->
+                            <span class="error-message number"></span>
+                            <div class="useragreement">
+                                <!--
+                                <span class="am-clickable icon-uncheck"></span><p>我同意<a href="#" class="am-clickable">使用条款</a></p>
+                                 -->
+                            </div>
+                            <span class="error-message agree"></span>
+
+                        </div>
+                    </form>
+                    <span class="error-message system"></span>
+                    <div class="am-clickable nextbutton">下一步</div>
+                </div>
+            </div>
+        </div>
+        <!--  page.fuyu_signup -- end -->
+        <!--  page.fuyu_vin -- start -->
+        <div class="am-page fuyu_vin" id="fuyu_vin">
+            <div class="am-header">
+                <span href="#" class="am-clickable menubutton left button"></span>
+                <p>长安福特俱乐部</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <form>
+                        <header>
+                            <div class="vintitle">车主认证</div>
+                            <p>填写项请与购车合同上的信息保持一致，确保认证顺利完成</p>
+                        </header>
+                        <div class="formcontent">
+                            <ul class="userinfo">
+                                <li><input name="" id="username" type="text" placeholder="姓名" autocapitalize="off" autocorrect="off"></li>
+                                <span class="error-message name"></span>
+                                <li><input name="" id="mobilenumber" type="text" placeholder="手机号码"></li>
+                                <span class="error-message phone"></span>
+                            </ul>
+                            <div class="findvin-detail">
+                                <p class="vintitle">车辆VIN码</p>
+                                <dl class="smswitch">
+                                    <dd id="smswitch10" class="am-clickable focused">扫描<span class="arrow-bluegray-down"></span></dd>
+                                    <dd id="smswitch11" class="am-clickable">手动输入<span class="arrow-bluegray-down"></span></dd>
+                                </dl>
+                                <dl class="formline-lasticon">
+                                    <dd class="lasticonli"><span class="am-clickable icon-scan-china"></span></dd>
+                                    <dd class="iconli">VIN</dd>
+                                    <dd class="inputli"><input name="vin" id="vin" type="text" readonly="readonly" placeholder="VIN code"></dd>
+                                </dl>
+                                <div class="am-clickable how-findvin">怎样找到车辆VIN码？〉</div>
+                                <span class="error-message vin"></span>
+                                <div class="addvehicle">
+                                    <!--
+                                    <div><span class="am-clickable icon-addvehicle"></span></div>
+                                    <p class="am-clickable">添加VIN码</p>
+                                    -->
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+                    <span class="error-message system"></span>
+                    <div class="am-clickable nextbutton">完成认证</div>
+                </div>
+            </div>
+        </div>
+        <!--  page.fuyu_vin -- end -->
+        <!--  page.fuyu_dashboard -- start -->
+        <div class="am-page fuyu_repair fuyu_dashboard knowledge_phasebook" id="fuyu_dashboard">
+            <div class="am-header">
+                <span href="#" class="am-clickable menubutton left button"></span>
+                <p>长安福特俱乐部</p>
+                <span href="#" class="am-clickable right button nextbutton">登出</span>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="content_wrapper">
+                        <div class="list-item am-clickable couponBtn">
+                            <div class="title-item">
+                                <div class="icon icon1"></div>
+                                <div class="title">优惠券账户</div>
+                                <div class="button"></div>
+                                <div class="clear"></div>
+                                <ul class="subBox">
+                                    <li>
+                                        <span class="line1 icon1">可用优惠券</span><br>
+                                        <span class="line2"></span>
+                                    </li>
+                                    <li>
+                                        <span class="line1 icon2">使用记录</span><br>
+                                        <span class="line2"></span>
+                                    </li>
+                                    <li>
+                                        <span class="line1 icon3">失效优惠券</span><br>
+                                        <span class="line2"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="recordList">
+                            <div class="list-item">
+                                <div class="title-item am-clickable">
+                                    <div class="icon icon-vehicle"></div>
+                                    <div class="center">
+                                        <div class="line1 data_carType"><!-- 福克斯两厢 1.8MT --></div>
+                                        <div class="line2 data_vin"><!-- <span class="light">VIN</span> IFDXE45FX1HA86243 黄色 --></div>
+                                    </div>
+                                    <div class="button"></div>
+                                    <div class="clear"></div>
+                                    <ul class="subBox">
+                                        <li>
+                                            <span class="line1 icon4">维修记录</span><br>
+                                            <span class="line2 data_totalTimes">3</span>
+                                        </li>
+                                        <li>
+                                            <span class="line1 icon5">总金额</span><br>
+                                            <span class="line2 data_amount"><!-- 5500<span class="small">￥</span> --></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subMenu">
+                                    <div class="arrow-gray-up"></div>
+                                    <div class="subList">
+                                        <div class="menu-item am-clickable">
+                                            <div class="text">
+                                                <div class="title"><!-- 安徽亚特 --></div>
+                                                <div class="date"><!-- 2014-03-20 --></div>
+                                            </div>
+                                            <div class="price"><!-- 5500<span class="small">￥</span> --></div>
+                                            <div class="button"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="am-clickable addVin">
+                            <div class="roundbutton icon-add"></div>添加VIN码
+                        </div>
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  page.fuyu_dashboard -- end -->
+        <!--  page.fuyu_coupon -- start -->
+        <div class="am-page fuyu_coupon" id="fuyu_coupon">
+            <div class="am-header">
+                <span href="#" class="am-clickable right button"><img src="img/icon-clear.png" width="13" height="13" alt="Close"></span>
+                <p>优惠券账户</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <ul class="coupontabs">
+                        <li class="am-clickable">
+                            <p class="couponnumber">
+                                <span class="icon-specialoffer-orange"></span>
+                            </p>
+                            <div class="tabstitle">
+                                可用优惠券
+                            </div>
+                            <div class="h-seperator"></div>
+                        </li>
+                        <li class="am-clickable active">
+                            <p class="couponnumber">
+                                <span class="icon-ok-green"></span>
+                            </p>
+                            <div class="tabstitle">
+                                使用记录
+                            </div>
+                            <div class="h-seperator"></div>
+                        </li>
+                        <li class="am-clickable">
+                            <p class="couponnumber">
+                                <span class="icon-warnred"></span>
+                            </p>
+                            <div class="tabstitle">
+                                失效优惠券
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="coupons useablecoupons"></ul>
+                    <ul class="coupons usedcoupons active"></ul>
+                    <ul class="coupons disablecoupons"></ul>
+                </div>
+            </div>
+        </div>
+        <!--  page.fuyu_coupon -- end -->
+        <!--  page.fuyu_repair -- start -->
+        <div class="am-page fuyu_repair knowledge_phasebook" id="fuyu_repair">
+            <div class="am-header">
+                <span href="#" class="am-clickable clearbutton right button"></span>
+                <p>维修保养记录</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="content_wrapper">
+                         
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  page.fuyu_repair -- end -->
+        <!--  page.fuyu_repairList -- start -->
+        <div class="am-page fuyu_repairList knowledge_phasebook" id="fuyu_repairList">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <p>维修保养记录</p>
+            </div>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="content_wrapper">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  page.fuyu_repair -- end -->
+        <!--  page.fuyu_repairDetail -- start -->
+        <div class="am-page fuyu_repairDetail" id="fuyu_repairDetail">
+            <div class="am-header">
+                <span href="#" class="am-clickable am-backbutton left button"></span>
+                <p>2014-03-20 维修详情</p>
+            </div>
+            <ul class="mainTab">
+                <li class="selected">基本<br>信息<span class="bar"></span></li>
+                <li>维修<br>材料<span class="bar"></span></li>
+                <li>维修<br>工时<span class="bar"></span></li>
+                <li>销售<br>配件<span class="bar"></span></li>
+                <li>维修<br>附加项<span class="bar"></span></li>
+            </ul>
+            <div class="am-body-wrap">
+                <div class="am-body-inner">
+                    <div class="tabContent carInfo padding active">
+                        <table class="tabList1" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <th>工单编号</th>
+                                    <td class="vbillId"></td>
+                                </tr>
+                                <tr>
+                                    <th>修理日期</th>
+                                    <td class="vrepairDate"></td>
+                                </tr>
+                                <tr>
+                                    <th>维修站号</th>
+                                    <td class="vsstId"></td>
+                                </tr>
+                                <tr>
+                                    <th>维修站名称</th>
+                                    <td class="vsstName"></td>
+                                </tr>
+                                <tr>
+                                    <th>品牌</th>
+                                    <td class="cdBrand"></td>
+                                </tr>
+                                <tr>
+                                    <th>车型大类</th>
+                                    <td class="cdname"></td>
+                                </tr>
+                                <tr>
+                                    <th>VIN码</th>
+                                    <td class="vvin"></td>
+                                </tr>
+                                <tr>
+                                    <th>发动机号</th>
+                                    <td class="vengineNmb"></td>
+                                </tr>
+                                <tr>
+                                    <th>工时费</th>
+                                    <td class="nlaborFee">元</td>
+                                </tr>
+                                <tr>
+                                    <th>维修材料费</th>
+                                    <td class="nrepairMaterialFee">元</td>
+                                </tr>
+                                <tr>
+                                    <th>销售材料费</th>
+                                    <td class="nsaleMaterialFee">元</td>
+                                </tr>
+                                <tr>
+                                    <th>其他（附加费用）</th>
+                                    <td class="naddItemFee">元</td>
+                                </tr>
+                                <tr>
+                                    <th>维修金额</th>
+                                    <td class="nrepairFee">元</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tabContent repairPartInfo padding">
+                        <ul class="tabList2">
+                        </ul>
+                    </div>
+                    <div class="tabContent laborInfo padding">
+                        <ul class="tabList2 noleft">
+                        </ul>
+                    </div>
+                    <div class="tabContent salePartInfo padding">
+                        <ul class="tabList2">
+                        </ul>
+                    </div>
+                    <div class="tabContent additionInfo padding">
+                        <ul class="tabList2 noleft">
+                            <li>
+                                <div class="middle">
+                                    <div class="line1">附加项目名称1</div>
+                                    <div class="line2">项目代码 32121  |  附加项目代码 12345</div>
+                                </div>
+                                <div class="right">222.39<span class="small">￥</span></div>
+                            </li>
+                            <li>
+                                <div class="middle">
+                                    <div class="line1">附加项目名称1</div>
+                                    <div class="line2">项目代码 32121  |  附加项目代码 12345</div>
+                                </div>
+                                <div class="right">222.39<span class="small">￥</span></div>
+                            </li>
+                            <li>
+                                <div class="middle">
+                                    <div class="line1">附加项目名称1</div>
+                                    <div class="line2">项目代码 32121  |  附加项目代码 12345</div>
+                                </div>
+                                <div class="right">222.39<span class="small">￥</span></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--  page.fuyu_repairDetail -- end -->
+
+
+    </div>
+
+
+
+    <!--  popup.popup_findVin -- start -->
+    <div class="am-popup popup-help" id="popup_findVin" style="display: none">
+        <div class="am-popup-inner">
+            <div class="popViewBG"></div>
+            <div class="popViewFrame">
+                <div class="popView">
+                    <div class="am-clickable popViewCloseBtn"></div>
+                    <div class="popViewTitle" i18n="POPUP_FINDVIN_TITLE">How to find my VIN?</div>
+                    <div class="popViewContent" i18n="POPUP_FINDVIN_CONTENT">Your 17 Characters code is listed in numerous documents, including your vehicle title, registration, finance statement and insurance documents. It also appears on the driver's side of your vehicle, between the windshield and the dashboard.</div>
+                    <div id="findVinImage"></div>
+                    <div id="findVinImageCN"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  popup.popup_findVin -- end -->
+    <!--  popup.popup_reminder -- start -->
+    <div class="am-popup popup-help" id="popup_reminder" style="display: none">
+        <div class="am-popup-inner">
+            <div class="popViewBG"></div>
+            <div class="popViewFrame">
+                <div class="popView">
+                    <div class="popViewTitle" i18n="POPUP_REMINDER_DONE"><div class="reminderDetailLogo"></div>Done</div>
+                    <div class="popViewContent" i18n="POPUP_REMINDER_CONTENT">We will Send you a reminder on that day so you don't forget to call your dealer.</div>
+                    <div class="am-clickable rectButton" i18n="POPUP_REMINDER_OK">OK</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  popup.popup_reminder -- end -->
+    <!--  popup.popup_disclaimer -- start -->
+    <div class="am-popup popup_disclaimer" id="popup_disclaimer" style="display: none">
+        <div class="am-popup-inner">
+            <div class="popViewBG"></div>
+            <div class="popViewFrame">
+                <div class="popView">
+                    <div class="pophead"><span class="am-clickable popCloseBtn"></span></div>
+                    <div class="poptitle" i18n="POPUP_DISCLAIMER_TITLE">Disclaimer</div>
+                    <div class="popcontent">
+                        <p i18n="POPUP_DISCLAIMER_CONTENT">
+                            Every effort has been made to ensure that the information on this site is correct and up to date, however, Ford Motor Company of Australia Limited ACN 004 116 223 ("Ford") does not provide any warranty as to the completeness or accuracy of the information and, subject to applicable laws, does not accept any liability for damages of any kind resulting from the access or use of this site and its contents.
+                            Ford reserves the right to discontinue or change any of the models, prices, colours, materials, equipment or other specifications referred to on this site at any time without notice. Some of the equipment shown or referred to in this site may only be available as an option at extra cost. Always consult an Authorised Ford Dealer for the latest information about a Ford product, and its availability, before
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  popup.popup_disclaimer -- end -->
+    <!--  popup.popup_privacyPolicy -- start -->
+    <div class="am-popup popup_privacyPolicy" id="popup_privacyPolicy" style="display: none">
+        <div class="am-popup-inner">
+            <div class="popViewBG"></div>
+            <div class="popViewFrame">
+                <div class="popView">
+                    <div class="pophead"><span class="am-clickable popCloseBtn"></span></div>
+                    <div class="poptitle" i18n="POPUP_PRIVACYPOLICY_TITLE">Privacy Policy</div>
+                    <div class="popcontent">
+                        <p i18n="POPUP_PRIVACYPOLICY_CONTENT">
+                            1. Introduction<br />
+                            1.1 Ford Motor Company of Australia Limited ABN 30 004 116 223 ("Ford", "we", "our" and "us") is committed to responsible privacy practices and to complying with the Privacy Principles contained in the Privacy Act 1988 (Cth) ("Privacy Act"). Where applicable, Ford will handle personal information relying on the related bodies corporate exemption and the employee records exemption in the Privacy Act and any other applicable exemptions in the Privacy Act or other legislation.<br />
+                            1.2 This Privacy Policy sets out our policies on the management of personal information including how we collect personal information, the purposes for which we use this information, and to whom this information is disclosed.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  popup.popup_privacyPolicy -- end -->
+    <!--  popup.popup_userLegalAgreement -- start -->
+    <div class="am-popup popup_userLegalAgreement" id="popup_userLegalAgreement" style="display: none">
+        <div class="am-popup-inner">
+            <div class="popViewBG"></div>
+            <div class="popViewFrame">
+                <div class="popView">
+                    <div class="pophead"><span class="am-clickable popCloseBtn"></span></div>
+                    <div class="poptitle" i18n="POPUP_USERLEGALAGREEMENT_TITLE">User Legal Agreement</div>
+                    <div class="popcontent">
+                        <p i18n="POPUP_USERLEGALAGREEMENT_CONTENT">
+                            1. Introduction<br />
+                            1.1 Ford Motor Company of Australia Limited ABN 30 004 116 223 ("Ford", "we", "our" and "us") is committed to responsible privacy practices and to complying with the Privacy Principles contained in the Privacy Act 1988 (Cth) ("Privacy Act"). Where applicable, Ford will handle personal information relying on the related bodies corporate exemption and the employee records exemption in the Privacy Act and any other applicable exemptions in the Privacy Act or other legislation.<br />
+                            1.2 This Privacy Policy sets out our policies on the management of personal information including how we collect personal information, the purposes for which we use this information, and to whom this information is disclosed.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  popup.popup_userLegalAgreement -- end -->
+    <!--  popup.popup_saveOk -- start -->
+    <div class="am-popup popup_saveOk" id="popup_saveOk" style="display: none">
+        <div class="am-popup-inner">
+            <div class="popViewBG"></div>
+            <div class="popViewFrame">
+                <div class="popView">
+                    <div class="pophead"></div>
+                    <div class="checkBtn"></div>
+                    <div class="poptitle" i18n="POPUP_SAVEOK_SUCCESS">Successfully</div>
+                    <!-- <div class="poptitle" i18n="POPUP_SAVEOK_SAVE">Saved</div> -->
+                    <div class="bottombutton am-clickable" i18n="POPUP_SAVEOK_OK">OK</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  popup.popup_saveOk -- end -->
+    <!--  popup.popup_versionUpdate -- start -->
+    <div class="am-popup popup_versionUpdate" id="popup_versionUpdate" style="display: none">
+        <div class="am-popup-inner">
+            <div class="popViewBG"></div>
+            <div class="popViewFrame">
+                <div class="popView">
+                    <div class="pophead"></div>
+                    <div class="poptitle">发现新版本</div>
+                    <div class="popcontent">
+                        <p>
+                            更新内容<br />
+                            1. 更新用户体验<br />
+                            2. 增加查看保修记录功能<br />
+                        </p>
+                    </div>
+                    <!-- <div class="poptitle" i18n="POPUP_SAVEOK_SAVE">Saved</div> -->
+                    <div class="bottombutton am-clickable" id="updateNow">立即前往更新</div>
+                    <div class="bottombutton am-clickable" id="cancel">稍后提醒</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  popup.popup_versionUpdate -- end -->
+    <!--  slidebar.slidebar_main -- start -->
+    <div class="am-slideBar slideBar-progress" id="slideBar_main" style="display: none">
+        <div class="am-slideBar-inner">
+            <ul class="slideBar-list">
+                <li class="am-clickable green" id="slideBar_name">Welcome, Jackie Wong</li>
+                <li class="am-clickable" id="slideBar_home" i18n="SLIDEBAR_TEXT1">Home</li>
+                <li class="am-clickable" id="slideBar_profile" i18n="SLIDEBAR_TEXT2">My Profile</li>
+                <li class="am-clickable" id="slideBar_dealer" i18n="SLIDEBAR_TEXT3">Dealer Locator</li>
+                <li class="am-clickable" id="slideBar_calllcenter" i18n="SLIDEBAR_TEXT4">Call Center</li>
+                <li class="am-clickable" id="slideBar_assist" i18n="SLIDEBAR_TEXT5">Roadside Assist.</li>
+                <li class="am-clickable" id="slideBar_checklist" i18n="SLIDEBAR_TEXT6">Service Checklist</li>
+                <li class="am-clickable" id="slideBar_knowledgeCenter">
+                    <span i18n="SLIDEBAR_TEXT7">Knowledge Center</span>
+                    <ul class="subList">
+                        <li class="am-clickable" id="slideBar_indicator" i18n="SLIDEBAR_TEXT8">Indicator Decoder</li>
+                        <li class="am-clickable" id="slideBar_ownerManual" i18n="SLIDEBAR_TEXT9">Owner Manual</li>
+                        <li class="am-clickable" id="slideBar_phasebook" i18n="SLIDEBAR_TEXT10">SYNC Phrasebook</li>
+                        <li class="am-clickable" id="slideBar_userGuider" i18n="SLIDEBAR_TEXT11">SYNC User Guider</li>
+                        <li class="am-clickable" id="slideBar_video" i18n="SLIDEBAR_TEXT12">Ford How-to Video</li>
+                    </ul>
+                </li>
+                <li class="am-clickable" id="slideBar_reecall" i18n="SLIDEBAR_TEXT13">Recall Lookup</li>
+                <li class="am-clickable" id="slideBar_notification" i18n="SLIDEBAR_TEXT14">Notification<span class="badge">10+</span></li>
+                <li class="am-clickable" id="slideBar_fuyu" i18n="SLIDEBAR_TEXT15">长安福特俱乐部</li>
+                <li class="am-clickable" id="slideBar_setting" i18n="SLIDEBAR_TEXT16">Setting</li>
+            </ul>
+        </div>
+    </div>
+    <!--  slidebar.slidebar_main -- end -->
+
+
+
+</body>
+</html>

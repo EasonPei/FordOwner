@@ -1,0 +1,154 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+.fuyu_signup form{
+	padding:0px 18px; 
+	background:#ffffff;
+}
+
+.fuyu_signup header{
+	padding-top:23px;
+	font-size:18px;
+	color:#102839;
+	line-height:18px;
+}
+
+/* Page content */
+.fuyu_signup .formcontent{
+}
+
+.fuyu_signup .formcontent ul {
+	border-bottom:1px solid #eae9e9;
+	padding:30px 1px 5px 0px;
+	height:27px;
+	margin-bottom:3px;
+	overflow:hidden; 
+	display:block;
+}
+
+.fuyu_signup .formcontent ul li{
+	list-style-type:none;
+}
+
+.fuyu_signup .formcontent ul .iconli{
+	float:left; 
+	width:20px; 
+	height:27px; 
+	display:block; 
+	text-align:center;
+}
+
+.fuyu_signup .formcontent ul .iconli span{
+	display:block; 
+	margin-top:9px;
+}
+
+.fuyu_signup .formcontent ul .inputli{
+	display:block; 
+	margin-left:32px; 
+	margin-right:102px;
+}
+
+.fuyu_signup .formcontent ul .inputli input{
+	border:none; 
+	line-height:18px; 
+	height:18px; 
+	font-size:15px; 
+	color:#000000; 
+	width:100%; 
+	margin-top:9px;
+}
+
+.fuyu_signup .formcontent ul .username{
+	margin-right:200px !important;
+}
+
+.fuyu_signup .formcontent ul .email{
+	margin-right:10px !important;
+}
+
+.fuyu_signup .formcontent ul .lastli{
+	float:right;
+	font-size:9px;
+	line-height:9px; 
+	color:#616161; 
+	text-align:right;
+}
+
+.fuyu_signup .formcontent ul .lastli span{
+	margin-top:18px;
+	display:block;
+	text-align:right;
+}
+
+.fuyu_signup .icon-person{ 
+	background:url(../img/icon-person.png) no-repeat;
+	background-position:center bottom;
+	background-size:16px 17px;
+}
+
+.fuyu_signup .icon-lock{ 
+	background:url(../img/icon-lock.png) no-repeat;
+	background-position:center bottom;
+	background-size:13px 17px;
+}
+
+.fuyu_signup .icon-email{
+	background:url(../img/icon-email.png) no-repeat;
+	background-position:center center;
+	background-size:15px 15px;
+	height: 20px !important;
+	margin-top: 7px;
+}
+
+.fuyu_signup .icon-number{ 
+	background:url(../img/login/number.png) no-repeat;
+	background-position:center center;
+	background-size:17px 9px;
+	height: 20px !important;
+	margin-top: 7px;
+}
+
+.fuyu_signup .checknumber{
+	width:102px;
+	height:27px;
+	margin-bottom:-2px;
+}
+
+.fuyu_signup .useragreement{
+	padding-top:37px; 
+	padding-bottom:43px; 
+	overflow:hidden;
+}
+.fuyu_signup .useragreement p{
+	display:block; 
+	margin-left:32px; 
+	color:#616161; 
+	font-size:12px; 
+	line-height:17px;
+}
+.fuyu_signup .useragreement p a{
+	color:#2596cf;
+}
+
+.fuyu_signup .nextbutton{
+	width:100%; 
+	height:49px; 
+	line-height:49px; 
+	color:#ffffff; 
+	text-align:center; 
+	font-size:18px; 
+	background:#2d96cd; 
+}
+.fuyu_signup .nextbutton.am-clickable-active{
+	opacity: 0.8;
+}
+
+.fuyu_signup .error-message
+{
+    color:#ff0000;
+    height:15px;
+    line-height:15px;
+    font-size:12px;
+    display:block;
+}

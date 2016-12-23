@@ -1,0 +1,196 @@
+@charset "utf-8";
+/* CSS Document */
+
+.dealer_mapview .am-body-inner
+{
+    /*height:100%;*/
+}
+
+.dealer_mapview .map{
+    /*height:65%;*/
+    overflow:hidden;
+    position:relative;
+}
+
+.dealer_mapview .round_tab
+{
+    position:absolute;
+    top:10px;
+    left:50%;
+    margin:0;
+    margin-left:-90px;       
+}
+
+.dealer_mapview .round_tab .tab_button
+{
+    overflow:visible; 
+}
+
+.dealer_mapview .map img
+{
+    height:100%;
+    width:100%;
+}
+
+.dealer_mapview .list 
+{
+    /*height:35%;*/
+    padding:0;
+}
+
+.dealer_mapview .list .list-item
+{
+    /*max-height:35%;*/
+    padding: 0;
+    padding-top:4%;
+    float:left;
+    clear:none;
+    width:84%;
+    border:none;
+}
+.dealer_mapview .distance-bullet
+{
+    top:9%;
+    left:2%
+}
+
+.dealer_mapview .locator-detail 
+{
+    padding-left:20%;
+}
+
+.dealer_mapview .locator-detail .buttons
+{
+    margin: 2% 0;
+}
+
+.dealer_mapview .list>.button
+{
+   width:8%;
+   height:100%;
+   max-height:180px;
+   float:left;
+   background-repeat:no-repeat;
+   background-position:center center;
+   background-size:50%;
+}
+
+.dealer_mapview .locator-detail
+{
+    padding-left:18%;
+}
+
+.dealer_mapview .locator-detail .buttons .button
+{
+    margin-right:8%;
+}
+
+.dealer_mapview .list>.button.left{
+    background-image:url("../img/dealerlocator/icon_left.png")
+}
+
+.dealer_mapview .list>.button.right{
+    background-image:url("../img/dealerlocator/icon_right.png")
+}
+
+
+.dealer_mapview .popbox{
+	position:absolute;
+	top:44px;
+	right:0px;
+	display:block;
+	width:100%;
+}
+
+.dealer_mapview .filterpopbox{
+	border:1px solid #e7e8e8;
+	padding:4px 10px 6px 10px;
+	display:block;
+	/*width:125px;*/
+	margin-right:8px;
+	position:relative;
+	background:#ffffff;
+	z-index:101;
+	float:right;
+}
+
+.dealer_mapview .filterpopbox .arrow-white-up{
+	background:url(../img/arrow-white-up.png) center no-repeat;
+	background-size:10px 7px;
+	width:10px;
+	height:7px;
+	position:absolute;
+	right:12px;
+	top:-7px;
+}
+
+.dealer_mapview .filterpopbox ul{
+	overflow:hidden;
+}
+
+.dealer_mapview .filterpopbox ul li p{
+	line-height:30px;
+	font-size:12px;
+	color:#2596cf;
+	margin-right:18px;
+	padding-left:2px;
+}
+
+.dealer_mapview .filterpopbox ul li p.category1{
+    color:#2596cf;
+}
+
+.dealer_mapview .filterpopbox ul li p.category2{
+    color:#008d01;
+}
+
+.dealer_mapview .filterpopbox ul li p.category3{
+    color:#e08700;
+}
+
+.dealer_mapview_labels {
+    color: black;
+    font-size: 18px;
+    text-align: center;
+    width: 18px;
+    white-space: nowrap;
+}
+
+.dealer_mapview_autonavi_labels_category1 {
+    color: black;
+    text-align: center;
+    width: 18px;
+    white-space: nowrap;
+    background:url("../img/dealerlocator/map-marker.png") center top no-repeat;
+    background-size:100%;
+    padding-bottom: 12px;
+    font-size: 14px;
+    font-weight:bold;
+    color: #fff;
+}
+
+.dealer_mapview_autonavi_labels_category2 {
+    color: black;
+    text-align: center;
+    width: 18px;
+    white-space: nowrap;
+    background:url("../img/dealerlocator/map-marker2.png") center top no-repeat;
+    background-size:100%;
+    padding-bottom: 12px;
+    font-size: 14px;
+    font-weight:bold;
+    color: #fff;
+}
+
+.dealer_mapview_autonavi_labels_category3 {
+    color: black;
+    text-align: center;
+    width: 18px;
+    white-space: nowrap;
+    background:url("../img/dealerlocator/map-marker3.png") center top no-repeat;
+    background-size:100%;
+    padding-bottom: 12px;
+    font-size: 14px;
+    font-weight:bold;
+    color: #fff;
+}

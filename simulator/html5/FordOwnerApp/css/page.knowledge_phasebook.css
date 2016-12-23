@@ -1,0 +1,195 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.knowledge_phasebook .am-body-wrap {
+    background-color: #fff;
+}
+
+.knowledge_phasebook .tabs div.am-clickable
+{
+    font-size:12px;
+}
+
+.knowledge_phasebook .list-item {
+    min-height: 80px;
+    color: #2596cf;
+    clear: both;
+    position:relative;
+}
+
+.knowledge_phasebook .list-item .title-item {
+    height: 80px;
+    border-bottom: solid 1px #e3e2e2;
+    margin: 0 18px
+}
+
+.knowledge_phasebook .list-item .title-item .title {
+    font-size: 16px;
+    height: 100%;
+    line-height: 80px;
+    width: 82%;
+    overflow: hidden;
+}
+@media screen and (max-width: 320px) {
+    .knowledge_phasebook .list-item .title-item .title {
+        font-size: 14px;
+        height: 100%;
+        line-height: 80px;
+        width: 80%;
+        overflow: hidden;
+    }
+}
+
+.knowledge_phasebook .list-item .icon,
+.knowledge_phasebook .list-item .title-item .title {
+    float: left;
+    height: 100%;
+}
+
+.knowledge_phasebook .list-item  .title-item .icon {
+    height: 38px;
+    width: 38px;
+    border-radius: 38px;
+    border: solid 1px #2596cf;
+    background-repeat: no-repeat;
+    background-position:center center;
+    margin:20px 0px;
+    margin-right:10px;   
+    background-size:60%; 
+}
+
+#knowledge_more .list-item  .title-item .icon 
+{
+    background-size:36%; 
+}
+
+.knowledge_phasebook .list-item  .title-item .icon.general{
+    background-image:url("../img/knowledgecenter/icon_general.png")
+}
+.knowledge_phasebook .list-item  .title-item .icon.phone{
+    background-image:url("../img/knowledgecenter/icon_phone.png")
+}
+.knowledge_phasebook .list-item  .title-item .icon.usb{
+    background-image:url("../img/knowledgecenter/icon_usb.png")
+}
+.knowledge_phasebook .list-item  .title-item .icon.bluetooth{
+    background-image:url("../img/knowledgecenter/icon_bluetooth.png")
+}
+.knowledge_phasebook .list-item  .title-item .icon.other{
+    background-image:url("../img/knowledgecenter/icon_other.png")
+}
+.knowledge_phasebook .list-item  .title-item .icon.text{
+    background-image:url("../img/knowledgecenter/icon_text.png")
+}
+.knowledge_phasebook .list-item  .title-item .icon.voice{
+    background-image:url("../img/knowledgecenter/icon_voice.png")
+}
+.knowledge_phasebook .list-item  .title-item .icon.play{
+    background-image:url("../img/knowledgecenter/icon_play.png")
+}
+
+
+.knowledge_phasebook .list-item .title-item .button {
+    position:absolute;
+    right:0;
+    top:0px;
+    height:80px;
+    width:60px;
+    background:url("../img/button-arrow-right.png") center center no-repeat; 
+    background-size: 9px 16px;
+}
+
+.knowledge_phasebook .list-item.extend .title-item,
+.knowledge_phasebook .list-item:last-child .title-item
+{
+     border-bottom: none;
+}
+
+
+.knowledge_phasebook .list-item.extend .title-item .button {
+    background:url("../img/button-arrow-down.png") center center no-repeat;
+    background-size:16px 9px;
+    transform: rotate(0deg);
+}
+    
+.knowledge_phasebook .list-item.extend .subMenu
+{
+    display:block;
+}
+
+
+.knowledge_phasebook .list-item .subMenu
+{
+    clear:both;
+    color:#000;
+    background-color:#f4f4f3;
+    padding:18px;
+    position:relative;
+    display:none;
+}
+
+.knowledge_phasebook .list-item .subMenu .arrow-gray-up {
+    background: url(../img/arrow-gray-up.png) no-repeat;
+    background-size: 20px 10px;
+    height: 10px;
+    width: 20px;
+    margin-left:-10px;
+    position: absolute;
+    top: -10px;
+    left:50%;
+}
+
+.knowledge_phasebook .list-item .menu-item
+{
+    border-bottom:solid 1px #e3e2e2;
+/*    height:50px;*/
+    margin-bottom:15px;
+    padding-bottom: 15px;
+    position:relative;
+}
+
+.knowledge_phasebook .list-item .menu-item:last-child
+{    
+    margin-bottom:0;
+    border-bottom:none;
+}
+
+
+.knowledge_phasebook .list-item .menu-item .title
+{
+    max-width: 86%;
+}
+
+.knowledge_phasebook .list-item .menu-item .desc
+{
+    font-size:9px;
+    color:#616161;
+    margin-top:3px;
+    max-width:86%;
+}
+
+.knowledge_phasebook .list-item .menu-item .sound
+{
+    height: 36px;
+    width: 36px;
+    border-radius: 36px;
+    border: solid 1px #2596cf;    
+    background:url("../img/knowledgecenter/icon_soundoff.png") center center no-repeat;
+    background-size:50%;
+    position: absolute;
+    right:0;
+    top:0;
+}
+
+.knowledge_phasebook .list-item .menu-item .sound.on
+{
+    background-image:url("../img/knowledgecenter/icon_soundon.png");    
+    border-color:#6db801;
+}
+
+.knowledge_phasebook .disclaimer
+{
+    font-size: 12px;
+    color: #7d7d7d;
+}

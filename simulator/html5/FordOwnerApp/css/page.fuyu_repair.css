@@ -1,0 +1,37 @@
+﻿@charset "utf-8";
+
+.fuyu_repair .am-header p {
+	font-size: 18px
+}
+
+.fuyu_repair .content_wrapper .am-clickable.am-clickable-active{
+    background-color:#ddd;
+    opacity:0.8;
+}
+
+.fuyu_repair .icon-vehicle {
+	background: url(../img/icon-vehicle.png) no-repeat;
+	background-size: 19px 12px;
+	background-position: center center;
+}
+
+.fuyu_repair .title-item .center {
+	float: left;
+	margin: 24px 0px;
+	height: 32px;
+}
+
+.fuyu_repair .title-item .center .line1 {
+	font-size: 15px;
+	line-height: 15px;
+	margin-bottom: 10px;
+}
+
+.fuyu_repair .title-item .center .line2 {
+	font-size: 9px;
+	line-height: 9px;
+	color: #616161;
+}
+.fuyu_repair .title-item .center .line2 .light {
+	color: #d2d1d1;
+}

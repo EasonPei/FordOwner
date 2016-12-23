@@ -1,0 +1,56 @@
+﻿.inputLineDropDown .inputLineRightView{
+	background-image: url(../img/region/dropdown.png);
+	background-repeat: no-repeat;
+	background-size:19px 10.5px;
+	width: 30px;
+
+}
+
+.regionTitle{
+	background-image: url(../img/region/CN_Global-Sphere_icon.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size:20px 20px;
+	padding-left: 30px;
+}
+
+.inputLineDropDown.am-clickable-active{
+	background-color: #ddd;
+	opacity: 0.8;
+}
+
+.inputLineCheck .inputLineRightView{
+	background-image: url(../img/region/check.png);
+	background-repeat: no-repeat;
+	background-size:19px 14px;
+	width: 30px;
+}
+
+.selectList li.am-clickable-active{
+	background-color: #ddd;
+	opacity: 0.8;
+}
+
+.selectList .inputLine{
+	color: #777;	
+}
+
+.inputLineCheck .inputLineLeftView{
+	color: #1E97C8;
+}
+
+.inputLineCheck .inputLineMiddle{
+	color: #000;
+}
+
+#locationView{
+	background-image: url(../img/region/location.png);
+	background-repeat: no-repeat;
+	background-size:13.5px 20.5px;
+}
+
+
+
+#firstUse_selectRegion .inputLineMiddle{
+	width: 140px;
+}

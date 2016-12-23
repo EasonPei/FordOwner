@@ -1,0 +1,61 @@
+﻿@charset "utf-8";
+
+.fuyu_repairList .am-header p {
+	font-size: 18px
+}
+
+.fuyu_repairList .content_wrapper 
+{
+    width:90%;
+    padding:0px 5%;
+}
+
+.fuyu_repairList .content_wrapper .am-clickable.am-clickable-active{
+    background-color:#ddd;
+    opacity:0.8;
+}
+
+.fuyu_repairList .content_wrapper .menu-item {
+	position: relative;
+    margin:20px 0px;
+}
+.fuyu_repairList .content_wrapper .menu-item .text {
+	background: url(../img/fuyu/subIcon-6.png) no-repeat;
+	background-size: 20px 14px;
+	background-position: left 3px;
+	padding-left: 30px;
+}
+.fuyu_repairList .content_wrapper .menu-item .text .title {
+	color: #102839;
+	font-size: 12px;
+	margin-bottom: 4px;
+    font-weight:600;
+}
+.fuyu_repairList .content_wrapper .menu-item .text .date {
+	color: #616161;
+	font-size: 9px;
+}
+
+.fuyu_repairList .content_wrapper .menu-item .price {
+	position: absolute;
+	right: 30px;
+	height: 38px;
+	line-height: 38px;
+	top: 0px;
+	color: #2596cf;
+	font-size: 18px;
+    margin-top: -5px;
+}
+.fuyu_repairList .content_wrapper .menu-item .price .small {
+	font-size: 10px;
+}
+.fuyu_repairList .content_wrapper .menu-item .button {
+	position: absolute;
+	right: 0px;
+	width: 24px;
+	height: 38px;
+	line-height: 38px;
+	top: 0px;
+	background: url("../img/button-arrow-right.png") center center no-repeat;
+	background-size: 9px 16px;
+}

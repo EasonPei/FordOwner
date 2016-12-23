@@ -1,0 +1,129 @@
+﻿.profile_myVehicle .vehicel_info
+{
+    padding-bottom:20px;
+    clear:both;
+}
+
+.profile_myVehicle .template
+{
+    display:none;
+}
+
+.profile_myVehicle .vehicel_info_wrapper,
+.profile_myVehicle .vehicel_info_wrapper input
+{
+    background-color:#f4f4f3;
+}
+
+.profile_myVehicle .profile_image img {
+    width: 100%;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile_myVehicle .vehicel_info .inputLine
+{
+    border-bottom-color:#dcdbdb;
+    position:relative;
+}
+
+.profile_myVehicle .nextbutton {
+	background-image: url(../img/button-next.png);
+	background-position: right 13px center;
+	background-size: 12px 16px;	
+	width: 12px;
+    height:16px;
+    position:absolute;
+
+    right:4px;   
+    top:12px;
+}
+
+
+.profile_myVehicle .inputLine .inputLineMiddle {
+    min-width: 75%;
+    font-size: 13px;
+}
+
+.profile_myVehicle .inputLine .warning {
+    font-size: 12px;
+    color: #ff0000;
+    display: inline-block;
+    position: absolute;
+    right: 4%;
+}
+
+.profile_myVehicle .buttonLine {
+    width: 90%;
+    margin-left: 5%;
+    padding-top: 8px;
+    height: 28px;
+    line-height: 28px;
+}
+
+.profile_myVehicle .buttonLine .roundbutton
+{
+    float:right;
+}
+
+.profile_myVehicle .rectButtonWhite
+{
+    width: 100%;
+    height: 64px;
+    background: #fff;
+    font-size: 14px;
+    color: #2596cf;
+    line-height: 64px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top:1px solid #f4f4f3;
+    border-bottom:1px solid #f4f4f3;
+}
+
+.profile_myVehicle .rectButtonWhite .roundbutton
+{
+    display:inline-block;
+    vertical-align:middle;
+    margin-right:5px;
+}
+
+.profile_myVehicle .detail-list li {
+    margin-top: 10px;
+}
+
+.profile_myVehicle #vehicleField {
+    background-image: url(../img/icon-vehicle.png);
+    background-repeat: no-repeat;
+    background-size: 20px 13px;
+}
+
+.profile_myVehicle #vinField {
+    background-image: url(../img/profile/icon-vin.png);
+    background-repeat: no-repeat;
+    background-size: 20px 9px;
+}
+
+.profile_myVehicle #warrantyNameField {
+    background-image: url(../img/profile/icon_name.png);
+    background-repeat: no-repeat;
+    background-size: 16px 20px;
+}
+
+.profile_myVehicle #warrantyServiceField {
+    background-image: url(../img/profile/icon_warranty.png);
+    background-repeat: no-repeat;
+    background-size: 16px 19px;
+}
+
+.profile_myVehicle #warrantyExpireField {
+    background-image: url(../img/profile/icon_warranty_exp.png);
+    background-repeat: no-repeat;
+    background-size: 17px 17px;
+}
+
+.profile_myVehicle .hide
+{
+    display:none;
+}

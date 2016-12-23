@@ -1,0 +1,162 @@
+@charset "utf-8";
+/* CSS Document */
+.clas_none
+{
+	display:none;
+}
+.dealer_detail .map
+{
+    height:150px;
+    overflow:hidden;
+}
+
+.dealer_detail.noMap .map
+{
+    height:0px;
+}
+
+.dealer_detail .favour-tag
+{
+    /*display:none;*/
+    background:url("../img/dealerlocator/icon_fav.png") right top no-repeat;
+    position:absolute;
+    top:0;
+    right:15px;
+    height:30px;
+    width:30px;
+    background-size:50%;
+}
+
+
+.dealer_detail .map img
+{
+    width:100%;
+}
+
+.dealer_detail .locator-detail
+{
+    padding:15px;
+    padding-top:35px;
+    position:relative;
+}
+
+.dealer_detail .locator-detail .title
+{
+    font-size:16px;
+}
+
+.dealer_detail .locator-detail .distance
+{
+    font-size:10px;
+    float:right;
+    margin-top:5px;
+}
+
+.dealer_detail .details 
+{
+    margin:10px 0;
+    margin-bottom:25px;
+}
+
+.dealer_detail .locator-detail .line
+{
+    font-size:12px;
+    color:#616161;
+    min-height:28px;
+    line-height:28px;
+    border-top:solid 1px #dcdbdb;
+    padding-left:35px;
+    position:relative;
+}
+
+.dealer_detail .locator-detail .line .am-clickable
+{
+    color:#2596cf;
+}
+
+.dealer_detail .locator-detail .line:last-child
+{
+    border-bottom:solid 1px #dcdbdb;
+}
+
+.dealer_detail .services p
+{
+    font-size:10px;
+    line-height:16px;
+    margin:8px 0;
+}
+
+.dealer_detail .buttons
+{
+    margin:20px auto;
+    float:none;
+    width:60%;
+}
+
+.dealer_detail .buttons .column
+{
+    width:33%;
+    float:left;
+}
+
+.dealer_detail .buttons .button
+{
+    margin:0 auto;
+    float:none;   
+     
+    width:50px;
+    text-align:center;
+    color:#2596cf;
+    font-size:10px;
+}
+
+.dealer_detail .buttons .button .roundbutton
+{
+    margin:0 auto;
+    float:none;   
+}
+
+
+.dealer_detail .buttons .button-text
+{
+    margin:4px 0;
+}
+
+.dealer_detail .line .icon
+{
+    position:absolute;
+    left:0;
+    width:25px;
+    height:28px;
+    background-size:80%;
+    background-repeat:no-repeat;
+    background-position:center center;
+}
+
+.roundbutton.icon-unfavour {
+  background-image: url("../img/icon_blankstar.png");
+  background-size: 50%;
+}
+
+.dealer_detail .line .icon.phone-gray {
+    background-image:url("../img/dealerlocator/icon_phone_gray.png")
+}
+.dealer_detail .line .icon.email-gray {
+    background-image:url("../img/dealerlocator/icon_email_gray.png")
+}
+.dealer_detail .line .icon.location-gray {
+    background-image:url("../img/dealerlocator/icon_location_gray.png")
+}
+.dealer_detail .line .icon.fax-gray {
+    background-image:url("../img/dealerlocator/icon_fax_gray.png")
+}
+.dealer_detail .line .icon.abn-gray {
+    background-image:url("../img/dealerlocator/icon_abn_gray.png")
+}
+.dealer_detail .line .icon.mouse-gray {
+    background-image:url("../img/dealerlocator/icon_mouse_gray.png")
+}
+.dealer_detail .line .icon.time-gray {
+  background-image:url("../img/dealerlocator/icon_time.png");
+  background-size: 50%;
+}

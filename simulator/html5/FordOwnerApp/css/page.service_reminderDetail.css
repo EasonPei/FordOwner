@@ -1,0 +1,124 @@
+.reminderDetailTitle{
+	width: 100%;
+	height: 40px;
+	margin-top: 10px;
+}
+
+.service_reminderDetail .editButton{
+	background-image: url(../img/reminderDetail/icon-edit.png);
+	background-size: 28.5px 28.5px ;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	position: absolute;
+	right: 18%;
+}
+
+.service_reminderDetail .editButton.am-clickable-active{
+	opacity: 0.8;
+}
+
+.service_reminderDetail .deleteButton{
+	background-image: url(../img/reminderDetail/icon-delete.png);
+	background-size: 28.5px 28.5px ;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	position: absolute;
+	right: 5%;
+}
+
+.service_reminderDetail .deleteButton.am-clickable-active{
+	opacity: 0.8;
+}
+
+.reminderDetailLogo{
+	background-image: url(../img/reminderDetail/reminder.png);
+	background-size: 36.5px 33px ;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 40px;
+}
+
+.reminderDetailDate{
+	color: #123;
+	font-size: 16px;
+	line-height: 28px;
+	text-align: center;
+	width: 100%;
+	padding-bottom: 25px;
+}
+
+.reminderDetailList{
+	width: 80%;
+	margin-left: 5%;
+	border-top: 1px solid #f1f1f1;
+	font-size: 14px;
+	color: #123;
+	line-height: 32px;
+	text-align: left;
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding-left: 10%;
+}
+
+.service_reminderDetail #myCar{
+	background-image: url(../img/reminderDetail/list_icon_car.png);
+	background-size: 16px 10px ;	
+}
+
+.service_reminderDetail #myVin{
+	background-image: url(../img/reminderDetail/list_icon_vin.png);
+	background-size: 18.5px 8.5px ;	
+}
+
+.service_reminderDetail #myDetail{
+	background-position: left 8px;
+	background-image: url(../img/reminderDetail/list_icon_detail.png);
+	background-size: 15px 15.5px ;	
+	line-height: 18px;
+    min-height:30px;
+    padding-top: 5px;
+}
+
+.service_reminderDetail .rectButton
+{
+    position:absolute;
+    bottom:0px;
+    margin-bottom:0px;
+}
+
+.reminderDetailNote{
+	background-color: #eee;
+	width: 82%;
+	margin: 5%;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	padding: 4%;
+	font-size: 12px;
+	color: #345;
+	line-height: 15px;
+}
+
+#popup_reminder .popViewFrame{
+	height: 290px;
+}
+
+
+#popup_reminder .popViewTitle{
+	color: #123;
+	text-align: center;
+}
+
+#popup_reminder .popViewContent{
+	font-size: 14px;
+	line-height: 30px;
+	text-align: center;
+	width: 70%;
+	margin-left: 15%;
+}

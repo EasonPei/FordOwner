@@ -1,0 +1,62 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+
+/* Page header */
+.signUp_vehicle .signup-vehicletitle{font-size:18px;padding:24px 18px; color:#102839;}
+
+
+/* Page saved vehicle */
+.signUp_vehicle .signup-savedvehicle{background:#f4f4f3; padding:14px 18px; position:relative;}
+.signUp_vehicle .signup-savedvehicle .svtitle{font-size:9px; color:#999999;margin-bottom:15px;}
+.signUp_vehicle .signup-savedvehicle .svinfo{overflow:hidden;}
+.signUp_vehicle .signup-savedvehicle .svinfo .svinfo-number{padding-left:10px; font-size:12px; color:#d2d1d1; font-weight:bold; float:left;}
+.signUp_vehicle .signup-savedvehicle .svinfo p{display:block;margin-left:33px; font-size:12px; color:#000000;line-height:18px;}
+.signUp_vehicle .signup-savedvehicle .svdelete{background:#ffffff;position:absolute; right:2px; bottom:2px; width:65px; height:58px;}
+.signUp_vehicle .icon-delete{background:url(../img/icon-delete.png) no-repeat; background-size:29px 29px; width:29px; height:29px; margin:auto auto; margin-top:15px; display:block; }
+
+
+/* Page vehicle info */
+.signUp_vehicle .signup-vehicleinfo{padding:20px 18px; overflow:hidden;}
+.signUp_vehicle .signup-vehicleinfo .vititle{font-size:12px; line-height:18px; color:#616161;}
+.signUp_vehicle .signup-vehicleinfo .formline{border-bottom:1px solid #dcdbdb;padding:10px 0px 7px 0px;height:15px; display:block;margin-bottom:20px;}
+.signUp_vehicle .signup-vehicleinfo .formline .iconli{float:left; width:25px; height:15px; display:block; text-align:center; font-size:11px; color:#2596cf;}
+.signUp_vehicle .signup-vehicleinfo .formline .inputli{display:block; margin-left:32px; margin-right:22px;}
+.signUp_vehicle .signup-vehicleinfo .formline .inputli input{border:none; line-height:15px; height:18px; font-size:15px; color:#000000; width:100%;}
+
+.signUp_vehicle .button-arrow-down{ display:block; float:right; background:url(../img/button-arrow-down.png) no-repeat; background-size:22px 12px; width:22px; height:12px;margin-top:2px;}
+.signUp_vehicle .signup-vehicleinfo .formline li .selectinput{color:#2d96cd !important;}
+
+.signUp_vehicle .icon-vehicle{ background:url(../img/icon-vehicle.png) center no-repeat;background-size:19px 12px;}
+
+.signUp_vehicle .signup-vcswitch{ border-radius:25px; background:#f4f4f4; padding:3px; display:-webkit-box;-webkit-box-orient:horizontal; margin-bottom:10px;}
+.signUp_vehicle .signup-vcswitch li{border-radius:25px; height:24px;-webkit-box-flex:1; text-align:center; font-size:12px; line-height:24px; color:#2d96cd; position:relative;width:50%;}
+.signUp_vehicle .signup-vcswitch .focused{background:#2d96cd !important; color:#ffffff !important; }
+.signUp_vehicle .signup-vcswitch .focused .arrow-bluegray-down {display:block;}
+.signUp_vehicle .arrow-bluegray-down{ position:absolute; left:50%; bottom:-9px; margin-left:-9px; background:url(../img/arrow-bluegray-down.png) center no-repeat;background-size:17px 9px; width:17px; height:9px; display:none;}
+
+.signUp_vehicle .signup-vehicleinfo .formline-lasticon{margin-bottom:6px; background:#ffffff;}
+.signUp_vehicle .signup-vehicleinfo .formline-lasticon .iconli{margin-top:4px; text-align:left;}
+.signUp_vehicle .signup-vehicleinfo .formline-lasticon .inputli{margin-right:40px;}
+.signUp_vehicle .signup-vehicleinfo .formline-lasticon .lasticonli{float:right; margin-bottom:-8px;background:#ffffff; width:40px;overflow:hidden;}
+.signUp_vehicle .icon-scan{ background:#ffffff url(../img/icon-scan.png) center no-repeat;background-size:29px 29px; width:50px; height:40px;display:block; float:right;}
+.signUp_vehicle .how-findvin{color:#2596cf; line-height:17px; font-size:9px;}
+
+.signUp_vehicle .signup-vehicleinfo .addvehicle{padding:28px 0 24px 0; margin:0 auto; width:73px;}
+.signUp_vehicle .signup-vehicleinfo .addvehicle p{color:#2596cf; line-height:15px; font-size:12px; text-align:center;padding-top:5px;}
+.signUp_vehicle .icon-addvehicle{ background:#ffffff url(../img/icon-addvehicle.png) center no-repeat;background-size:29px 29px; width:29px; height:29px;display:block;margin:0 auto;}
+
+.signUp_vehicle .bottombutton.am-clickable-active{opacity: 0.8}
+.signUp_vehicle .bottombutton{width:100%; height:48px; line-height:48px; color:#ffffff; text-align:center; font-size:15px; background:#2d96cd; border-top:1px solid #8dc6e4;border-bottom:1px solid #7bc0e3;position: absolute; bottom:0px;}
+
+
+.signUp_vehicle .error-message
+{
+    color:#ff0000;
+    height:14px;
+    font-size:12px;
+    display:none;
+    margin:5px 0;
+}
+
+

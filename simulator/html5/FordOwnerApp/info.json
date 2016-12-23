@@ -1,0 +1,28 @@
+{
+	"version": "0.001",
+	"label": "Ford Owner App",
+	"description": "Ford Owner App",
+	"id": "FordOwnerApp",
+	"systemBar": "true",
+	"category": "default",
+	"index": "home.html",
+	"icon": "src/icon.png",
+	"minVersion": "1.0",
+	"orientation": "all",
+	"containerVer": {
+		"android": "1.0",
+		"ios": "1.0",
+		"wp": "1.0"
+	},
+	"minContainerVer": {
+		"android": "1.0",
+		"ios": "1.0",
+		"wp": "1.0"
+	},
+	"containerUrl": {
+		"android": "1.0",
+		"ios": "1.0",
+		"wp": "1.0"
+	},
+	"newVersionDescription": "changlog: ......"
+}

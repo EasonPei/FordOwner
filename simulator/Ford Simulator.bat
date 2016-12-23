@@ -1,0 +1,1 @@
+start chrome.exe --user-data-dir="C:/Chrome dev session" --allow-file-access-from-files+Space --allow-file-access-from-files --allow-http-access-from-files+Space --disable-web-security

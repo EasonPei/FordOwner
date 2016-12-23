@@ -1,0 +1,463 @@
+﻿html, body, h1, h2, h3, h4, ul, li, ol, dl, dt, dd, form, p, input, textarea {
+	margin: 0;
+	padding: 0;
+}
+ul, dl, ol {
+	list-style: none;
+}
+
+iframe {
+	border: none;
+}
+
+body {
+	background: url(../images/background.jpg) center top;
+	overflow: hidden;
+}
+
+#logo {
+	background: url(../images/hp_logo.png) right top;
+	position: absolute;
+	top: 50px;
+	right: 7px;
+	height: 60px;
+	width: 60px;
+}
+
+textarea {
+	border: 1px solid #cccccc;
+	box-shadow: 1px 1px 4px rgba(204, 204, 204, 0.5) inset;
+	padding-left: 5px;
+}
+
+input[type="text"] {
+	border: 1px solid #cccccc;
+	box-shadow: 1px 1px 4px rgba(204, 204, 204, 0.5) inset;
+	height: 22px;
+	padding-left: 5px;
+	background-color: #fafafa;
+}
+
+#scr {
+	position: absolute;
+	width: 320px;
+	height: 480px;
+	top: 50%;
+	left: 50%;
+	margin-left: -160px;
+	margin-top: -240px;
+	/*border: #AAAAAA 3px solid;
+	 border-radius: 3px;*/
+	background: #eee;
+}
+
+#eventManager {
+	position: absolute;
+	top: 50px;
+	left: 10px;
+	width: 200px;
+	height: 300px;
+	background: #fff;
+	font-size: 12px;
+	border: #006696 1px solid;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+	z-index: 99;
+}
+
+#eventManager .content {
+	padding: 8px;
+}
+
+#eventManager textarea {
+	width: 172px;
+	height: 100px;
+	padding: 5px;
+}
+
+#eventManager .titleBar {
+	background: -webkit-gradient(linear, left top, left bottom, from(#64d2f7), to(#0099cd));
+	user-select: none;
+	height: 30px;
+	line-height: 30px;
+	color: #fff;
+	padding: 0 5px;
+	font-size: 12px;
+	font-weight: bold;
+	word-break: break-word;
+}
+
+#eventManager .titleBar .sim-button-white {
+	float: right;
+}
+
+#eventManager .text {
+	height: 30px;
+	line-height: 30px;
+}
+
+#headBar {
+	text-align: center;
+	line-height: 40px;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	padding: 0 20px 0 40px;
+	background: url(../images/titleBg.png) no-repeat left center, -webkit-gradient(linear, left top, left bottom, from(#0bb8f1), to(#0099cc));
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+	z-index: 9;
+}
+#headBar li {
+	float: left;
+	color: #fff;
+	padding: 0 7px;
+	font-size: 14px;
+}
+#headBar li:hover {
+	background: #0C4D63;
+}
+
+#toolbar2 {
+	height: 40px;
+	background: #555;
+	width: 100%;
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	border-radius: 5px;
+}
+#toolbar2 li {
+	height: 40px;
+	-webkit-box-flex: 1;
+	text-align: center;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 40px;
+	color: #FFFFFF;
+}
+
+#simulatorUI {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+#simulatorUI .sim-tabbar {
+	height: 40px;
+	background: #fff;
+	width: 100%;
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+}
+#simulatorUI .sim-tabbar li {
+	/*border-radius: 2px;
+	 border: #eeeeee 1px solid;*/
+	height: 40px;
+	border-bottom: none;
+	-webkit-box-flex: 1;
+	text-align: center;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 40px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#64d2f7), to(#0099cd));
+	color: #FFFFFF;
+	text-shadow: 0px 2px 4px #0380ac;
+}
+#simulatorUI .sim-tabbar li.selected {
+	height: 40px;
+	color: #037399;
+	/*background: #fff;*/
+	background: -webkit-gradient(linear, left top, left bottom, from(#c5effd), to(#f8fdff));
+	text-shadow: 0px 0px 0px #0380ac;
+}
+
+#simulatorUI .sim-page {
+	position: absolute;
+	top: 40px;
+	bottom: 0px;
+	width: 100%;
+	background: #f8fdff;
+}
+
+#simulatorUI .sim-close {
+	position: absolute;
+	height: 22px;
+	width: 22px;
+	top: -11px;
+	right: -11px;
+	background: url(../images/delete2.png) no-repeat center center;
+	background-size: contain;
+}
+
+#simulatorUI .actionBar {
+	position: absolute;
+	bottom: 0px;
+	height: 40px;
+	width: 100%;
+	background: #fff;
+	text-align: center;
+}
+
+#mobiletList {
+	position: absolute;
+	top: 0;
+	bottom: 40px;
+	left: 0;
+	right: 0;
+	overflow-y: scroll;
+}
+#mobiletList li {
+	/*width: 25%;*/
+	height: 110px;
+	width: 75px;
+	float: left;
+	position: relative;
+}
+#mobiletList li:hover {
+	background: #eee;
+}
+
+#mobiletList li:hover .delete {
+	display: block;
+}
+
+#mobiletList .img {
+	margin: 10px 10px 3px 10px;
+}
+
+#mobiletList .info {
+	font-size: 12px;
+	margin: 0 10px 10px 10px;
+	text-align: center;
+}
+
+#mobiletList .delete {
+	width: 22px;
+	height: 22px;
+	display: none;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background: url(../images/delete2.png) no-repeat center center;
+	background-size: contain;
+}
+
+#mobiletList .delete:hover {
+	background: url(../images/delete.png) no-repeat center center;
+	background-size: contain;
+}
+
+.bottombar {
+	position: absolute;
+	bottom: 0;
+	height: 40px;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+#addMobilet input {
+	width: 60%;
+}
+
+#addServer {
+	height: 70px;
+	width: 100%;
+	text-align: center;
+	padding: 0 10px;
+	font-size: 12px;
+}
+
+#addServer table {
+	width: 80%;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#addServer input.servername {
+	width: 50%;
+}
+#addServer input.serverip {
+	width: 80%;
+}
+
+.addResulotionContainer {
+	height: 70px;
+}
+
+#addResulotion {
+	width: 350px;
+	height: 70px;
+	text-align: left;
+	padding: 0 10px;
+	font-size: 12px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#addResulotion input.resname {
+	width: 180px;
+}
+#addResulotion input.reswidth {
+	width: 96px;
+}
+#addResulotion input.resheight {
+	width: 96px;
+}
+
+.list {
+	position: absolute;
+	top: 0;
+	bottom: 70px;
+	left: 0;
+	right: 0;
+	overflow-y: scroll;
+}
+
+.list li {
+	height: 40px;
+	position: relative;
+	/*border-top: 1px #fff solid;*/
+	border-bottom: 1px #bbbbbb solid;
+	/*background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eee));*/
+	font-size: 14px;
+	padding: 10px 0 10px 20px;
+	color: #888;
+}
+
+.list li.selected {
+	background: url(../images/select.png) no-repeat no-repeat center right 10px, -webkit-gradient(linear, left top, left bottom, from(#33b5e6), to(#33b5e6));
+	background-size: 22px 22px, auto;
+	color: #FFF;
+}
+
+.list li:hover {
+	background: -webkit-gradient(linear, left top, left bottom, from(#33b5e6), to(#33b5e6));
+	color: #FFF;
+}
+.list li:hover .delete {
+	display: block;
+}
+.list li:active {
+	background: -webkit-gradient(linear, left top, left bottom, from(#ddd), to(#fff));
+}
+.list li.selected:active {
+	background: url(../images/select.png) no-repeat no-repeat center right 10px, -webkit-gradient(linear, left top, left bottom, from(#ddd), to(#fff));
+	background-size: 22px 22px, auto;
+}
+
+.list li .name {
+	font-weight: bold;
+	line-height: 25px;
+}
+
+.list li .url {
+	font-size: 12px;
+}
+
+.list li .highlight {
+	color: #ff7139;
+	padding: 0 10px 0 5px;
+}
+
+.list .delete {
+	display: none;
+	position: absolute;
+	height: 22px;
+	width: 22px;
+	top: 19px;
+	right: 10px;
+	background: url(../images/delete2.png) no-repeat center center;
+	background-size: contain;
+}
+
+.list li .arrow {
+	background: url(../images/list-icon.gif) no-repeat no-repeat;
+	background-size: contain;
+	display: block;
+	position: absolute;
+	height: 13px;
+	width: 13px;
+	top: 22px;
+	right: 15px;
+}
+
+.sim-block {
+	margin: 20px 10px;
+	padding: 20px 10px;
+	border: #bbbbbb 1px solid;
+	position: relative;
+	font-size: 12px;
+}
+
+.sim-block h1 {
+	position: absolute;
+	font-size: 14px;
+	top: -10px;
+	left: 20px;
+	background: #f8fdff;
+	padding: 0 10px;
+}
+
+.sim-block .inputTitle {
+	line-height: 30px;
+	font-weight: bold;
+}
+
+.sim-block input {
+	vertical-align: sub;
+}
+
+.sim-button {
+	display: inline-block;
+	background: -webkit-gradient(linear, left top, left bottom, from(#85ceef), to(#048bb8));
+	/*box-shadow: 0 0 4px rgba(255, 255, 255, 1) inset;*/
+	border: 1px #048bb8 solid;
+	border-radius: 2px;
+	height: 12px;
+	font-size: 10px;
+	color: #fff;
+	line-height: 12px;
+	padding: 5px 11px;
+	margin: 2px;
+}
+
+.sim-button:active {
+	background: -webkit-gradient(linear, left top, left bottom, from(#00679A), to(#0098CB));
+}
+
+.sim-button-green {
+	display: inline-block;
+	background: -webkit-gradient(linear, left top, left bottom, from(#98cb00), to(#6da101));
+	/*box-shadow: 0 0 4px rgba(255, 255, 255, 1) inset;*/
+	border: 1px #669900 solid;
+	border-radius: 2px;
+	height: 12px;
+	font-size: 10px;
+	color: #fff;
+	line-height: 12px;
+	padding: 5px 11px;
+	margin: 2px;
+}
+
+.sim-button-green:active {
+	background: -webkit-gradient(linear, left top, left bottom, from(#00679A), to(#0098CB));
+}
+
+.sim-button-white {
+	display: inline-block;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#dddbdc));
+	/*box-shadow: 0 0 4px rgba(255, 255, 255, 1) inset;*/
+	border: 1px #c7c7c7 solid;
+	border-radius: 2px;
+	height: 12px;
+	font-size: 10px;
+	color: #000;
+	line-height: 12px;
+	padding: 5px 11px;
+	margin: 2px;
+}
+
+.sim-button-white:active {
+	background: -webkit-gradient(linear, left top, left bottom, from(#00679A), to(#0098CB));
+}

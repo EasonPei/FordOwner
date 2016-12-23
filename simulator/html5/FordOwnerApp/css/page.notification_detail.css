@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+
+.notification_detail .notificationDetailBanner{
+	margin-bottom: 20px;
+}
+
+.notification_detail .notificationDetailText{
+	color: #123;
+	font-size: 12px;
+	line-height: 18px;
+	text-align: left;
+	width: 90%;
+	margin-top: 2px;
+	margin-left: 5%;
+	margin-bottom: 15px;
+}
+
+.notification_detail .notificationDetailText li{
+	list-style: disc;
+	margin-left: 6%;
+}
+
+.notification_detail .notificationDetailTitle{
+	color: #123;
+	font-size: 20px;
+	line-height: 26px;
+	text-align: left;
+	width: 90%;
+	margin-left: 5%;
+	margin-top: -5px;
+	padding-bottom: 2px;
+}
+
+.notification_detail .notificationDetailTextRed{
+	color: #f44;
+	font-size: 12px;
+	line-height: 18px;
+	text-align: left;
+	width: 90%;
+	margin-top: -15px;
+	margin-left: 5%;
+	margin-bottom: 10px;
+}
+
+.notification_detail .favourButton{
+	background-image: url(../img/notificationDetail/star.png);
+	background-size: 29px 28.5px ;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 20%;
+	margin-left: 40%;
+	height: 30px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.notification_detail .icon-unfavour{
+	width: 20%;
+	margin-left: 40%;
+	height: 30px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.notification_detail .favourButton.am-clickable-active,.notification_detail .icon-unfavour.am-clickable-active{
+	opacity: 0.8;
+}
+.notification_detail .bottombutton.am-clickable-active{opacity: 0.8}
+.notification_detail .bottombutton{width:100%; height:48px; line-height:48px; color:#ffffff; text-align:center; font-size:15px; background:#2d96cd; border-top:1px solid #8dc6e4;border-bottom:1px solid #7bc0e3;position: absolute; bottom:0px;}
+

@@ -1,0 +1,67 @@
+﻿.profile_updateInfo .am-body-wrap
+{
+    background-color:#fff;
+}
+
+.profile_updateInfo .form {
+    padding: 20px;
+}
+
+.profile_updateInfo .form * {
+    display: block;
+}
+
+.profile_updateInfo .form label
+{
+    font-size:14px;
+    color:#777;
+}
+
+.profile_updateInfo .form div:first-child
+{
+    margin-bottom:15px;
+}
+
+.profile_updateInfo .form input 
+{
+    font-size:17px;
+    background-color:transparent;
+    border:none;
+    border-bottom: 1px solid #f1f1f1;
+    color: #000;    
+    text-align: left;
+    margin:5px 0;
+    text-overflow : ellipsis;
+    width: 100%;
+}
+
+.profile_updateInfo .error
+{
+    color:#ff0000;
+    padding: 20px
+}
+
+.profile_updateInfo .rectButton {
+width: 100%;
+height: 40px;
+background: #1E97C8;
+border-top: 1px solid #CCE6F2;
+border-bottom: 1px solid #CCE6F2;
+font-size: 18px;
+color: #fff;
+line-height: 40px;
+text-align: center;
+margin-top: 0px;
+margin-bottom: 0px;
+position: absolute;
+bottom:0px;
+}
+
+.profile_updateInfo .keboardCover{
+  background-color: #fff;
+  opacity: 0.1;
+  width: 100%;
+  height: 2000px;
+  z-index: 999;
+  position: absolute;;
+}

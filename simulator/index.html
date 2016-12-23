@@ -1,0 +1,400 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>EMAP Simulator</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="styles/common.css" rel="stylesheet" type="text/css" />
+    <link href="styles/components.css" rel="stylesheet" type="text/css" />
+    <link href="libs/mobiscroll.datetime-2.4.1.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div id="logo"></div>
+	<ul id="headBar">
+		<li id="mainBtn0" ml="common.regular"><!-- 常规 --></li>
+		<li id="mainBtn1" ml="common.application"><!-- 应用 --></li>
+		<li id="mainBtn2" ml="common.server"><!-- 服务器 --></li>
+		<li id="mainBtn3" ml="common.resolution"><!-- 分辨率 --></li>
+		<li id="mainBtn4" ml="common.eventTrigger"><!-- 事件触发器 --></li>
+	</ul>
+	<div id="scr">
+		<iframe id="mobilet" width="100%" height="100%"></iframe>
+		<div id="simulatorUI" style="display: none">
+			<ul class="sim-tabbar">
+				<li ml="common.regular">常规</li>
+				<li ml="common.application">应用</li>
+				<li ml="common.server" class="selected">服务器</li>
+				<li ml="common.resolution">分辨率</li>
+			</ul>
+			<div class="sim-page" style="display: none; overflow-y: scroll;">
+				<div class="sim-block">
+					<h1 ml="regular.lang">语言</h1>
+					<label><input type="radio" name="lang" value="en-US"><span> English</span></label>
+					<label><input type="radio" name="lang" value="zh-CN"><span> 中文</span></label>
+				</div>
+				<div class="sim-block">
+					<h1 ml="regular.mode">模式</h1>
+					<label><input type="radio" name="mode" value="1"><span ml="regular.modeB2E"> B2E 模式</span></label>
+					<label><input type="radio" name="mode" value="2"><span ml="regular.modeB2C"> B2C 模式</span></label>
+					<label><input type="radio" name="mode" value="3"><span ml="regular.modeB2EOffline"> B2E Offline 模式</span></label>
+				</div>
+				<div class="sim-block" id="user">
+					<h1 ml="regular.user">用户</h1>
+					<div class="inputTitle" ml="regular.username">用户名</div>
+					<input type="text" id="username"/>
+					<div class="inputTitle" ml="regular.password">密码</div>
+					<input type="text" id="password"/>
+					<label><input type="checkbox" id="encodePwd"> <span ml="regular.passwordEncode">密码加密</span></label>
+					<div class="inputTitle">Token</div>
+					<p>
+						<span id="token">12312331</span>
+						<span class="sim-button" id="login" ml="regular.login">登录</span>
+					</p>
+				</div>
+				<div class="sim-block">
+					<h1 ml="regular.cache">缓存</h1>
+					<span class="sim-button sim-button-white" id="clearCache" ml="regular.clearCache">清除缓存</span>
+				</div>
+				<div class="sim-block">
+					<h1 ml="regular.importExport">导入/导出</h1>
+					<textarea style="width: 100%; height: 90px;" id="datapool"></textarea>
+					<span class="sim-button" id="exportBtn" ml="regular.export">导出</span>
+					<span class="sim-button sim-button-green" id="importBtn" ml="regular.import">导入</span>
+				</div>
+			</div>
+			<div class="sim-page" style="display: none">
+				<ul id="mobiletList">
+					<li>
+						<div class="img"><!-- <img src="E:\svn\Mobilets\TestMobilet\images2\icon.png" width="100%" height="100%"> --></div>
+						<div class="info"><!-- 肯德基宅急送 --></div>
+						<div class="delete"></div>
+					</li>
+				</ul>
+				<div id="addMobilet" class="bottombar">
+					<input type="text" />
+					<span class="sim-button sim-button-green" ml="application.add">添加</span>
+				</div>
+			</div>
+			<div class="sim-page" style="display: none">
+				<ul id="serverList" class="list">
+					<li>
+						<div class="name"><!-- 肯德基宅急送 --></div>
+						<div class="url"><!-- www2.4008823823.com.cn:80 --></div>
+						<div class="delete"></div>
+					</li>
+				</ul>
+				<div id="addServer" class="bottombar">				   
+				    <table>
+					<tr>
+					    <td ml="server.desc">描述:</td>
+					    <td><input type="text" class="servername" /> <span class="sim-button sim-button-green" ml="server.add">添加</span></td>
+					</tr>
+					<tr>
+					    <td ml="server.uri">地址: </td>
+					    <td><input type="text" class="serverip" /></td>
+					</tr>
+				    </table>				  
+				</div>
+			</div>
+			<div class="sim-page" style="display: none">
+				<ul id="resolutionList" class="list">
+					<li>
+						<div class="name"><!-- iPhone(带系统栏) --></div>
+						<div class="url"><!-- Width:<span class="highlight">320px</span>Height:<span class="highlight">460px</span> --></div>
+						<div class="delete"></div>
+					</li>
+				</ul>
+				<div class="bottombar addResulotionContainer" >
+				    <div id="addResulotion" >
+					    <span ml="resolution.desc">描述</span> <input type="text" class="resname" />
+					    <span ml="resolution.add" class="sim-button sim-button-green">添加</span><br>
+					    <span ml="resolution.width">宽度</span>: <input type="text" class="reswidth" />
+					    <span ml="resolution.height">高度</span>: <input type="text" class="resheight" />
+				    </div>
+				</div>
+			</div>
+			<div class="sim-close" id="uiclose"></div>			
+		</div>
+		<div class="comp-busyview" style="display: none">
+			<div>
+			    <div id="busyviewText" ml="busyview.loading"> Loading... </div>
+			    <span class="sim-button" ml="busyview.close">关闭</span>
+			</div>
+		</div>
+		<div class="comp-instantMessage" style="display: none">
+			<span></span>
+		</div>
+		<div class="comp-confirm" style="display: none">
+			<div class="box">
+				<h1></h1>
+				<p></p>
+				<span class="sim-button" ml="common.confirm">确认</span>
+				<span class="sim-button" ml="common.cancel">取消</span>
+			</div>
+		</div>
+		<div class="comp-messageBox" style="display: none">
+			<div class="box">
+				<h1></h1>
+				<p></p>
+				<span class="sim-button" ml="messageBox.close">关闭</span>
+			</div>
+		</div>
+		<div class="comp-popupWebsite" style="display: none">
+		    <iframe id='popupWebsiteIframe' width="100%" height="100%"></iframe>
+		    <div class="close"></div>
+		</div>
+		<div class="comp-cameraGetPicture" style="display: none">
+		    <video id="video" width="100%" height="100%" autoplay></video>
+		    <canvas id="canvas"></canvas>
+		    <span id="selectPic" class="sim-button" ml="cameraGetPicture.select">Select Picture</span>
+		    <span id="capture" class="sim-button" ml="cameraGetPicture.capture">Capture</span>		    
+		    <div class="close"></div>
+		</div>
+		<div class="comp-dial" style="display: none">		   	    		   		   
+		    <img id="imgDial"></img>
+		    <div id='dialNumber'></div>
+		    <div class="close"></div>
+		</div>
+		<div class="comp-sms" style="display: none">
+		    <div class="content">
+			<div class="smsTitle">
+			    <span class="return"><</span>
+			   <span ml="sms.sms">短信</span>
+			    <span class="sim-button sim-button-white" ml="sms.send">发送</span>
+			</div>
+			<div class="smsRowContent">
+			    <div class="smsRow">
+				<div class="title" ml="sms.reciver">收件人</div>
+				<input type="text" id="smsNumber"/>
+			    </div>
+			    <textarea id='smsBody'></textarea>
+			    <br>
+			</div>
+		    </div>
+		</div>
+		<div class="comp-email" style="display: none">
+		    <div class="content">
+			<div class="emailTitle">
+			    <span class="return"><</span>
+			   <span ml="email.email">邮件</span>
+			    <span class="sim-button sim-button-white" ml="email.send">发送</span>
+			</div>
+			<div class="emailRowContent">
+			    <div class="emailRow">
+				<div class="title" ml="email.reciver">收件人:</div>
+				<input type="text" id="emailTo"/>
+			    </div>
+			    <div class="emailRow">			
+				<div class="title" ml="email.cc">抄送:</div>
+				<input type="text" id="emailCC"/>
+			    </div>
+			    <div class="emailRow">
+				<div class="title" ml="email.bcc">密送:</div>
+				<input type="text" id="emailBCC"/>
+			    </div>
+			    <div class="emailRow">
+				<div class="title" ml="email.subject">主题:</div>
+				<input type="text" id="emailSubject"/>
+			    </div>			
+			    <textarea id='emailBody'></textarea>
+			    <br>
+			</div>
+		    </div>
+		    <!--div class="close"></div-->
+		</div>
+		<div class="comp-selectPicture" style="display: none">
+		    <div class="box">
+			<h1 ml="selectPicture.select">Select picture</h1>
+			<p>
+			    <input type="file" id="input" size="10" accept="image/*"  />
+			</p>
+			<span class="sim-button" ml="common.ok">Ok</span>
+			<span class="sim-button" ml="common.cancel">Cancel</span>
+		    </div>
+		</div>				
+		<div class="comp-barcode" style="display: none">
+		    <div class="box">
+			<h1 ml="barcode.inputBarcode">Input barcode</h1>
+			<br/>
+			<br/>
+			    <div id="barcodeContent">
+				<input type="text" id="inputBarcode" size="20"/>
+			    </div>			
+			<span class="sim-button" ml="common.ok">Ok</span>
+			<span class="sim-button" ml="common.cancel">Cancel</span>
+		    </div>
+		</div>
+		<div class="comp-barcodeCamera" style="display: none">
+		    <video id="videoBarcode" width="100%" height="100%" autoplay></video>
+		    <canvas id="canvasBarcode"></canvas>		    		 		    
+		    <div class="close"></div>
+		</div>
+		<div class="comp-showComboBox" style="display: none">
+		    <div class="box">
+			<ul id="resolutionList">
+				<li>清除缓存清除缓存清除缓存清除缓存清除缓存清除缓存</li>
+				<li>清除缓存</li>
+				<li>清除缓存</li>
+				<li>清除缓存</li>
+				<li>清除缓存</li>
+				<li>清除缓存</li>
+				<li>清除缓存</li>
+				<li>清除缓存</li>
+				<li>清除缓存</li>
+				<li>清除缓存</li>
+			</ul>
+			<span class="sim-button" ml="common.cancel">取消</span>
+		    </div>
+		</div>
+		<div class="comp-map" style="display: none">
+		    <div id="allmap"> </div>
+		    <div class="close"></div>
+		</div>
+		<div class="comp-search" style="display: none">
+		    <div class="content">
+			<div class="searchTitle">
+			    <span class="return"><</span>
+			    <span id="searchTitleText"></span>
+			</div>
+			<div class="searchInput">            
+			    <input type="text" name="key" placeholder="输入关键字">
+			</div>						
+			<dl class="searchGroup">			
+			</dl>
+		    </div>
+		</div>
+		<div class="comp-bind" style="display: none">
+			<div class="box">
+				<h1></h1>
+				<p></p>
+				<div class="content">				    
+				    <div class="title" ml="socail.username">用户名</div>
+				    <input type="text" ml="socail.password" id="bindUserName"/>
+				    <div class="title">密码</div>
+				    <input type="password" id="bindPassword"/>
+				</div>
+				<span class="sim-button" ml="common.ok">确认</span>
+				<span class="sim-button" ml="common.cancel">取消</span>
+			</div>
+		</div>
+		<div class="comp-shareTo" style="display: none">
+			<div class="box">
+				<h1></h1>
+				<p></p>
+				<div class="content">	
+				    <input type="textarea" id="shareContent"/>				   
+				</div>
+				<span class="sim-button" ml="common.ok">确认</span>
+				<span class="sim-button" ml="common.cancel">取消</span>
+			</div>
+		</div>
+		<audio id="audioPlay" autoplay="autoplay" >		    
+		</audio>
+		<audio id="audioBeep" autoplay="autoplay" >		    
+		</audio>
+		<ul id="toolbar2">
+			<li id="mainBtn10" ml="common.backButton"><!-- 返回 --></li>
+			<li id="mainBtn11" ml="common.menuButton"><!-- 菜单 --></li>
+			<li id="mainBtn12" ml="common.searchButton"><!-- 搜索 --></li>
+			<!-- <li id="mainBtn13">接通</li>
+			<li id="mainBtn14">挂断</li>
+			<li id="mainBtn15">音量+</li>
+			<li id="mainBtn16">音量-</li> -->
+		</ul>
+	</div>
+	
+	<div id="eventManager" onselectstart="return false;" style="display: none">
+		<div id="eventManagerHandler" class="titleBar">
+			<span ml="eventTigger.title">事件触发器</span>
+			<span ml="eventTigger.close" class="sim-button-white" id="eventManagerClose">关闭</span>
+		</div>
+		<div class="content">
+			<div class="text" ml="eventTigger.event" >事件</div>
+			<select>
+			  <option value="emap_notice">emap_notice</option>
+			  <option value="emap_event">emap_event</option>
+			  <option value="emap_audioended">emap_audioended</option>
+			  <option value="emap_audioerror">emap_audioerror</option>
+			  <option value="emap_recorderror">emap_recorderror</option>
+			  <option value="pause">pause</option>
+			  <option value="resume">resume</option>
+			  <option value="online">online</option>
+			  <option value="offline">offline</option>
+			  <option value="backbutton">backbutton</option>
+			  <option value="menubutton">menubutton</option>
+			  <option value="searchbutton">searchbutton</option>
+			  <option value="startcallbutton">startcallbutton</option>
+			  <option value="endcallbutton">endcallbutton</option>
+			  <option value="volumedownbutton">volumedownbutton</option>
+			  <option value="volumeupbutton">volumeupbutton</option>
+			</select>
+			<div class="text" ml="eventTigger.params" >参数</div>
+			<textarea></textarea>
+			<span class="sim-button-white" ml="eventTigger.trigger" id="eventManagerTrigger">触发</span>
+		</div>
+	</div>
+</body>
+
+
+    <script src="libs/jquery-2.0.3.min.js" type="text/javascript"></script>
+    <script src="libs/urlparser.js" type="text/javascript"></script>
+    <script src="libs/drag.js" type="text/javascript"></script>
+    <script src="libs/dateFormat.js" type="text/javascript"></script>
+    <script src="libs/mobiscroll.datetime-2.4.1.min.js" type="text/javascript"></script>
+    <script src="libs/base64EnDecoder.js" type="text/javascript"></script>
+    <script src="libs/sha1.js"></script>
+	<script src="libs/enc-base64-min.js"></script>
+	<script src="libs/multi_language.js"></script>
+    
+    <script src="bootParam.js" type="text/javascript"></script>
+    
+    <script src="scripts/init.js" type="text/javascript"></script>
+    <script src="scripts/apis.core.js" type="text/javascript"></script>
+    <script src="scripts/apis.nativeUI.js" type="text/javascript"></script>
+    <script src="scripts/apis.emapFileTransfer.js" type="text/javascript"></script>
+    <script src="scripts/apis.emapNotification.js" type="text/javascript"></script>
+    <script src="scripts/apis.phoneService.js" type="text/javascript"></script>
+    <script src="scripts/apis.recordService.js" type="text/javascript"></script>
+    <script src="scripts/apis.mediaService.js" type="text/javascript"></script>
+    <script src="scripts/apis.social.js" type="text/javascript"></script>
+    <script src="scripts/apis.pns.js" type="text/javascript"></script>
+    <script src="scripts/apis.ADBMobile_PhoneGap.js" type="text/javascript"></script>
+    <script src="scripts/apis.NetworkStatus.js" type="text/javascript"></script>
+    <script src="scripts/apis.securityService.js" type="text/javascript"></script>
+    <script src="scripts/simfunc.js" type="text/javascript"></script>
+    <!--script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=8fa808e8f1e0ed2f302922a566f50e76"></script-->
+    
+    <script type="text/javascript">
+	function initialize() {
+	  //var mp = new BMap.Map('map');
+	  //mp.centerAndZoom(new BMap.Point(121.491, 31.233), 11);
+	}
+	  
+	function loadScript() {
+	  var script = document.createElement("script");
+	  script.src = "http://api.map.baidu.com/api?v=2.0&ak=8fa808e8f1e0ed2f302922a566f50e76&callback=initialize";
+	  document.body.appendChild(script);
+	}
+	  
+	window.onload = loadScript;
+    </script>
+    
+    <!--barcode-->
+    <script type="text/javascript" src="libs/qrcode/grid.js"></script>
+    <script type="text/javascript" src="libs/qrcode/version.js"></script>
+    <script type="text/javascript" src="libs/qrcode/detector.js"></script>
+    <script type="text/javascript" src="libs/qrcode/formatinf.js"></script>
+    <script type="text/javascript" src="libs/qrcode/errorlevel.js"></script>
+    <script type="text/javascript" src="libs/qrcode/bitmat.js"></script>
+    <script type="text/javascript" src="libs/qrcode/datablock.js"></script>
+    <script type="text/javascript" src="libs/qrcode/bmparser.js"></script>
+    <script type="text/javascript" src="libs/qrcode/datamask.js"></script>
+    <script type="text/javascript" src="libs/qrcode/rsdecoder.js"></script>
+    <script type="text/javascript" src="libs/qrcode/gf256poly.js"></script>
+    <script type="text/javascript" src="libs/qrcode/gf256.js"></script>
+    <script type="text/javascript" src="libs/qrcode/decoder.js"></script>
+    <script type="text/javascript" src="libs/qrcode/qrcode.js"></script>
+    <script type="text/javascript" src="libs/qrcode/findpat.js"></script>
+    <script type="text/javascript" src="libs/qrcode/alignpat.js"></script>
+    <script type="text/javascript" src="libs/qrcode/databr.js"></script>
+
+</html>

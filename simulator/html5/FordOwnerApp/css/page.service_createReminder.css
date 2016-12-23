@@ -1,0 +1,59 @@
+.createReminderTitle {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #123;
+    font-size: 16px;
+    line-height: 32px;
+    text-align: center;
+    width: 100%;
+}
+
+.service_createReminder .datepicker {
+    margin-left: 5%;
+}
+
+.service_createReminder .subtitle {
+    width: 90%;
+    margin-left: 5%;
+    padding-top: 15px;
+    padding-bottom: 2px;
+    font-size: 14px;
+    color: #777;
+    line-height: 18px;
+    text-align: left;
+}
+
+#myVehicle {
+    background-image: url(../img/createReminder/car.png);
+    background-repeat: no-repeat;
+    background-size: 18.5px 11.5px;
+}
+
+.service_createReminder .inputLine {
+    color: #1E97C8;
+}
+
+.service_createReminder .inputLine .inputLineMiddle
+{
+    width:auto;
+}
+
+.service_createReminder .noteInput {
+    width: 90%;
+    margin-left: 5%;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 45px;
+}
+
+.service_createReminder .rectButton {
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 0px;
+}
+
+

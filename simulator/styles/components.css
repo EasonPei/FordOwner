@@ -1,0 +1,743 @@
+﻿.comp-busyview {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.3);
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	top: 0;
+	left: 0;
+}
+
+.comp-busyview > div {
+	background: rgba(0,0,0,0.8);
+	border-radius: 10px;
+	height: 50px;
+	line-height: 50px;
+	color: #fff;
+	padding: 20px;
+	text-align:center
+}
+
+.comp-busyview #busyviewText {
+	height: 20px;
+	line-height: 20px;
+	margin-left: 0;
+	margin-right: 0;	
+}
+
+.comp-instantMessage {
+	position: absolute;
+	bottom: 30px;
+	width: 100%;
+	text-align: center;
+}
+
+.comp-instantMessage span {
+	margin: 10px;
+	background: rgba(0,0,0,0.8);
+	border-radius: 5px;
+	line-height: 20px;
+	color: #fff;
+	padding: 10px;
+	display: block;
+}
+
+.comp-confirm {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.3);
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	top: 0;
+	left: 0;
+}
+
+.comp-confirm .box {
+	width: 250px;
+	background: #E3E6EA;
+	text-align: center;
+	padding: 10px;
+	border-radius: 3px;
+	border: #0098CB 1px solid;
+}
+.comp-confirm h1 {
+	font-size: 18px;
+	background: #0098CB;
+	padding: 5px;
+}
+.comp-confirm p {
+	min-height: 40px;
+	text-align: left;
+	padding: 5px 0;
+}
+
+.comp-messageBox {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.3);
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	top: 0;
+	left: 0;
+}
+
+.comp-messageBox .box {
+	width: 250px;
+	background: #E3E6EA;
+	text-align: center;
+	padding: 10px;
+	border-radius: 3px;
+	border: #0098CB 1px solid;
+}
+.comp-messageBox h1 {
+	font-size: 18px;
+	background: #0098CB;
+	padding: 5px;
+}
+.comp-messageBox p {
+	min-height: 40px;
+	text-align: left;
+	padding: 5px 0;
+	word-wrap:break-word;
+}
+
+.comp-popupWebsite{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.3);
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	top: 0;
+	left: 0;
+}
+
+.comp-popupWebsite .close{
+	position: absolute;
+	height: 22px;
+	width: 22px;
+	top: -11px;
+	right: -11px;
+	background: url(../images/delete2.png) no-repeat center center;
+	background-size: contain;
+}
+
+.comp-popupWebsite #popupWebsiteIframe{
+	position: absolute;
+	background: #fff;
+}
+
+
+.comp-showComboBox {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.3);
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	top: 0;
+	left: 0;
+}
+
+.comp-showComboBox .box {
+	width: 250px;
+	background: #E3E6EA;
+	text-align: center;
+	padding: 10px;
+	border-radius: 3px;
+	border: #0098CB 1px solid;
+}
+
+.comp-showComboBox ul {
+	overflow-y: scroll;
+	height: 300px;
+	margin-bottom: 10px;
+}
+.comp-showComboBox li {
+	line-height: 30px;
+	position: relative;
+	border-top: 1px #fff solid;
+	border-bottom: 1px #e3e6ea solid;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eee));
+	font-size: 14px;
+	padding: 0 10px;
+	color: #888;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.comp-cameraGetPicture{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: black;
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	top: 0;
+	left: 0;
+}
+
+.comp-cameraGetPicture .close{
+	position: absolute;
+	height: 22px;
+	width: 22px;
+	top: -11px;
+	right: -11px;
+	background: url(../images/delete2.png) no-repeat center center;
+	background-size: contain;
+}
+
+.comp-cameraGetPicture #canvas{
+	position: absolute;
+	display: none;
+}
+
+.comp-cameraGetPicture #capture{
+	position: absolute;
+	left: 50%;
+	width:50px;
+	margin-left: -25px;
+	z-index: 1000;
+	text-align: center;
+	bottom: 10px;	
+}
+.comp-cameraGetPicture #selectPic{
+	position: absolute;
+	left: 50%;
+	width:100px;
+	margin-left: -50px;
+	z-index: 1000;
+	text-align: center;
+	bottom: 50px;	
+}
+
+.comp-selectPicture {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.3);
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	top: 0;
+	left: 0;
+}
+
+.comp-selectPicture .box {
+	width: 250px;
+	background: #E3E6EA;
+	text-align: center;
+	padding: 10px;
+	border-radius: 3px;
+	border: #0098CB 1px solid;
+}
+.comp-selectPicture h1 {
+	font-size: 18px;
+	background: #0098CB;
+	padding: 5px;
+}
+.comp-selectPicture p {
+	min-height: 40px;
+	text-align: left;
+	padding: 5px 0;
+}
+
+.comp-dial{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: black;
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	top: 0;
+	left: 0;	
+}
+
+.comp-dial .close{
+	position: absolute;
+	height: 22px;
+	width: 22px;
+	top: -11px;
+	right: -11px;
+	background: url(../images/delete2.png) no-repeat center center;
+	background-size: contain;
+}
+
+.comp-dial #dialNumber{
+	position: absolute;
+	width: 100%;
+	height: 45px;
+	top: 55px;	
+	/*background: green;*/
+	text-align: center;
+        vertical-align: middle;
+	color: white;
+	font-size: 38px;
+}
+
+.comp-dial #imgDial{
+	position: absolute;
+	height: 400px;
+	width: 300px;
+	top: 50px;	
+	/*left: 10px;*/
+	/*background: blue;*/
+}
+
+.comp-email{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #f8fdff;
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	top: 0;
+	left: 0;
+}
+
+.comp-email .content{
+	width: 100%;
+	height: 100%;			
+}
+
+.comp-email .emailTitle{
+	width: 100%;
+	height: 40px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#3bc5f3), to(#009ace));
+	text-align: center;
+	line-height: 40px;
+	color: white;
+	font-weight: bold;
+}
+
+.comp-email .emailTitle .return{
+	position: absolute;
+	height: 40px;
+	line-height: 40px;
+	width: 20px;	
+	font-weight: bold;
+	color: white;	
+	left: 10px;
+}
+
+.comp-email .emailRowContent
+{
+	margin: 0px;	
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.comp-email .emailTitle .sim-button{
+	position: absolute;
+	top: 6px;
+	right: 10px;
+	font-weight: normal;
+}
+
+.comp-email .emailRow {
+	width: 100%;
+	height: 25px;
+	padding: 5px;
+	padding-left: 10px;
+}
+
+.comp-email .emailRow .title{
+	width: 60px;
+	float:  left;
+	text-align: left;
+	line-height: 20px;
+}
+
+.comp-email .emailRow input{
+	
+	float:  left;	
+}
+
+.comp-email textarea {
+	height: 160px;
+	margin: 0px;
+	margin-top: 5px;
+	padding: 0px;
+	width: 100%;	
+}
+
+
+.comp-sms{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #f8fdff;
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	top: 0;
+	left: 0;
+}
+
+.comp-sms .content{
+	width: 100%;
+	height: 100%;			
+}
+
+.comp-sms .smsTitle{
+	width: 100%;
+	height: 40px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#3bc5f3), to(#009ace));
+	text-align: center;
+	line-height: 40px;
+	color: white;
+	font-weight: bold;
+}
+
+.comp-sms .smsTitle .return{
+	position: absolute;
+	height: 40px;
+	line-height: 40px;
+	width: 20px;	
+	font-weight: bold;
+	color: white;	
+	left: 10px;
+}
+
+
+.comp-sms .smsTitle .sim-button{
+	position: absolute;
+	top: 6px;
+	right: 10px;
+	font-weight: normal;
+}
+
+.comp-sms .smsRowContent
+{
+	margin: 0px;	
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.comp-sms .smsRow {
+	width: 100%;
+	height: 25px;
+	padding: 5px;
+	padding-left: 10px;
+}
+
+.comp-sms .smsRow .title{
+	width: 60px;
+	float:  left;
+	text-align: left;
+	line-height: 20px;
+}
+
+.comp-sms .smsRow input{
+	
+	float:  left;	
+}
+
+.comp-sms textarea {
+	height: 160px;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;	
+}
+
+.comp-barcode {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.3);
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	top: 0;
+	left: 0;
+}
+
+.comp-barcode .box {
+	width: 250px;
+	height: 150px;
+	background: #E3E6EA;
+	text-align: center;
+	padding: 10px;
+	border-radius: 3px;
+	border: #0098CB 1px solid;
+}
+.comp-barcode h1 {
+	font-size: 18px;
+	background: #0098CB;
+	padding: 5px;
+}
+.comp-barcode p {
+	min-height: 30px;
+	text-align: left;	
+}
+.comp-barcode #barcodeContent
+{
+        width: 100%;
+	height: 40px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.comp-map{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.3);
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	top: 0;
+	left: 0;
+}
+
+.comp-map #allmap
+{
+        width: 100%;
+	height: 100%;	
+}
+
+.comp-map .close{
+	position: absolute;
+	z-index: 9999;
+	height: 22px;
+	width: 22px;
+	top: -11px;
+	right: -11px;
+	background: url(../images/delete2.png) no-repeat center center;
+	background-size: contain;
+}
+
+.comp-search{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	/*background: rgba(0,0,0,1);*/
+	background-color: #f8fdff;
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	vertical-align: top;
+	top: 0;
+	left: 0;
+}
+
+.comp-search .content{
+	width: 100%;
+	height: 100%;
+}
+
+.comp-search .content .searchTitle{
+	height: 40px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#3bc5f3), to(#009ace));
+	text-align: center;
+}
+
+.comp-search .content .searchTitle #searchTitleText{
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	font-weight: bold;
+	color: white;
+}
+
+.comp-search .content .searchTitle .return{
+	position: absolute;
+	height: 20px;
+	width: 20px;	
+	font-weight: bold;
+	color: white;
+	top: 10px;
+	left: 10px;
+}
+
+.comp-search .content .searchInput{
+	height: 40px;
+	width: 100%;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#d5d5d5));
+}
+
+.comp-search input {
+	width: 90%;	
+	padding: 0;
+	margin: 5px;
+	height: 30px;
+	font-size: 12px;
+	color: #6c6c6c;
+	border-radius: 15px;
+	padding-left: 20px;
+}
+.comp-search dl {	
+	overflow-y: scroll;
+}
+
+.comp-search dt {	
+	margin-top: -1px;
+	height: 26px;
+	background: #f1f1f1;
+	padding-left: 20px;
+	line-height: 26px;
+	font-weight: bold;
+	font-size: 12px;
+	font-weight: bold;
+	color: #35b5e6;
+}
+.comp-search dd {	
+	font-size: 12px;
+	font-weight: bold;
+	border-bottom: 1px solid #f1f1f1;
+	height: 26px;
+	line-height: 26px;
+	padding-left: 40px;	
+}
+
+.comp-barcodeCamera{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: black;
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	top: 0;
+	left: 0;
+}
+
+.comp-barcodeCamera .close{
+	position: absolute;
+	height: 22px;
+	width: 22px;
+	top: -11px;
+	right: -11px;
+	background: url(../images/delete2.png) no-repeat center center;
+	background-size: contain;
+}
+
+.comp-barcodeCamera #canvasBarcode{
+	position: absolute;
+	display: none;
+}
+
+
+.comp-bind {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.3);
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	top: 0;
+	left: 0;
+}
+
+.comp-bind .box {
+	width: 250px;
+	background: #E3E6EA;
+	text-align: center;
+	padding: 10px;
+	border-radius: 3px;
+	border: #0098CB 1px solid;
+}
+.comp-bind h1 {
+	font-size: 18px;
+	background: #0098CB;
+	padding: 5px;
+}
+.comp-bind p {
+	min-height: 40px;
+	text-align: left;
+	padding: 5px 0;
+}
+
+.comp-bind .content{
+	padding: 20px;
+	text-align: left;
+	font-size: 12px;
+}
+
+.comp-bind .title {
+	font-weight: bold;
+}
+
+.comp-bind input, .comp-bind textarea {	
+	margin: 10px 0px 20px;
+	width: 100%;
+	border: #333333 1px solid;
+	line-height: 25px;
+	color: #5F7FFF;
+	
+}
+
+.comp-shareTo {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.3);
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	top: 0;
+	left: 0;
+}
+
+.comp-shareTo .box {
+	width: 250px;
+	background: #E3E6EA;
+	text-align: center;
+	padding: 10px;
+	border-radius: 3px;
+	border: #0098CB 1px solid;
+}
+.comp-shareTo h1 {
+	font-size: 18px;
+	background: #0098CB;
+	padding: 5px;
+}
+.comp-shareTo p {
+	min-height: 40px;
+	text-align: left;
+	padding: 5px 0;
+}
+
+.comp-shareTo .content {
+	padding: 20px;
+	text-align: left;
+	font-size: 12px;
+}
+
+.comp-shareTo .title {
+	font-weight: bold;
+}
+
+.comp-shareTo input, .comp-shareTo textarea {	
+	margin: 10px 0px 20px;
+	width: 100%;
+	border: #333333 1px solid;
+	line-height: 25px;
+	color: #5F7FFF;
+}
+
+.comp-shareTo #shareContent
+{
+	height: 120px;
+}
+
+
+
+
+
+

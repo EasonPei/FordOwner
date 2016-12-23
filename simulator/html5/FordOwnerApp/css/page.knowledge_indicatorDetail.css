@@ -1,0 +1,66 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+.knowledge_indicatorDetail .am-body-inner
+{
+    padding-bottom:10px;
+}
+
+.knowledge_indicatorDetail .indicatorDetailTitle{
+	color: #123;
+	font-size: 22px;
+	line-height: 28px;
+	text-align: center;
+	width: 100%;
+	padding-top: 40px;
+	padding-bottom: 20px;
+}
+
+.knowledge_indicatorDetail .indicatorDetailIcon{
+	background-image: url(../img/indicatorDetail/icon.png);
+	background-size: 139.5px 139.5px ;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 150px;
+
+}
+
+.knowledge_indicatorDetail .indicatorDetailSubtitle{
+	color: #123;
+	font-size: 15px;
+	line-height: 20px;
+	text-align: left;
+	width: 80%;
+	margin-top: 25px;
+	padding-left: 8%;
+	margin-left: 7%;
+	background-position: left center;
+	background-repeat: no-repeat;
+}
+
+.knowledge_indicatorDetail .indicatorDetailText{
+	color: #123;
+	font-size: 12px;
+	line-height: 18px;
+	text-align: left;
+	width: 80%;
+	margin-top: 5px;
+	padding-left: 8%;
+	margin-left: 7%;
+}
+
+.knowledge_indicatorDetail .indicatorDetailRedIcon{
+	background-image: url(../img/indicatorDetail/small_icon_red.png);
+	background-size: 16px 15px ;
+}
+
+.knowledge_indicatorDetail .indicatorDetailOrangeIcon{
+	background-image: url(../img/indicatorDetail/small_icon_orange.png);
+	background-size: 16px 15px ;
+}
+
+.knowledge_indicatorDetail .indicatorDetailGreenIcon{
+	background-image: url(../img/indicatorDetail/small_icon_green.png);
+	background-size: 16px 15px ;
+}

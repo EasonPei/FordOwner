@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+
+.common_reload .am-body-inner {
+	display: block;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}
+
+.common_reload .reloadblock{
+	display:block;
+	position:absolute;
+	top:50%; 
+	margin-top: -56px;
+	width:100%;
+}
+
+.common_reload .reloadblock span{
+	border:1px solid #2596cf;
+	border-radius:44px;
+	width:88px;
+	height:88px;
+	margin:0px auto;
+	display:block;
+}
+	
+.common_reload .icon-reload{
+	background:url(../img/icon-reload.png) no-repeat;
+	background-size:36px 32px;
+	background-position: 29px center;
+}
+
+.common_reload .reloadblock p{
+	padding-top:11px;
+	display:block;
+	line-height:13px;
+	font-size:12px;
+	color:#2d96cd;
+	text-align:center;
+}

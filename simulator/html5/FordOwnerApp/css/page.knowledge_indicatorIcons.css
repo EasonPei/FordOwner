@@ -1,0 +1,124 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+.knowledge_indicatorIcons .content_wrapper
+{
+    padding:6px;
+}
+
+.knowledge_indicatorIcons .tabs div.am-clickable
+{
+    font-size:12px;
+}
+
+.knowledge_indicatorIcons #vehicleField {
+    background-image: url(../img/icon-vehicle.png);
+    background-repeat: no-repeat;
+    background-size: 20px 13px;
+}
+
+.knowledge_indicatorIcons .inputLine
+{
+    /*padding:0;
+    margin:0;
+    width:100%;*/
+}
+
+.knowledge_indicatorIcons .inputLine  .inputLineMiddle
+{
+    color:#2596cf;
+    font-size:14px;
+    width: 60%;
+}
+
+.knowledge_indicatorIcons .indicatoricon
+{
+    width:33%;
+    float:left;
+    text-align:center;
+    margin:18px 0 0 0;
+}
+
+.knowledge_indicatorIcons .indicatoricon .roundbutton
+{
+    width:58px;
+    height:58px;
+    border-radius:58px;
+    float:none;
+    margin:0 auto;
+}
+
+.knowledge_indicatorIcons .indicatoricon .desc
+{
+    font-size:10px;
+    width:82%;
+    float:none;
+    margin:10px auto;
+    color:#2596cf;
+	word-wrap:break-word;
+	/*word-break:break-all;*/
+}
+
+.knowledge_indicatorIcons .indicatoricon .roundbutton
+{
+    background-size:50%;
+}
+
+.knowledge_indicatorIcons .indicatoricon .roundbutton.icon_warning
+{
+    background-image:url("../img/indicators/icon_warning.png");
+}
+
+.knowledge_indicatorIcons .indicatoricon .roundbutton.icon_abs
+{
+    background-image:url("../img/indicators/icon_abs.png");
+}
+.knowledge_indicatorIcons .indicatoricon .roundbutton.icon_nofire
+{
+    background-image:url("../img/indicators/icon_nofire.png");
+}
+.knowledge_indicatorIcons .indicatoricon .roundbutton.icon_battery
+{
+    background-image:url("../img/indicators/icon_battery.png");
+}
+.knowledge_indicatorIcons .indicatoricon .roundbutton.icon_brake
+{
+    background-image:url("../img/indicators/icon_brake.png");
+}
+.knowledge_indicatorIcons .indicatoricon .roundbutton.icon_brake2
+{
+    background-image:url("../img/indicators/icon_brake2.png");
+}
+.knowledge_indicatorIcons .indicatoricon .roundbutton.icon_airfilter
+{
+    background-image:url("../img/indicators/icon_airfilter.png");
+}
+.knowledge_indicatorIcons .indicatoricon .roundbutton.icon_fuelcap
+{
+    background-image:url("../img/indicators/icon_fuelcap.png");
+}
+.knowledge_indicatorIcons .indicatoricon .roundbutton.icon_childsafe
+{
+    background-image:url("../img/indicators/icon_childsafe.png");
+}
+    
+	
+.knowledge_indicatorIcons .icons .iconline{
+	display:block;
+	overflow:hidden;
+}
+
+.knowledge_indicatorIcons .commoniconslabel{
+	display:block;
+	line-height:36px;
+	margin-top:10px;
+	font-size:12px;
+	color:#616161;
+}
+
+.knowledge_indicatorIcons .commoniconslabel span{
+	margin:11px 9px 0px 20px;
+	width:19px;
+	height:12px;
+	float:left;
+}

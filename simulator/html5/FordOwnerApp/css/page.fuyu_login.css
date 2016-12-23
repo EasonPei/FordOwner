@@ -1,0 +1,206 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+.fuyu_login .am-body-wrap{
+	
+}
+
+.fuyu_login .loginunsign-fuyu{
+	background-color: #0b0908;
+	background-image:url(../img/loginbg-fuyu.jpg);
+	background-size: 100% 100%;
+	background-position: center top;
+	height: 100%;
+	display:block;
+	position:relative;
+	padding:0px 18px;
+}
+
+.fuyu_login .loginunsign{
+	position:absolute;
+	display:block;
+	bottom:37px;
+	left:18px;
+	right:18px;	
+}
+
+.fuyu_login .loginunsign .title{
+	display:block;
+	margin-bottom:14px;
+	font-size:49px;
+	line-height:50px;
+	color:#ffffff;
+	text-align:center;
+}
+
+.fuyu_login .loginunsign .subtitle{
+	display:block;
+	margin-bottom:31px;
+	font-size:21px;
+	line-height:22px;
+	color:#ffffff;
+	text-align:center;
+}
+
+.fuyu_login .loginunsign .loginbt{
+	display:block;
+	height: 49px;
+	background: #1bbc9b;
+	font-size: 18px;
+	color: #ffffff;
+	line-height: 49px;
+	text-align: center;
+	margin-bottom: 14px;
+}
+
+.fuyu_login .loginunsign .loginbt.am-clickable-active{
+	opacity: 0.8;
+}
+
+.fuyu_login .loginunsign .signupbt{
+	display:block;
+	height: 47px;
+	background: #0d0a09;
+	border: 1px solid #ffffff;
+	font-size: 18px;
+	color: #fff;
+	line-height: 47px;
+	text-align: center;
+}
+
+.fuyu_login .loginunsign .signupbt.am-clickable-active{
+	background: #222222;
+	opacity: 0.8;
+}
+
+.fuyu_login .loginsign-fuyu{
+	position:relative;
+	height:100%;
+}
+
+
+.fuyu_login form{
+	padding:0px 18px; 
+	background:#ffffff;
+}
+
+.fuyu_login .loginnote{
+	padding-top:20px;
+	margin-bottom:4px;
+	font-size:12px;
+	color:#616161;
+	line-height:12px;
+}
+
+/* Page content */
+.fuyu_login .formcontent{
+}
+
+.fuyu_login .formcontent ul {
+	border-bottom:1px solid #eae9e9;
+	padding:27px 1px 5px 0px;
+	height:27px;
+	overflow:hidden; 
+	display:block;
+}
+
+.fuyu_login .formcontent ul li{
+	list-style-type:none;
+}
+
+.fuyu_login .formcontent ul .iconli{
+	float:left; 
+	width:20px; 
+	height:27px; 
+	display:block; 
+	text-align:center;
+}
+
+.fuyu_login .formcontent ul .iconli span{
+	display:block; 
+	margin-top:9px;
+}
+
+.fuyu_login .formcontent ul .inputli{
+	display:block; 
+	margin-left:32px; 
+	margin-right:102px;
+}
+
+.fuyu_login .formcontent ul .inputli input{
+	border:none; 
+	line-height:18px; 
+	height:18px; 
+	font-size:15px; 
+	color:#000000; 
+	width:100%; 
+	margin-top:9px;
+}
+
+.fuyu_login .formcontent ul .lastli{
+	float:right;
+	font-size:12px; 
+	color:#2d96cd; 
+	text-align:right;
+}
+
+.fuyu_login .formcontent ul .lastli span{
+	margin-top:15px;
+	display:block;
+	text-align:right;
+}
+
+.fuyu_login .icon-person{ 
+	background:url(../img/icon-person.png) no-repeat;
+	background-position:center bottom;
+	background-size:16px 17px;
+}
+
+.fuyu_login .icon-lock{ 
+	background:url(../img/icon-lock.png) no-repeat;
+	background-position:center bottom;
+	background-size:13px 17px;
+}
+
+.fuyu_login .icon-number{ 
+	background:url(../img/login/number.png) no-repeat;
+	background-position:center center;
+	background-size:17px 9px;
+	height: 20px !important;
+	margin-top: 7px;
+}
+
+.fuyu_login .checknumber{
+	width:102px;
+	height:27px;
+	margin-bottom:-2px;
+}
+
+.fuyu_login .loginbutton{
+	margin-top:40px; 
+	width:100%; 
+	height:49px; 
+	line-height:49px; 
+	color:#ffffff; 
+	text-align:center; 
+	font-size:18px; 
+	background:#2d96cd; 
+}
+.fuyu_login .loginbutton.am-clickable-active{
+	opacity: 0.8;
+}
+
+.fuyu_login .registerline{
+	position:absolute;
+	bottom:34px;
+	text-align:center;
+	width:100%;
+	font-size:18px;
+	line-height:18px;
+	color:#616161;
+}
+
+.fuyu_login .registerline .fontlink{
+	color:#2596cf !important;
+	display:inline-block;
+}

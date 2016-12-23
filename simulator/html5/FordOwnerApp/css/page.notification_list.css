@@ -1,0 +1,243 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* notification list */
+.notification_list .noticepic {
+	display:block;
+	margin-bottom:12px;
+}
+
+.notification_list section{
+	padding:10px 13px 16px 18px;
+}
+
+.notification_list section time{
+	overflow:hidden;
+	font-size:9px;
+	line-height:11px;
+	margin-bottom:18px;
+	display:block;
+}
+
+.notification_list section time .newitem{
+	width: 10px;  
+	height: 10px;  
+	background: #2596cf;   
+	-moz-border-radius: 5px;   
+	-webkit-border-radius: 5px;   
+	border-radius:5px;  
+	float:left;
+	margin-right:7px;
+}
+
+.notification_list section time .lastdays{
+	float:right;
+	color:#ff4239;
+	padding-right:6px;
+}
+
+.notification_list section title{
+	font-size:15px;
+	color:#102839;
+	line-height:16px;
+	margin-bottom:5px;
+	display:block;
+}
+
+.notification_list section p{
+	font-size:9px;
+	color:#616161;
+	line-height:18px;
+	margin-bottom:13px;
+	display:block;
+}
+
+.notification_list section footer{
+	font-size:9px;
+	color:#999999;
+	line-height:17px;
+	display:block;
+}
+
+.notification_list section footer .firsticon{
+	width:17px;
+	height:17px;
+	margin-right:7px;
+	float:left;
+	display:block;
+}
+
+.notification_list section footer .lasticon{
+	width:28px;
+	height:30px;
+	margin-top:-13px;
+	float:right;
+	display:block;
+}
+
+.notification_list .blackbuleline{
+	background:#102839;
+	border-top:1px solid #cfd4d7;
+	box-shadow:2px 2px 2px #cfd4d7;
+	-moz-box-shadow:2px 2px 2px #cfd4d7;
+	-webkit-box-shadow:2px 2px 2px #cfd4d7;
+	height:24px;
+	margin-bottom:17px;
+	display:block;
+}
+
+.notification_list .marginbottom0{
+	margin-bottom:0px !important;
+}
+
+/* notification list search*/
+.notification_list .popbox{
+	position:absolute;
+	top:44px;
+	right:0px;
+	display:block;
+	width:100%;
+}
+
+.notification_list .searchpopbox{
+	border:1px solid #e7e8e8;
+	padding:17px 15px 8px 15px;
+	display:block;
+	margin-left:35px;
+	margin-right:32px;
+	position:relative;
+	background:#ffffff;
+	z-index:100;
+}
+
+.notification_list .searchpopbox .arrow-white-up{
+	background:url(../img/arrow-white-up.png) center no-repeat;
+	background-size:10px 7px;
+	width:10px;
+	height:7px;
+	position:absolute;
+	right:18px;
+	top:-7px;
+}
+
+.notification_list .searchpopbox .inputbox{
+	border:1px solid #e7e7e7;
+	background:#f4f4f4;
+	padding:0px 8px 0px 15px;
+	display:block;
+	position:relative;
+	margin-bottom:3px;
+}
+
+.notification_list .searchpopbox .inputbox input{
+	width:100%;
+	border:none;
+	background:none;
+	font-size:15px;
+	color:#2596cf;
+	height:29px;
+	line-height:29px;
+}
+
+.notification_list .searchpopbox .icon-clear{
+	background:url(../img/icon-clear.png) no-repeat;
+	background-size:13px 13px;
+	width:13px;
+	height:13px;
+	display:block;
+	position:absolute;
+	right:8px;
+	top:8px;
+}
+
+.notification_list .searchpopbox .searchresults{
+	padding:0px 2px;
+}
+
+.notification_list .searchpopbox .searchresults li{
+	overflow:hidden;
+	display:block;
+	border-bottom:1px solid #f0f0f0;
+	padding:0px 5px;	
+}
+
+.notification_list .searchpopbox .searchresults li p{
+	line-height:34px;
+	font-size:9px;
+	color:#616161;
+	margin-right:18px;
+	
+}
+
+.notification_list .searchpopbox .searchresults li p em{
+	color:#2596cf;
+	font-style:normal;
+}
+
+.notification_list .searchpopbox .searchresults li span{
+	width:18px;
+	height:34px;
+	float:right;
+}
+
+.notification_list .borderbottom0{
+	border-bottom:none !important;
+}
+
+/* notification list filter*/
+.notification_list .filterpopbox{
+	border:1px solid #e7e8e8;
+	padding:4px 10px 6px 10px;
+	display:block;
+	width:175px;
+	margin-right:8px;
+	position:relative;
+	background:#ffffff;
+	z-index:101;
+	float:right;
+}
+
+.notification_list .filterpopbox .arrow-white-up{
+	background:url(../img/arrow-white-up.png) center no-repeat;
+	background-size:10px 7px;
+	width:10px;
+	height:7px;
+	position:absolute;
+	right:12px;
+	top:-7px;
+}
+
+.notification_list .filterpopbox ul{
+	overflow:hidden;
+}
+
+.notification_list .filterpopbox ul li{
+	overflow:hidden;
+	display:block;
+	border-bottom:1px solid #f0f0f0;	
+}
+
+.notification_list .filterpopbox ul li p{
+	line-height:30px;
+	font-size:12px;
+	color:#2596cf;
+	margin-right:18px;
+	padding-left:2px;
+}
+
+.notification_list .filterpopbox ul li span{
+	width:18px;
+	height:30px;
+	float:right;
+}
+
+.notification_list .icon-graydot{
+	width: 10px;  
+	height: 10px;  
+	background: #d2d1d1;   
+	-moz-border-radius: 5px;   
+	-webkit-border-radius: 5px;   
+	border-radius:5px;  
+	margin-left:4px;
+	margin-top:10px;
+}

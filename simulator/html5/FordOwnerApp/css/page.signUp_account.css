@@ -1,0 +1,61 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+.signUp_account form{padding:0px 18px; background:#ffffff;}
+
+/* Page header */
+.signUp_account header{padding-top:20px;margin-bottom:10px;}
+.signUp_account header .signup-accounttitle{font-size:18px;margin-bottom:15px; color:#102839;}
+.signUp_account header p{font-size:12px; color:#616161; line-height:18px;word-wrap:break-word;}
+
+/* Page content */
+.signUp_account .formcontent{}
+.signUp_account .formcontent ul {border-bottom:1px solid #eae9e9;padding:13px 2px 6px 0px;height:18px;overflow:hidden; display:block;position:relative;}
+.signUp_account .formcontent ul li{list-style-type:none;}
+.signUp_account .formcontent ul .iconli{float:left; width:19px; height:18px; display:block; text-align:center;}
+.signUp_account .formcontent ul .iconli span{display:block;}
+.signUp_account .formcontent ul .inputli{display:block; margin-left:30px; margin-right:12px;}
+.signUp_account .formcontent ul .inputli input{border:none; line-height:18px; height:18px; font-size:15px; color:#000000; width:100%;}
+.signUp_account .formcontent ul .required{float:right;font-size:18px; color:#ff4239; text-align:right; width:12px; padding-top:7px;}
+.signUp_account #numberField {background-position:center center;}
+
+.signUp_account .formcontent img.captcha  {height:22px;position:absolute;right:0;bottom:4px;}
+
+.signUp_account .icon-person{ background:url(../img/icon-person.png) center no-repeat;background-size:16px 17px;}
+.signUp_account .icon-lock{ background:url(../img/icon-lock.png) center no-repeat; background-size:13px 17px;}
+.signUp_account .icon-email{background:url(../img/icon-email.png) center no-repeat;background-size:15px 15px;}
+.signUp_account .icon-F{background:url(../img/icon-F.png) center no-repeat; background-size:9px 12px;}
+.signUp_account .icon-L{background:url(../img/icon-L.png) center no-repeat; background-size:9px 12px;}
+
+/*.signUp_account .height40{height:20px;}*/
+
+.signUp_account .useragreement{padding-top:25px; padding-bottom:5px; overflow:hidden;}
+.signUp_account .useragreement p{display:block; margin-left:29px; color:#616161; font-size:9px; line-height:17px;}
+.signUp_account .useragreement p a{color:#2596cf;}
+
+.signUp_account .bottombutton.am-clickable-active{opacity: 0.8}
+.signUp_account .bottombutton{/*margin-top:15px; */width:100%; height:48px; line-height:48px; color:#ffffff; text-align:center; font-size:15px; background:#2d96cd; border-top:1px solid #8dc6e4;border-bottom:1px solid #7bc0e3;position: absolute;bottom: 0}
+
+.signUp_account .error-message
+{
+    color:#ff0000;
+    padding-top: 2px;
+    /*height:15px;*/
+    line-height:15px;
+    font-size:12px;
+    display:block;
+}
+
+.signUp_account .error-message.aggreement
+{
+  padding-bottom: 40px;
+}
+
+.signUp_account .keboardCover{
+	background-color: #fff;
+	opacity: 0.1;
+	width: 100%;
+	height: 2000px;
+	z-index: 999;
+	position: absolute;;
+}

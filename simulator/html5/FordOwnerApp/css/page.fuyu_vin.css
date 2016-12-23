@@ -1,0 +1,211 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+.fuyu_vin form{
+	padding:0px 18px; 
+	background:#ffffff;
+}
+
+
+/* Page header */
+.fuyu_vin header{
+	padding-top:20px;
+	margin-bottom:10px;
+}
+
+.fuyu_vin header .vintitle{
+	font-size:18px;
+	margin-bottom:15px; 
+	color:#102839;
+}
+
+.fuyu_vin header p{
+	font-size:12px; 
+	color:#616161; 
+	line-height:18px;
+	word-wrap:break-word;
+}
+
+/* Page content */
+.fuyu_vin .formcontent{
+}
+
+.fuyu_vin .formcontent .userinfo{
+	overflow:hidden; 
+	display:block;
+}
+
+.fuyu_vin .formcontent .userinfo li{
+	list-style-type:none;
+	border-bottom:1px solid #eae9e9;
+	padding:11px 1px 5px 0px;
+	height:18px;
+	margin-bottom:9px;
+	display:block;
+}
+
+.fuyu_vin .formcontent .userinfo li input{
+	border:none; 
+	line-height:18px; 
+	height:18px; 
+	font-size:18px; 
+	color:#000000; 
+	width:100%; 
+}
+
+.fuyu_vin .formcontent .findvin-detail{
+	
+}
+
+.fuyu_vin .formcontent .findvin-detail .vintitle{
+	font-size:12px; 
+	line-height:12px; 
+	color:#616161;
+	padding-top:14px;
+	padding-bottom:16px;
+}
+
+.fuyu_vin .formcontent .findvin-detail .smswitch{
+	border-radius:25px; 
+	background:#f4f4f4; 
+	padding:3px; 
+	display:-webkit-box;
+	-webkit-box-orient:horizontal; 
+	margin-bottom:10px;
+}
+
+.fuyu_vin .formcontent .findvin-detail .smswitch dd{
+	border-radius:25px; 
+	height:24px;
+	-webkit-box-flex:1; 
+	text-align:center; 
+	font-size:12px; 
+	line-height:24px; 
+	color:#2d96cd; 
+	position:relative;
+	width:50%;
+}
+
+.fuyu_vin .formcontent .findvin-detail .smswitch .focused{
+	background:#2d96cd !important; 
+	color:#ffffff !important; 
+}
+
+.fuyu_vin .formcontent .findvin-detail .focused .arrow-bluegray-down{ 
+	position:absolute; 
+	left:50%; 
+	bottom:-9px; 
+	margin-left:-9px; 
+	background:url(../img/arrow-bluegray-down.png) center no-repeat;
+	background-size:17px 9px; 
+	width:17px; 
+	height:9px;
+}
+
+
+
+.fuyu_vin .formcontent .findvin-detail .formline-lasticon{
+	border-bottom:1px solid #dcdbdb;
+	padding:10px 0px 7px 0px;
+	height:15px;
+	line-height:15px;
+	display:block;
+	margin-bottom:6px; 
+	background:#ffffff;
+}
+
+.fuyu_vin .formcontent .findvin-detail .formline-lasticon .iconli{
+	float:left; 
+	width:25px; 
+	height:15px; 
+	display:block; 
+	font-size:11px; 
+	color:#2596cf;
+	margin-top:4px; 
+	text-align:left;
+}
+
+.fuyu_vin .formcontent .findvin-detail .formline-lasticon .inputli{
+	display:block; 
+	margin-left:29px;
+	margin-right:40px;
+}
+
+.fuyu_vin .formcontent .findvin-detail .formline-lasticon .inputli input{
+	border:none; 
+	line-height:15px; 
+	height:15px; 
+	font-size:15px; 
+	color:#000000; 
+	width:100%;
+}
+
+.fuyu_vin .formcontent .findvin-detail .formline-lasticon .lasticonli{
+	float:right; 
+	margin-bottom:-4px;
+	background:#ffffff; 
+	width:40px;
+	overflow:hidden;
+}
+
+.fuyu_vin .formcontent .findvin-detail .icon-scan-china{ 
+	background:#ffffff url(../img/icon-scan-china.png) center no-repeat;
+	background-size:29px 29px; 
+	width:29px;
+	height:29px;
+	display:block; 
+	float:right;
+}
+
+.fuyu_vin .formcontent .findvin-detail .how-findvin{
+	color:#2596cf; 
+	line-height:17px; 
+	font-size:9px;
+}
+
+.fuyu_vin .formcontent .findvin-detail .addvehicle{
+	padding:66px 0 24px 0; 
+	margin:0 auto; 
+	width:73px;
+}
+
+.fuyu_vin .formcontent .findvin-detail .addvehicle p{
+	color:#2596cf; 
+	line-height:12px; 
+	font-size:12px; 
+	text-align:center;
+	padding-top:10px;
+}
+
+.fuyu_vin .formcontent .findvin-detail .icon-addvehicle{ 
+	background:#ffffff url(../img/icon-addvehicle.png) center no-repeat;
+	background-size:29px 29px; 
+	width:29px; 
+	height:29px;
+	display:block;
+	margin:0 auto;
+}
+
+.fuyu_vin .nextbutton{
+	width:100%; 
+	height:49px; 
+	line-height:49px; 
+	color:#ffffff; 
+	text-align:center; 
+	font-size:18px; 
+	background:#2d96cd; 
+}
+.fuyu_vin .nextbutton.am-clickable-active{
+	opacity: 0.8;
+}
+
+.fuyu_vin .error-message
+{
+    color:#ff0000;
+    height:14px;
+    font-size:12px;
+    display:block;
+    margin:5px 0;
+
+
+}

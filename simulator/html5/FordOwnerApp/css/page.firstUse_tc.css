@@ -1,0 +1,24 @@
+﻿.firstUse_tc .useragreement {
+	padding: 50px 30px;
+	overflow: hidden;
+}
+.firstUse_tc .useragreement p {
+	display: block;
+	margin-left: 29px;
+	color: #616161;
+	font-size: 9px;
+	line-height: 17px;
+}
+.firstUse_tc .useragreement p span.highlight {
+	color: #2596cf;
+}
+
+.firstUse_tc .rectButton{
+	height: 49px;
+	line-height: 49px;
+}
+
+.firstUse_tc .rectButton.am-disabled{
+	background: #888686;
+	color: #bdbcbc
+}

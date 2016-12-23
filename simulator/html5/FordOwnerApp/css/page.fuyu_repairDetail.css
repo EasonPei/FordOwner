@@ -1,0 +1,126 @@
+﻿@charset "utf-8";
+
+.fuyu_repairDetail .am-header p {
+	font-size: 18px
+}
+
+.fuyu_repairDetail .mainTab {
+	display: -webkit-box;
+	padding: 12px 0;
+	height: 28px;
+	color: #369bcf;
+	font-size: 12px;
+	text-align: center;
+	line-height: 14px;
+	border-bottom: #dcdbdb 5px solid;
+	position: relative;
+	z-index: 1;
+	background: #fff;
+}
+
+.fuyu_repairDetail .mainTab > li {
+	-webkit-box-flex: 1;
+	border-right: #e3e2e2 1px solid;
+}
+
+.fuyu_repairDetail .mainTab > li.selected {
+	color: #102839;
+	position: relative;
+}
+
+.fuyu_repairDetail .mainTab > li.selected .bar {
+	display: block;
+	position: absolute;
+	width: 100%;
+	left: 0px;
+	bottom: -17px;
+	background: #102839;
+	height: 5px;
+}
+
+.fuyu_repairDetail .tabContent
+{
+    display:none;
+}
+
+.fuyu_repairDetail .tabContent.active
+{
+    display:block;
+}
+
+.fuyu_repairDetail .padding {
+	padding: 17px;
+}
+
+.fuyu_repairDetail .tabList1 {
+	font-size: 12px;
+	width: 100%;
+}
+.fuyu_repairDetail .tabList1 th {
+	color: #d2d1d1;
+	height: 26px;
+	border-bottom: #d2d1d1 1px solid;
+	text-align: left;
+	font-weight: normal;
+}
+.fuyu_repairDetail .tabList1 td {
+	color: #000;
+	height: 26px;
+	border-bottom: #d2d1d1 1px solid;
+}
+
+.fuyu_repairDetail .tabList2 > li {
+	padding: 15px 0;
+	position: relative;
+	border-bottom: #f2f2f2 1px solid;
+}
+
+.fuyu_repairDetail .tabList2 > li .left {
+	color: #102839;
+	float: left;
+	font-size: 13px;
+}
+
+.fuyu_repairDetail .tabList2 > li .middle {
+	margin-left: 32px;
+	margin-right: 80px;
+}
+.fuyu_repairDetail .tabList2 > li .line1 {
+	font-size: 14px;
+	color: #102839;
+	margin-bottom: 3px;
+    margin-top:-2px;
+    font-weight:600;
+}
+.fuyu_repairDetail .tabList2 > li .line2 {
+	font-size: 9px;
+	color: #616161;
+	line-height: 16px;
+}
+
+.fuyu_repairDetail .tabList2 > li .detailItem{
+    display:inline-block;
+    height:10px;
+    line-height:10px;
+    padding-right:5px;
+    margin-right:5px;
+    border-right:1px solid #CCC;
+}
+
+.fuyu_repairDetail .tabList2 > li .right {
+	position: absolute;
+	color: #102839;
+	top: 50%;
+	margin-top: -18px;
+	line-height: 22px;
+	height: 22px;
+	font-size: 18px;
+	right: 0px;
+}
+.fuyu_repairDetail .tabList2 > li .small {
+	font-size: 10px;
+}
+
+.fuyu_repairDetail .tabList2.noleft > li .middle {
+	margin-left: 0px;
+}

@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+
+.common_noResult .am-body-inner {
+	display: block;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}
+
+.common_noResult .noresultblock{
+	display:block;
+	position: absolute;
+	top: 50%;
+	margin-top: -27px;
+	width:100%;
+}
+
+.common_noResult .noresultblock p{
+	margin-top:14px;
+	font-size:18px;
+	color:#102839;
+	line-height:18px;
+	text-align:center;
+}
+
+.common_noResult .buttons{
+	position:absolute;
+	bottom:0px;
+	height: 50px;
+	width: 100%;
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+}
+
+.common_noResult .buttons li{
+	height: 50px;
+	-webkit-box-flex: 1;
+	text-align: center;
+	font-size: 15px;
+	line-height: 50px;
+	color: #FFFFFF;
+	background: #2596cf;
+	width:50%;
+}
+.common_noResult .buttons li.am-clickable-active{
+	opacity: 0.8;
+}
+
+.common_noResult .buttons .marginright1{
+	margin-right:1px;
+}

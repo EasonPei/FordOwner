@@ -1,0 +1,133 @@
+﻿.profile_myAccount h1
+{
+    display: inline-block;
+    margin:16px 16px 8px 16px;
+    font-size:19px;
+}
+
+.profile_myAccount #emailAddressField{
+	background-image: url(../img/icon-email.png);
+	background-repeat: no-repeat;
+	background-size:16px 16px;
+}
+
+.profile_myAccount #firstNameField{
+	background-image: url(../img/icon-F.png);
+	background-repeat: no-repeat;
+	background-size:12px 16px;
+}
+
+.profile_myAccount #lastNameField{
+    background-image: url(../img/icon-L.png);
+	background-repeat: no-repeat;
+	background-size:12px 16px;
+}
+
+.profile_myAccount .block .textview
+{
+    display:inline-block;
+    margin-top:0px;
+    padding-top:0px;
+    padding-bottom:10px;
+    font-size:14px;
+}
+
+.profile_myAccount .block .inputLineMiddle
+{
+    width:80%;
+}
+
+.profile_myAccount .block .inputLineMiddle,
+.profile_myAccount .block .inputLineLeftView2
+{
+    font-size:14px;
+}
+@media screen and (max-width: 320px) {
+    .profile_myAccount .block .inputLineLeftView2
+    {
+        font-size:10px;
+    }
+}
+
+.profile_myAccount .block .commentsLine
+{
+    margin-left: 5%;
+    padding-top: 8px;
+    color: #777;
+    font-size: 13px;
+}
+
+
+.profile_myAccount .block .inputLineLeftView2
+{
+    height: 28px;
+    width:auto;
+}
+
+
+.profile_myAccount .block .inputLineMiddle2 
+{
+    display: inline-block;
+    border: 0px;
+    font-size: 14px;
+    position: absolute;
+    left: 35%;
+    line-height: 28px;
+}
+
+
+.profile_myAccount .block .selectblock
+{
+    padding:0 20px;
+    margin-bottom:20px;
+}
+
+.profile_myAccount .selectblock{ margin-top:25px; padding-bottom:25px;}
+.profile_myAccount .selectblock .selectblock1,.selectblock .selectblock2{margin-bottom:10px;}
+.profile_myAccount .selectblock .selectblock1 p,.selectblock .selectblock2 p,.selectblock .moreselects p{display:block; margin-left:30px; color:#616161; font-size:9px; line-height:17px;}
+.profile_myAccount .selectblock .moreselects{ position:relative; background:#f4f4f4; padding:12px; margin-bottom:17px;}
+.profile_myAccount .selectblock .moreselects div{margin-bottom:7px;}
+.profile_myAccount .selectblock .moreselects div p{line-height:15px;}
+.profile_myAccount .selectblock .choosecontent,.profile_myAccount .selectblock .contactcontent{ display:block; color:#616161; font-size:9px; line-height:17px;margin-bottom: 10px;}
+
+.profile_myAccount .arrow-gray-up{ position:absolute; left:50%; margin-left:-10px; top:-10px;background:url(../img/arrow-gray-up.png) no-repeat; background-size:20px 10px; width:20px; height:10px;}
+
+.profile_myAccount .inputLine
+{
+    position:relative;
+}
+
+.profile_myAccount .inputLine .inputLineRightView
+{
+    position: absolute;
+    bottom:0;
+    right:0;
+}
+
+.profile_myAccount .inputLine.updatable .inputLineRightView
+{
+    background-image: url(../img/button-next.png);
+    background-position: center center;
+    background-size: 12px 16px;
+    width: 12px;
+    height: 16px;
+    position: absolute;
+    right: 4px;
+    top: 12px;
+}
+
+.profile_myAccount .am-header .am-backbutton-account {
+    background-image: url(../img/button-back.png);
+    background-position: center center;
+    background-size: 9px 15px;
+    width: 42px;
+}
+
+
+.selectblock .selectblock2 p:first-child {display:block; margin-left:0px;margin-bottom: 10px; color:#616161; font-size:9px; line-height:17px;}
+
+.profile_myAccount .selectblock .choosecontent{ display:block; color:#616161; font-size:9px; line-height:17px;margin-bottom: 10px;margin-left: 15px;}
+
+.profile_myAccount.Vietnam .hidden_in_vn{
+    display: none;
+}

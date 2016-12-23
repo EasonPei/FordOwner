@@ -1,0 +1,153 @@
+﻿.whiteBG{
+	background: #fff;
+}
+
+.textview{
+	width: 90%;
+	margin-left: 5%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 16px;
+	color: #777;
+	line-height: 20px;
+	text-align: left;
+}
+
+.rectButton{
+	width: 100%;
+	height: 40px;
+	background: #1E97C8;
+	border-top: 1px solid #CCE6F2;
+	border-bottom: 1px solid #CCE6F2;
+
+	font-size: 18px;
+	color: #fff;
+	line-height: 40px;
+	text-align: center;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.rectButton.am-clickable-active{
+	opacity: 0.8;
+}
+
+.textLink{
+	font-size: 16px;
+	color: #1E97C8;
+	line-height: 20px;
+}
+
+.textLink.am-clickable-active{
+	opacity: 0.8;
+}
+
+.checkNumber{
+	width: 102px;
+	height: 28px;
+
+	background-image: url(../img/login/checkNumber.png);
+	background-size: 102px 27.5px ;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.inputLine{
+	width: 90%;
+	margin-left: 5%;
+	padding-top: 8px;
+	height: 28px;
+	border-bottom: 1px solid #f1f1f1;
+
+	font-size: 16px;
+	color: #000;
+	line-height: 28px;
+	text-align: left;
+}
+
+.inputLine div{
+	line-height: 28px;
+	display: inline-block;
+}
+
+.inputLine .inputLineMiddle{
+	display: inline-block;
+	border: 0px;
+	font-size: 16px;
+	position: absolute;
+	left: 15%;
+	line-height: 28px;
+	  width: 130px;
+}
+
+.inputLineRightView{
+	float: right;
+	text-align: right;
+	right: 5%;
+	background-position: center;
+	height: 28px;
+}
+
+.inputLineRightView.textLink{
+	font-size: 12px;
+}
+
+.inputLineLeftView{
+	width: 20px;
+	height: 28px;
+	background-position: center;
+}
+
+.login_login .error-message{
+	color: #f44;
+	font-size: 12px;
+	line-height: 16px;
+	width: 90%;
+	margin-left: 5%;
+	display: none;
+}
+
+.login_login .error-message.show-error-message{
+	display: block;
+}
+
+#usernameField{
+	background-image: url(../img/login/user.png);
+	background-repeat: no-repeat;
+	background-size:15px 16px;
+}
+
+#passwordField{
+	background-image: url(../img/login/locker.png);
+	background-repeat: no-repeat;
+	background-size:12px 16px;
+}
+
+#numberField{
+	background-image: url(../img/login/number.png);
+	background-repeat: no-repeat;
+	background-size:16.5px 8.5px;
+}
+
+#loginBottomView{
+	bottom: 30px;
+	text-align: center;
+	margin-top: 50px;
+}
+
+#loginBottomView div{
+	display: inline-block;
+}
+
+#createAccountBtn {
+	background-image: url(../img/login/right_arrow_blue.png);
+	background-size: 8.5px 15px ;
+	background-position: right;
+	background-repeat: no-repeat;
+	padding-right: 16px;
+}
+
+#loginButton{
+	margin-top: 30px;
+}

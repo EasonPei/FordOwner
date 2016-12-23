@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* CSS Document */
+
+.setting_qrcode .am-body-inner{
+	padding:62px 45px 75px 45px;
+	background:#ffffff;
+}
+
+.setting_qrcode .shareto{
+	font-size:12px;
+	color:#616161;
+	line-height:12px;
+	margin-bottom:15px;
+	text-align:center;
+}
+
+.setting_qrcode .fordowner{
+	background:url(../img/fordowner-black.png) no-repeat;
+	background-size:154px 17px;
+	background-position:center center;
+	height:17px;
+	display:block;
+	margin-bottom:10px;
+}
+
+.setting_qrcode .qrcode{
+	background:url(../img/fordqrcode.png) no-repeat;
+	background-size:204px 205px;
+	background-position:center center;
+	height:205px;
+	display:block;
+	margin-bottom:53px;
+}
+
+.setting_qrcode .sharepath{
+	display:-webkit-box;
+	-webkit-box-orient:horizontal; 
+}
+
+.setting_qrcode .sharepath li{
+	-webkit-box-flex:1; 
+}
+
+.setting_qrcode .sharepath li span{
+	margin:0px 17px 8px 17px;
+	display:block;
+}
+
+.setting_qrcode .sharepath li p{
+	display:block;
+	text-align:center; 
+	font-size:9px; 
+	line-height:9px; 
+}
+
+.setting_qrcode .facebook span{
+    height: 43px;
+    width: 43px;
+    border-radius: 22px;
+    border: solid 1px #4c66a4;
+	background:url(../img/icon-facebook.png) no-repeat;
+	background-size:10px 18px;
+    background-position:center center;
+}
+
+.setting_qrcode .facebook p{
+	color:#4c66a4;
+}
+
+.setting_qrcode .twitter span{
+	height: 43px;
+    width: 43px;
+    border-radius: 22px;
+    border: solid 1px #00abf0;
+	background:url(../img/icon-twitter.png) no-repeat;
+	background-size:21px 19px;
+    background-position:center center;
+}
+
+.setting_qrcode .twitter p{
+	color:#00abf0;
+}
+
+.setting_qrcode .weChat span{
+	height: 43px;
+    width: 43px;
+    border-radius: 22px;
+    border: solid 1px #06a904;
+	background:url(../img/icon-wechat.png) no-repeat;
+	background-size:19px 16px;
+    background-position:center center;
+}
+
+.setting_qrcode .weChat p{
+	color:#06a904;
+}

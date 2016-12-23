@@ -1,0 +1,267 @@
+@charset "utf-8";
+/* CSS Document */
+
+.recall_main .functionlist{
+	display:block;
+	background:#ffffff;
+	padding:2px 18px;
+}
+
+.recall_main .functionlist li{
+	display:block;
+	min-height:70px;
+	border-bottom:1px solid #e0dfdf;
+	/*overflow:hidden;*/
+	padding-bottom:5px;
+}
+
+.recall_main .functionlist li p{
+	display:block;
+	line-height: 25px;
+	color:#2596cf;
+	font-size:15px;
+	padding-top: 25px;
+	padding-bottom:25px;
+	margin-left:46px;
+	margin-right:16px;
+}
+
+.recall_main .functionlist li .firsticon{
+	float:left;
+	width:35px;
+	height:35px;
+	font-size:12px;
+	font-weight:bold;
+	color:#2596cf;
+	line-height:35px;
+	border-radius: 18px;
+    border: solid 1px #2596cf;
+	margin-top:20px;
+	text-align:center;
+}
+
+.recall_main .icon-vehicle{
+	background:url(../img/icon-vehicle.png) no-repeat;
+	background-size:19px 12px;
+	background-position:center center;
+}
+
+.recall_main .functionlist li .lasticon{
+	float:right;
+	display:block;
+	width:16px;
+	height:75px;
+	background:url(../img/button-next.png) center right no-repeat;
+	background-size:9px 15px;
+}
+
+.recall_main .functionlist li .button-arrow-down{
+	background:url(../img/button-arrow-down.png) center right no-repeat !important;
+	background-size:15px 8px !important;
+}
+
+.recall_main .noborder{
+	border:none !important;
+}
+
+.recall_main .mymustang-detail{
+	
+}
+
+.recall_main .mymustang-detail .recalls{
+	position:relative;
+	background:#f4f4f3;
+	display:block;
+	padding:17px 15px 23px 15px;
+	margin-bottom:20px;
+}
+
+.recall_main .mymustang-detail .recalls .warnblock{
+	font-size:12px; 
+	color:#ff3333; 
+	line-height:14px;
+	margin-bottom:19px;
+}
+
+.recall_main .mymustang-detail .recalls .warnblock span{
+	float:left; 
+	margin-right:5px;
+	margin-left:2px;
+}
+
+.recall_main .mymustang-detail .recalls fieldset{
+	border:none;
+	padding:0px 2px;
+	color:#616161;
+	font-size:9px;
+	line-height:20px;
+}
+
+.recall_main .mymustang-detail .recalls fieldset legend{
+	color:#102839;
+	font-size:12px;
+	line-height:12px;
+	-webkit-padding-start: 2px;
+	margin-bottom:4px;
+}
+
+.recall_main .mymustang-detail .recalls .borderbottomline{
+	margin-top:3px;
+	margin-bottom:13px;
+	border:1px solid #e3e2e2;
+}
+
+.recall_main .mymustang-detail .recalls .arrow-gray-down{
+	position:absolute; 
+	left:50%; 
+	margin-left:-10px; 
+	bottom:-11px;
+	background:url(../img/arrow-gray-down.png) no-repeat; 
+	background-size:21px 11px; 
+	width:21px; 
+	height:11px;
+}
+
+.recall_main .bluebutton.am-clickable-active{
+	opacity: 0.8;
+}
+.recall_main .bluebutton{
+	display:block;
+	line-height:50px;
+	text-align:center;
+	background:#2d96cd;
+	font-size:15px;
+	color:#ffffff;
+	margin: 0 -20px 0 -20px;
+}
+
+.recall_main .mymustang-detail .comments{
+	padding:9px 5px 14px 5px;
+	color:#616161;
+	font-size:9px;
+	line-height:18px;
+	text-align:center;
+}
+
+.recall_main .findvin-detail{
+	padding-top: 80px;
+}
+
+.recall_main .findvin-detail .smswitch{
+	border-radius:25px; 
+	background:#f4f4f4; 
+	padding:3px; 
+	display:-webkit-box;
+	-webkit-box-orient:horizontal; 
+	margin-bottom:10px;
+}
+
+.recall_main .findvin-detail .smswitch dd{
+	border-radius:25px; 
+	height:24px;
+	-webkit-box-flex:1; 
+	text-align:center; 
+	font-size:12px; 
+	line-height:24px; 
+	color:#2d96cd; 
+	position:relative;
+	width:50%;
+}
+
+.recall_main .findvin-detail .smswitch .focused{
+	background:#2d96cd !important; 
+	color:#ffffff !important; 
+}
+
+.recall_main .findvin-detail .arrow-bluegray-down{ 
+	position:absolute; 
+	left:50%; 
+	bottom:-9px; 
+	margin-left:-9px; 
+	background:url(../img/arrow-bluegray-down.png) center no-repeat;
+	background-size:17px 9px; 
+	width:17px; 
+	height:9px;
+}
+
+.recall_main .findvin-detail .formline-lasticon{
+	border-bottom:1px solid #dcdbdb;
+	padding:10px 0px 7px 0px;
+	height:15px;
+	line-height:15px;
+	display:block;
+	margin-bottom:6px; 
+	background:#ffffff;
+}
+
+.recall_main .findvin-detail .formline-lasticon .iconli{
+	float:left; 
+	width:25px; 
+	height:15px; 
+	display:block; 
+	font-size:11px; 
+	color:#2596cf;
+	margin-top:4px; 
+	text-align:left;
+}
+
+.recall_main .findvin-detail .formline-lasticon .inputli{
+	display:block; 
+	margin-left:29px;
+	margin-right:40px;
+}
+
+.recall_main .findvin-detail .formline-lasticon .inputli input{
+	border:none; 
+	line-height:15px; 
+	height:20px; 
+	font-size:15px; 
+	color:#000000; 
+	width:100%;
+}
+
+.recall_main .findvin-detail .formline-lasticon .lasticonli{
+	float:right; 
+	margin-bottom:-4px;
+	background:#ffffff; 
+	width:40px;
+	overflow:hidden;
+}
+
+.recall_main .findvin-detail .icon-scan{ 
+	background:#ffffff url(../img/icon-scan.png) center no-repeat;
+	background-size:29px 29px; 
+	width:29px;
+	height:29px;
+	display:block; 
+	float:right;
+}
+
+.recall_main .findvin-detail .how-findvin{
+	color:#2596cf; 
+	line-height:17px; 
+	font-size:9px;
+	margin-bottom:20px;
+}
+
+.recall_main .icon-okgreen{
+	background:url(../img/icon-okgreen.png) no-repeat;
+	background-size:60px 58px;
+	background-position: center center;
+	height:60px;
+	display:block;
+}
+
+.recall_main .norecall{
+	display:block;
+	padding:0px 15px 23px 15px;
+}
+
+.recall_main .norecall div{
+	padding-top:5px;
+	display:block;
+	line-height:22px;
+	font-size:9px;
+	color:#616161;
+	text-align:center;
+}

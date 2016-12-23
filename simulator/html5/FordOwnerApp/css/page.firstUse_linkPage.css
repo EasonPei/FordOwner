@@ -1,0 +1,154 @@
+﻿.loginBG {
+	background-color: #000;
+	background-image: url(../img/login/bg.jpg);
+	background-size: 100%;
+	background-position: center;
+	height: 100%;
+	width: 100%;
+	padding-top: 5%;
+}
+
+.fordLogo {
+	background-image: url(../img/wizard/logo.png);
+	background-size: 84px 50px;
+	background-position: center top;
+	background-repeat: no-repeat;
+	height: 129.5px;
+	width: 100%;
+}
+
+.fordLogoCN {
+  background-image: url(../img/wizard/logo_cn.png);
+  background-size: 71px 42.5px;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  height: 129.5px;
+  width: 100%;
+}
+
+.textview-accountTips {
+	width: 90%;
+	margin-left: 5%;
+	padding-top: 50px;
+	padding-bottom: 5px;
+	font-size: 10px;
+	color: #fff;
+	line-height: 14px;
+	text-align: center;
+}
+
+.loginButton {
+	width: 90%;
+	margin-left: 5%;
+	height: 40px;
+	background: #00bc9e;
+	border: 1px solid #007d6a;
+	font-size: 18px;
+	color: #fff;
+	line-height: 40px;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.loginButton.am-clickable-active {
+	opacity: 0.8;
+}
+
+.signupButton {
+	width: 90%;
+	margin-left: 5%;
+	height: 40px;
+	border: 1px solid #e8e8e8;
+	font-size: 18px;
+	color: #fff;
+	line-height: 40px;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.signupButton.am-clickable-active {
+	background: #222;
+	opacity: 0.8;
+}
+
+#operationView {
+	width: 100%;
+	position: absolute;
+	bottom: 5%;
+  z-index: 2000;
+}
+
+#loginBottomViewWhite {
+	bottom: 30px;
+	text-align: center;
+	margin-top: 30px;
+	color: #fff;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+#loginBottomViewWhite div {
+	display: inline-block;
+	color: #fff;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+#signUpLater {
+	background-image: url(../img/login/right_arrow.png);
+	background-size: 9.5px 16.5px;
+	background-position: right;
+	background-repeat: no-repeat;
+	padding-right: 12px;
+}
+
+.firstUse_linkPage .mainCarr {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+}
+.firstUse_linkPage .mainCarr .am-carrousel-inner > li {
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	position: relative;
+}
+.firstUse_linkPage .mainCarr .am-carrousel-inner > li img {
+	width: 240px;
+	height: 140px;
+	display: block;
+	margin: auto;
+}.firstUse_linkPage .mainCarr .am-carrousel-inner > li.wider img {
+	width: 290px;
+	height: 140px;
+	display: block;
+	margin: auto;
+}
+.firstUse_linkPage .mainCarr > .dot {
+	position: absolute;
+	bottom: 23%;
+	/* left: 20px; */
+	height: 8px;
+	width: 100%;
+	text-align: center;
+}
+.firstUse_linkPage .mainCarr > .dot > li {
+	width: 6px;
+	height: 6px;
+	border-radius: 6px;
+	display: inline-block;
+	margin-right: 10px;
+	background: none;
+	border: #fff 2px solid;
+	vertical-align: middle;
+}
+.firstUse_linkPage .mainCarr > .dot > li.selected {
+	width: 6px;
+	height: 6px;
+	border-radius: 6px;
+	background: #fff;
+	border: rgba(255,255,255,0) 1px solid;
+}

@@ -1,0 +1,210 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+.fuyu_coupon .am-body-wrap {
+    background: #102839;
+}
+
+
+.fuyu_coupon .coupontabs {
+    height: 68px;
+    background: #ffffff;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+}
+
+    .fuyu_coupon .coupontabs li.am-clickable {
+        width: 33%;
+        -webkit-box-flex: 1;
+        text-align: center;
+        vertical-align: middle;
+        line-height: normal;
+        border-bottom: solid 5px #dcdbdb;
+        color: #2596cf;
+        position: relative;
+    }
+
+        .fuyu_coupon .coupontabs li.am-clickable .tabstitle {
+            display: block;
+            text-align: center;
+            font-size: 12px;
+            line-height: 13px;
+            /*padding-top: 12px;*/
+            position: relative;
+            margin-left: 10px;
+        }
+
+.fuyu_coupon .icon-specialoffer-orange {
+    background: url(../img/icon-specialoffer-orange.png) no-repeat;
+    background-position: left center;
+    background-size: 22px 20px;
+    display: inline-block;
+    width: 42px;
+    height: 24px;
+    text-align:right;
+    line-height:26px;
+}
+
+.fuyu_coupon .icon-ok-green {
+    background: url(../img/icon-ok-green.png) no-repeat;
+    background-position: left center;
+    background-size: 22px 20px;
+    display: inline-block;
+    width: 42px;
+    height: 24px;
+    text-align:right;
+    line-height:26px;
+}
+
+.fuyu_coupon .icon-warnred {
+    background: url(../img/icon-warnred.png) no-repeat;
+    background-position: left center;
+    background-size: 22px 20px;
+    display: inline-block;
+    width: 42px;
+    height: 24px;
+    text-align:right;
+    line-height:26px;
+}
+
+.fuyu_coupon .coupontabs li.am-clickable .couponnumber {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    line-height: 39px;
+}
+
+.fuyu_coupon .coupontabs li .h-seperator {
+    background-color: #dcdbdb;
+    width: 1px;
+    height: 65%;
+    position: absolute;
+    right: 0px;
+    top: 20%;
+}
+
+.fuyu_coupon .coupontabs li.am-clickable.active {
+    border-bottom-color: #102839;
+    color: #102839;
+}
+
+.fuyu_coupon .coupons
+{
+    display:none;
+}
+
+.fuyu_coupon .coupons.active
+{
+    display:block;
+}
+
+
+.fuyu_coupon .coupons li {
+    list-style: none;
+    padding: 15px 18px;
+    margin-bottom: 10px;
+    display: block;
+    background: #ffffff url(../img/icon-money.png) no-repeat;
+    background-position: 18px 15px;
+    background-size: 13px 16px;
+    overflow: hidden;
+}
+
+    .fuyu_coupon .coupons li .couponvalue {
+        width: 69px;
+        height: 69px;
+        border-radius: 35px;
+        /*border: solid 1px #6db801;*/
+        line-height: 69px;
+        color: #6db801;
+        text-align: center;
+        font-size: 27px;
+        margin-left: 18px;
+        margin-bottom: 9px;
+        float: left;
+    }
+
+    .fuyu_coupon .coupons li .couponinfo1 {
+        float: right;
+    }
+
+.fuyu_coupon .icon-finished {
+    background: url(../img/icon-finished.png) no-repeat;
+    background-position: center right;
+    background-size: 20px 17px;
+    display: block;
+    height: 17px;
+    /*width: 20px;*/
+}
+
+.fuyu_coupon .coupons li .couponinfo1 .cnumber {
+    text-align: right;
+    font-size: 9px;
+    line-height: 10px;
+    color: #616161;
+    margin-bottom: 14px;
+}
+
+.fuyu_coupon .coupons li .couponinfo1 .cname {
+    text-align: right;
+    font-size: 18px;
+    line-height: 18px;
+    color: #102839;
+    margin-top: 14px;
+    margin-bottom: 9px;
+}
+
+.fuyu_coupon .coupons li .couponinfo2 {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+    .fuyu_coupon .coupons li .couponinfo2 .sheetnumber {
+        font-size: 9px;
+        line-height: 12px;
+        color: #616161;
+        float: left;
+        /*letter-spacing:1px;*/
+    }
+
+    .fuyu_coupon .coupons li .couponinfo2 .usetime {
+        float: right;
+        text-align: right;
+        font-size: 9px;
+        line-height: 12px;
+        color: #616161;
+    }
+
+.fuyu_coupon .useablecoupons li .couponvalue {
+    /*border: solid 1px #fab205;*/
+    color: #fab205;
+}
+
+.fuyu_coupon .useablecoupons li .iconline {
+    display: block;
+    height: 17px;
+}
+
+.fuyu_coupon .useablecoupons li .couponinfo2 .sheetnumber em {
+    font-weight: normal;
+    font-style: normal;
+    color: #fab205;
+}
+
+.fuyu_coupon .disablecoupons li .couponvalue {
+    /*border: solid 1px #dcdbdb;*/
+    color: #dcdbdb;
+}
+
+.fuyu_coupon .disablecoupons li .couponinfo2 .usetime {
+    color: #ff4239;
+}
+
+.fuyu_coupon .disablecoupons li .couponinfo1 .icon-warnred2 {
+    background: url(../img/icon-warnred.png) no-repeat;
+    background-position: center right;
+    background-size: 16px 14px;
+    display: block;
+    height: 17px;
+}

@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+
+
+.contact_callCenter li{
+
+	border-bottom: 1px solid #f1f1f1;
+
+	width: 90%;
+
+	margin-left: 5%;
+
+	padding-top: 15px;
+
+	padding-bottom: 15px;
+
+}
+
+
+
+.contact_callCenter .callCenterTitle{
+
+	color: #123;
+
+	font-size: 18px;
+
+	line-height: 22px;
+
+	background-image: url(../img/callcenter/phone.png);
+
+	background-size: 15.5px 16.5px ;
+
+	background-position: left;
+
+	background-repeat: no-repeat;
+
+	padding-left: 30px;
+
+}
+
+
+
+.contact_callCenter .callCenterPhoneNumber{
+	color: #1E97C8;
+	font-size: 22px;
+	line-height: 36px;
+	padding-left: 30px;
+	padding-right: 10px; 
+	word-wrap: break-word;
+	background-image: url(../img/callcenter/call.png);
+	background-size: 35px 35px ;
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+.contact_callCenter .callCenterEmail{
+	color: #1E97C8;
+	font-size: 22px;
+	line-height: 36px;
+	padding-left: 30px;
+	padding-right: 10px; 
+	word-wrap: break-word;
+	background-image: url(../img/callcenter/email.png);
+	background-size: 35px 35px ;
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+.contact_callCenter .callCenterTwitter{
+	color: #1E97C8;
+	font-size: 22px;
+	line-height: 36px;
+	padding-left: 30px;
+	padding-right: 10px; 
+	word-wrap: break-word;
+	background-image: url(../img/callcenter/twitter.png);
+	background-size: 35px 35px ;
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+.contact_callCenter .callCenterFacebook{
+	color: #1E97C8;
+	font-size: 16px;
+	line-height: 36px;
+	padding-left: 30px;
+	padding-right: 10px; 
+	word-wrap: break-word;
+	background-image: url(../img/callcenter/facebook.png);
+	background-size: 35px 35px ;
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+
+.contact_callCenter .callCenterDetail{
+
+	color: #666;
+
+	font-size: 12px;
+
+	line-height: 16px;
+
+	padding-left: 30px;
+
+	
+
+}
+
+
+
+.contact_callCenter .am-clickable-active{
+
+	opacity: 0.8;
+
+}
+
